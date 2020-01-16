@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	</include>
+		<include name="">
+		<content>
+			<item>
+				<label></label>
+				<onclick></onclick>
+				<thumb></thumb>
+			</item>
+		</content>
+	</include>
+-->
+<includes>
+	<include name="WidgetListMenu">
+		<param name="item_limit">$INFO[Container($PARAM[list_id]).NumItems]</param>
+		<param name="icon">$INFO[ListItem.Icon]</param>
+		<param name="icon_height">120</param>
+		<param name="visible">true</param>
+		
+		<param name="SCMainMenu_submenu">false</param>
+		<param name="SCMoviesMenu_submenu">false</param>
+		<param name="SCTVShowsMenu_submenu">false</param>
+		<param name="SCStoriesMenu_submenu">false</param>
+		<param name="SCConcertsMenu_submenu">false</param>
+		<param name="SCAnimeMenu_submenu">false</param>
+		<param name="SCTVMenu_submenu">false</param>
+		<param name="SCTraktMenu_submenu">false</param>
+		<param name="iVysilaniMenu_submenu">false</param>
+		<param name="RadiodeMenu_submenu">false</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
+			</include>
+			<control type="panel" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>110</top>
+				<right>0</right>
+				<height>290</height>
+				<include content="WidgetListCommon">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<itemlayout width="310" height="340">
+					<control type="group">
+						<left>70</left>
+						<control type="image">
+							<width>316</width>
+							<height>200</height>
+							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<centertop>74</centertop>
+							<left>62</left>
+							<width>200</width>
+							<height>$PARAM[icon_height]</height>
+							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="textbox">
+							<left>42</left>
+							<top>106</top>
+							<width>240</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="340">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+						</animation>
+						<control type="image">
+							<width>316</width>
+							<height>200</height>
+							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<width>316</width>
+							<height>200</height>
+							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<bordersize>20</bordersize>
+							<include>Animation_FocusTextureFade</include>
+						</control>
+						<control type="image">
+							<centertop>74</centertop>
+							<left>62</left>
+							<width>200</width>
+							<height>$PARAM[icon_height]</height>
+							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="textbox">
+							<left>42</left>
+							<top>106</top>
+							<width>240</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</focusedlayout>
+				<include condition="$PARAM[SCMainMenu_submenu]">SCMainMenuContent</include>
+				<include condition="$PARAM[SCMoviesMenu_submenu]">SCMoviesMenuContent</include>
+				<include condition="$PARAM[SCTVShowsMenu_submenu]">SCTVShowsMenuContent</include>
+				<include condition="$PARAM[SCStoriesMenu_submenu]">SCStoriesMenuContent</include>
+				<include condition="$PARAM[SCConcertsMenu_submenu]">SCConcertsMenuContent</include>
+				<include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include>
+				<include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include>
+				<include condition="$PARAM[SCTraktMenu_submenu]">SCTraktMenuContent</include>
+				<include condition="$PARAM[iVysilaniMenu_submenu]">iVysilaniMenuContent</include>
+				<include condition="$PARAM[RadiodeMenu_submenu]">RadiodeMenuContent</include>
+			</control>
+		</definition>
+	</include>
+	<include name="SCMainMenuContent">
+		<content>
+			<item>
+				<label>Stažené soubory</label>
+				<onclick>ActivateWindow(Videos,$INFO[Skin.String(SCDownloadPath)],return)</onclick>
+				<thumb>defaultaddonsrepo.png</thumb>
+			</item>
+			<item>
+				<label>Vyhledávání</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365617263682f6d656e75&amp;title=5b425d2433303935335b2f425d&amp;url=2f5365617263682f6d656e75,return)</onclick>
+				<thumb>defaultaddonssearch.png</thumb>
+			</item>
+			<item>
+				<label>Filmy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6d6f76696573&amp;list=2f464d6f76696573&amp;title=243330393031&amp;url=2f464d6f76696573,return)</onclick>
+				<thumb>defaultmovies.png</thumb>
+			</item>
+			<item>
+				<label>Seriály</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
+				<thumb>defaulttvshows.png</thumb>
+			</item>
+			<item>
+				<label>Koncerty</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
+				<thumb>defaultmusicvideos.png</thumb>
+			</item>
+			<item>
+				<label>Anime</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=616e696d65&amp;list=2f416e696d65&amp;title=416e696d65&amp;url=2f416e696d65,return)</onclick>
+				<thumb>defaultaddonvideo.png</thumb>
+			</item>
+			<item>
+				<label>Moje seznamy (trakt.tv)</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
+				<thumb>defaultplaylist.png</thumb>
+			</item>
+			<item>
+				<label>TV dnes</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476,return)</onclick>
+				<thumb>defaultaddonpvrclient.png</thumb>
+			</item>
+			<item>
+				<label>TV program na 14 dni</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976,return)</onclick>
+				<thumb>defaultyear.png</thumb>
+			</item>
+			<item>
+				<label>HDR</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f484452&amp;title=484452&amp;url=2f484452,return)</onclick>
+				<thumb>special://home/addons/skin.estuary.stream-cinema/extras/icons/hdr.png</thumb>
+			</item>
+			<item>
+				<label>Zoznamy/Rebricky</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365617263682f6765744c697374&amp;title=5a6f7a6e616d792f5265627269636b79&amp;url=2f5365617263682f6765744c697374,return)</onclick>
+				<thumb>defaultmusictop100.png</thumb>
+			</item>
+			<item>
+				<label>Nastavení</label>
+				<onclick>Addon.OpenSettings(plugin.video.stream-cinema)</onclick>
+				<thumb>defaultaddonservice.png</thumb>
+			</item>
+			<item>
+				<label>Plugin</label>
+				<onclick>RunAddon(plugin.video.stream-cinema)</onclick>
+				<thumb>defaultaddon.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCMoviesMenuContent">
+		<content>
+			<item>
+				<label>Poslední sledované</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=6c617374&amp;id=6c6173746d&amp;title=243330393237,return)</onclick>
+				<thumb>defaultinprogressshows.png</thumb>
+				<visible>!Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</visible>
+			</item>
+			<item>
+				<label>Poslední sledované (T)</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65,return)</onclick>
+				<thumb>defaultinprogressshows.png</thumb>
+				<visible>Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</visible>
+			</item>
+			<item>
+				<label>Novinky</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6c6174657374&amp;title=243330393530&amp;url=2f464d6f766965732f6c6174657374,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>
+				<label>Novinky dub</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6c617465737464&amp;title=24333039353020647562&amp;url=2f464d6f766965732f6c617465737464,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>
+				<label>Práve sledované</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f7761746368696e67&amp;title=243330393536&amp;url=2f464d6f766965732f7761746368696e67,return)</onclick>
+				<thumb>defaultmovies.png</thumb>
+			</item>
+			<item>
+				<label>Nejsledovanější</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f706f70756c6172&amp;title=243330393035&amp;url=2f464d6f766965732f706f70756c6172,return)</onclick>
+				<thumb>defaultfavourites.png</thumb>
+			</item>
+			<item>
+				<label>Nově přidané</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d,return)</onclick>
+				<thumb>DefaultRecentlyAddedMovies.png</thumb>
+			</item>
+			<item>
+				<label>A-Z</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f617a&amp;title=243330393033&amp;url=2f464d6f766965732f617a,return)</onclick>
+				<thumb>DefaultMovieTitle.png</thumb>
+			</item>
+			<item>
+				<label>Země</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f636f756e747279&amp;title=243330393036&amp;url=2f464d6f766965732f636f756e747279,return)</onclick>
+				<thumb>DefaultCountry.png</thumb>
+			</item>
+			<item>
+				<label>Kvalita</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f7175616c697479&amp;title=243330393037&amp;url=2f464d6f766965732f7175616c697479,return)</onclick>
+				<thumb>flags/videoresolution/1080.png</thumb>
+			</item>
+			<item>
+				<label>Žánr</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e7265&amp;title=243330393038&amp;url=2f464d6f766965732f67656e7265,return)</onclick>
+				<thumb>DefaultGenre.png</thumb>
+			</item>
+			<item>
+				<label>Rok</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f79656172&amp;title=243330393039&amp;url=2f464d6f766965732f79656172,return)</onclick>
+				<thumb>DefaultYear.png</thumb>
+			</item>
+			<item>
+				<label>Kolekcie</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f636f6c6c656374696f6e&amp;title=4b6f6c656b636965&amp;url=2f464d6f766965732f636f6c6c656374696f6e,return)</onclick>
+				<thumb>defaultsets.png</thumb>
+			</item>
+			<item>
+				<label>Knihovna</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?cmd=416374697661746557696e646f7728566964656f732c4d6f7669657329&amp;title=243330393235&amp;url=636d643a2f2f416374697661746557696e646f7728566964656f732c4d6f7669657329,return)</onclick>
+				<thumb>defaultaddoninfolibrary.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCTVShowsMenuContent">
+		<content>
+			<item>
+				<label>Poslední sledované</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=6c617374&amp;id=6c617374&amp;title=243330393237,return)</onclick>
+				<thumb>defaultinprogressshows.png</thumb>
+				<visible>!Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</visible>
+			</item>
+			<item>
+				<label>Poslední sledované (T)</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65,return)</onclick>
+				<thumb>defaultinprogressshows.png</thumb>
+				<visible>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</visible>
+			</item>
+			<item>
+				<label>Poslední přidané seriály</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f6c6174657374&amp;title=243330393231&amp;url=2f5365726965732f6c6174657374,return)</onclick>
+				<thumb>DefaultRecentlyAddedMovies.png</thumb>
+			</item>
+			<item>
+				<label>Poslední přidané části</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f6e65776570&amp;title=243330393230&amp;url=2f5365726965732f6e65776570,return)</onclick>
+				<thumb>DefaultRecentlyAddedMovies.png</thumb>
+			</item>
+			<item>
+				<label>Nejsledovanější</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f706f70756c6172&amp;title=243330393035&amp;url=2f5365726965732f706f70756c6172,return)</onclick>
+				<thumb>defaultfavourites.png</thumb>
+			</item>
+			<item>
+				<label>Práve sledované</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f7761746368696e67&amp;title=243330393536&amp;url=2f5365726965732f7761746368696e67,return)</onclick>
+				<thumb>defaulttvshows.png</thumb>
+			</item>
+			<item>
+				<label>A-Z</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f617a&amp;title=243330393033&amp;url=2f5365726965732f617a,return)</onclick>
+				<thumb>DefaultMovieTitle.png</thumb>
+			</item>
+			<item>
+				<label>Země</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f636f756e747279&amp;title=243330393036&amp;url=2f5365726965732f636f756e747279,return)</onclick>
+				<thumb>DefaultCountry.png</thumb>
+			</item>
+			<item>
+				<label>Žánr</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365726965732f67656e7265&amp;title=243330393038&amp;url=2f5365726965732f67656e7265,return)</onclick>
+				<thumb>DefaultGenre.png</thumb>
+			</item>
+			<item>
+				<label>Knihovna</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?cmd=416374697661746557696e646f7728566964656f732c547653686f777329&amp;title=243330393235&amp;url=636d643a2f2f416374697661746557696e646f7728566964656f732c547653686f777329,return)</onclick>
+				<thumb>defaultaddoninfolibrary.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCStoriesMenuContent">
+		<content>
+			<item>
+				<label>Pohádky</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36&amp;id=36&amp;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>
+				<label>Filmové pohádky</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e72652f706f6861646b61&amp;title=243332383230&amp;url=2f464d6f766965732f67656e72652f706f6861646b61&amp;,return)</onclick>
+				<thumb>defaultmovies.png</thumb>
+			</item>
+			<item>
+				<label>Animované pohádky</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e72652f616e696d6f76616e79&amp;title=243331313238&amp;url=2f464d6f766965732f67656e72652f616e696d6f76616e79,return)</onclick>
+				<thumb>defaultmovies.png</thumb>
+			</item>
+			<item>
+				<label>Disney</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5365617263682f6765744c6973742f3836&amp;title=4469736e6579&amp;url=2f5365617263682f6765744c6973742f3836&amp;id=3836&amp;,return)</onclick>
+				<thumb>special://skin/extras/icons/studios/disneycompany.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCConcertsMenuContent">
+		<content>
+			<item>
+				<label>Koncerty I. část</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
+				<thumb>defaultmusicvideos.png</thumb>
+			</item>
+			<item>
+				<label>Koncerty II. část</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6b6f6e636572743f703d32&amp;title=6e657874&amp;url=2f464d6f766965732f6b6f6e636572743f703d32,return)</onclick>
+				<thumb>defaultmusicvideos.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCAnimeMenuContent">
+		<content>
+			<item>
+				<label>Filmy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=616d6f76696573&amp;list=2f416e696d652f4d6f76696573&amp;title=243330393031&amp;url=2f416e696d652f4d6f76696573,return)</onclick>
+				<thumb>defaultmovies.png</thumb>
+			</item>
+			<item>
+				<label>Seriály</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=61736572696573&amp;list=2f416e696d652f536572696573&amp;title=243330393032&amp;url=2f416e696d652f536572696573,return)</onclick>
+				<thumb>defaulttvshows.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCTVMenuContent">
+		<content>
+			<item>
+				<label>TV program dnes</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476,return)</onclick>
+				<thumb>defaultaddonpvrclient.png</thumb>
+			</item>
+			<item>
+				<label>TV program na 14 dní</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976,return)</onclick>
+				<thumb>defaultyear.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="SCTraktMenuContent">
+		<content>
+			<item>
+				<label>Seznam ke shlédnutí</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65,return)</onclick>
+				<thumb>defaultplaylist.png</thumb>
+			</item>
+			<item>
+				<label>Historie</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b74486973746f7279&amp;id=686973746f7279&amp;title=5b425d2433303935385b2f425d&amp;tu=6d65,return)</onclick>
+				<thumb></thumb>
+			</item>
+			<item>
+				<label>Přátelé</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b74466f6c6c6f77696e67&amp;id=666f6c6c6f77696e67&amp;title=5b425d2433303936335b2f425d,return)</onclick>
+				<thumb>defaultmusicroles.png</thumb>
+			</item>
+			<item>
+				<label>Oblíbené seznamy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b745370656369616c4c69737473&amp;id=6c696b65645f6c69737473&amp;title=5b425d2433303936345b2f425d,return)</onclick>
+				<thumb>defaultmusictop100.png</thumb>
+			</item>
+			<item>
+				<label>Populární seznamy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b745370656369616c4c69737473&amp;id=706f70756c61725f6c69737473&amp;page=31&amp;title=5b425d2433303936355b2f425d,return)</onclick>
+				<thumb>defaultfavourites.png</thumb>
+			</item>
+			<item>
+				<label>Populární seznamy za týden</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b745370656369616c4c69737473&amp;id=7472656e64696e675f6c69737473&amp;page=31&amp;title=5b425d2433303936365b2f425d,return)</onclick>
+				<thumb>defaultfavourites.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="iVysilaniMenuContent">
+		<content>
+			<item>
+				<label>Živé vysílání</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=live,return)</onclick>
+				<thumb>defaultaddonpvrclient.png</thumb>
+			</item>
+			<item>
+				<label>Podle data</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byDate,return)</onclick>
+				<thumb>defaultyear.png</thumb>
+			</item>
+			<item>
+				<label>Podle abecedy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byLetter,return)</onclick>
+				<thumb>defaultmovietitle.png</thumb>
+			</item>
+			<item>
+				<label>Podle žánru</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byGenre,return)</onclick>
+				<thumb>defaultgenre.png</thumb>
+			</item>
+			<item>
+				<label>Tipy</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsMain,return)</onclick>
+				<thumb>defaultfavourites.png</thumb>
+			</item>
+			<item>
+				<label>Nejsledovanější dne</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=topDay,return)</onclick>
+				<thumb>defaultmusictop100.png</thumb>
+			</item>
+			<item>
+				<label>Nejsledovanější týdne</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=topWeek,return)</onclick>
+				<thumb>defaultmusictop100.png</thumb>
+			</item>
+			<item>
+				<label>Nepřehlédněte</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsNote,return)</onclick>
+				<thumb>defaulticonwarning.png</thumb>
+			</item>
+			<item>
+				<label>Z našeho archivu</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsArchive,return)</onclick>
+				<thumb></thumb>
+			</item>
+			<item>
+				<label>Ostatní právě sledují</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=watching,return)</onclick>
+				<thumb>defaultinprogressshows.png</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="RadiodeMenuContent">
+		<content>
+			<item>
+				<label>Local Stations</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/local/,return)</onclick>
+				<thumb>icons/sidemenu/radio.png</thumb>
+			</item>
+			<item>
+				<label>Editorials Recommendations</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/recommended/,return)</onclick>
+				<thumb>defaultmusicroles.png</thumb>
+			</item>
+			<item>
+				<label>Top 100 Stations</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/top/,return)</onclick>
+				<thumb>defaultmusictop100.png</thumb>
+			</item>
+			<item>
+				<label>Browse by genre</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/genre/,return)</onclick>
+				<thumb>defaultmusicgenres.png</thumb>
+			</item>
+			<item>
+				<label>Browse by topic</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/topic/,return)</onclick>
+				<thumb>defaultaddoninfoprovider.png</thumb>
+			</item>
+			<item>
+				<label>Browse by Country</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/country/,return)</onclick>
+				<thumb>defaultcountry.png</thumb>
+			</item>
+			<item>
+				<label>Browse by city</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/city/,return)</onclick>
+				<thumb>defaultaddonaudiodecoder.png</thumb>
+			</item>
+			<item>
+				<label>Browse by language</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/language/,return)</onclick>
+				<thumb>defaultcountry.png</thumb>
+			</item>
+			<item>
+				<label>Search for station</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/search/,return)</onclick>
+				<thumb>defaultmusicsearch.png</thumb>
+			</item>
+			<item>
+				<label>My Stations</label>
+				<onclick>ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/my/,return)</onclick>
+				<thumb>defaultmusicplaylists.png</thumb>
+			</item>
+		</content>
+	</include>
+</includes>

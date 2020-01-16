@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window> <!-- Easy/SC* -->
+	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
+	<onload condition="String.IsEmpty(Skin.String(widget_limit))">Skin.SetString(widget_limit,15)</onload> <!-- Easy/SC+ -->
+	<onload condition="String.IsEmpty(Skin.String(reboot_command))">Skin.SetString(reboot_command,/usr/sbin/rebootfromnand)</onload> <!-- Easy/SC+ -->
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath background="true" colordiffuse="bg_overlay">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+		</control>
+		<control type="group" id="10001"> <!-- Easy/SC+ New Skin Settings Level -->
+			<control type="group"> <!-- Easy/SC+ Main Menu - New Style of Settings -->
+				<depth>DepthContentPanel</depth>
+				<top>160</top>
+				<left>470</left>
+				<include>OpenClose_Right</include>
+				<include content="ContentPanel">
+					<param name="left" value="15" />
+					<param name="width" value="470" />
+					<param name="top" value="15" />
+					<param name="height" value="760" />
+				</include>
+				<control type="label">
+					<left>370</left>
+					<width>100</width>
+					<align>right</align>
+					<font>font10</font>
+					<label>$INFO[Container(1000).CurrentItem]/$INFO[Container(1000).NumItems]</label>
+				</control>			
+				<visible>Container(9000).HasFocus(5)</visible>
+				<control type="list" id="1000"> <!-- Easy/SC* Main Menu Settings -->
+					<description>button area</description>
+					<left>35</left>
+					<top>35</top>
+					<width>430</width>
+					<height>720</height>
+					<pagecontrol>100</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>1001</onright>
+					<onup>1000</onup>
+					<ondown>1000</ondown>
+					<itemlayout height="90" width="470">
+						<control type="label">
+							<textoffsetx>30</textoffsetx>
+							<width>470</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<textoffsetx>30</textoffsetx>
+							<width>470</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="90" width="470">
+						<control type="image">
+							<width>470</width>
+							<height>90</height>
+							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(1000)">Conditional</animation>
+						</control>
+						<control type="label">
+							<textoffsetx>30</textoffsetx>
+							<width>470</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<textoffsetx>30</textoffsetx>
+							<width>470</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<font>font37</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1020"> <!-- SC Main Menu -->
+							<label>Stream-Cinema</label>
+							<label2></label2>
+							<onclick>Skin.ToggleSetting(SCMain)</onclick>
+						</item>
+						<item id="1040"> <!-- SC Movies -->
+							<label>Filmy</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
+						</item>
+						<item id="1060"> <!-- SC TVShows -->
+							<label>Seriály</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
+						</item>
+						<item id="1080"> <!-- SC Stories -->
+							<label>Pohádky</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCStories)</onclick>
+						</item>
+						<item id="1100"> <!-- SC Concerts -->
+							<label>Koncerty</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCConcerts)</onclick>
+						</item>
+						<item id="1120"> <!-- SC Anime -->
+							<label>Anime</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
+						</item>
+						<item id="1140"> <!-- SC TV -->
+							<label>Televize</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCTV)</onclick>
+						</item>
+						<item id="1160">  <!-- SC Trakt -->
+							<label>Moje seznamy</label>
+							<label2>[CR][CR]Stream-Cinema</label2>
+							<onclick>Skin.ToggleSetting(SCTrakt)</onclick>
+						</item>
+						<item id="1280">  <!-- iVysilani Czech TV -->
+							<label>iVysílání</label>
+							<label2>[CR][CR]Česká televize</label2>
+							<onclick>Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onclick>
+						</item>
+						<item id="1320">  <!-- Trailer -->
+							<label>Trailer</label>
+							<label2></label2>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+							<visible>!Skin.HasSetting(TrailerWallWidget)</visible>
+						</item>
+						<item id="1320">  <!-- Trailer -->
+							<label>Trailer</label>
+							<label2>[CR][CR]Týdenní přehled</label2>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+							<visible>Skin.HasSetting(TrailerWallWidget)</visible>
+						</item>
+						<item id="1300">  <!-- Radio.de -->
+							<label>Radio</label>
+							<label2>[CR][CR]Internet</label2>
+							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+							<visible>!Skin.HasSetting(RadiodeWallWidget)</visible>
+						</item>
+						<item id="1300">  <!-- Radio.de -->
+							<label>Radio</label>
+							<label2>[CR][CR]Internet: My Stations</label2>
+							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+							<visible>Skin.HasSetting(RadiodeWallWidget)</visible>
+						</item>
+						<item id="1400"> <!-- Movies -->
+							<label>$LOCALIZE[342]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+						</item>
+						<item id="1420"> <!-- TVShows -->
+							<label>$LOCALIZE[20343]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+						</item>
+						<item id="1440"> <!-- Disc -->
+							<label>$LOCALIZE[427]</label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="1460"> <!-- TV -->
+							<label>$LOCALIZE[19020]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+						</item>
+						<item id="1480"> <!-- Radio -->
+							<label>$LOCALIZE[19021]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+						</item>
+						<item id="1500"> <!-- Music -->
+							<label>$LOCALIZE[2]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+						</item>
+						<item id="1520"> <!-- Music Videos -->
+							<label>$LOCALIZE[20389]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
+						</item>
+						<item id="1640"> <!-- Games -->
+							<label>$LOCALIZE[15016]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+						</item>
+						<item id="1540"> <!-- Addons -->
+							<label>$LOCALIZE[24001]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+						</item>
+						<item id="1560"> <!-- Pictures -->
+							<label>$LOCALIZE[1]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNopicturesButton)</onclick>
+						</item>
+						<item id="1580"> <!-- Videos -->
+							<label>$LOCALIZE[3]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+						</item>
+						<item id="1600"> <!-- Favorites -->
+							<label>$LOCALIZE[10134]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
+						</item>
+						<item id="1620"> <!-- Weather -->
+							<label>$LOCALIZE[8]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+						</item>	
+					</content>
+				</control>
+				<control type="scrollbar" id="100">
+					<top>35</top>
+					<left>447</left>
+					<bottom>165</bottom>
+					<width>12</width>
+					<orientation>vertical</orientation>
+					<texturesliderbackground />
+					<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(100)">conditional</animation>
+					<onleft>1000</onleft>
+					<onright>1000</onright>
+					<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+					<visible>Control.IsVisible(1000)</visible>
+				</control>
+				<control type=group id="1001"> <!-- Easy/SC* Items of Main Menu Detail Settings -->
+					<top>0</top>
+					<left>500</left>
+					<right>0</right>
+					<bottom>140</bottom>
+					<control type="grouplist" id="1021"> <!-- Easy/SC+ Main Menu -->
+						<pagecontrol>1039</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1039</onright>
+						<onup>1021</onup>
+						<ondown>1021</ondown>
+						<visible>Container(1000).HasFocus(1020)</visible>
+						<control type="radiobutton" id="1022"> <!-- Main Menu enable/disable-->
+							<label>Povolit</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMain)</selected>
+							<onclick>Skin.ToggleSetting(SCMain)</onclick>
+						</control>
+						<control type="image" id="1023">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1024"> <!-- Main Menu Widget -->
+							<label>Widget Menu Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1025"> <!-- Main Movies Widget -->
+							<label>Widget Filmové novinky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainMoviesNewWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainMoviesNewWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1026"> <!-- Main Last Added Movies Widget -->
+							<label>Widget Poslední přidané filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainMoviesNewAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainMoviesNewAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1027"> <!-- Main Last Added TVShows Widget -->
+							<label>Widget Poslední přidané seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainTVShowsNewAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainTVShowsNewAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1028"> <!-- Main Last Added TVShows Episodes Widget -->
+							<label>Widget Poslední přidané části seriálů</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainTVShowsNewAddedEpisodesWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainTVShowsNewAddedEpisodesWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1030"> <!-- Main Trakt.tv Widget -->
+							<label>Widget Ke shlédnutí (trakt.tv)</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainTraktWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainTraktWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1031"> <!-- Main TV Programm Today Widget -->
+							<label>Widget TV program dnes</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMainTVTodayWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMainTVTodayWidget)</onclick>
+						</control>
+					</control>
+					<control type="scrollbar" id="1039">
+						<right>0</right>
+						<top>163</top>
+						<width>12</width>
+						<bottom>137</bottom>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(1039)">conditional</animation>
+						<onleft>1021</onleft>
+						<onright>1021</onright>
+						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+						<visible>Control.IsVisible(1021)</visible>
+					</control>
+					<control type="grouplist" id="1041"> <!-- Easy/SC+ Movies -->
+						<pagecontrol>1059</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1059</onright>
+						<onup>1041</onup>
+						<ondown>1041</ondown>
+						<visible>Container(1000).HasFocus(1040)</visible>
+						<control type="radiobutton" id="1042"> <!-- Movies Menu enable/disable -->
+							<label>Povolit Filmy Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMovie)</selected>
+							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
+						</control>
+						<control type="image" id="1043">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1044"> <!-- Movies Menu Widget -->
+							<label>Widget Menu Filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1045"> <!-- Last Played Movies Widget -->
+							<label>Widget Poslední sledované filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesLastPlayedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1046"> <!-- Switch to Trakt Watched Movies Widget -->
+							<label>- Použít seznam z Trakt?</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidgetTrakt)</onclick>
+						</control>
+						<control type="radiobutton" id="1047"> <!-- New Movies Widget -->
+							<label>Widget Filmové novinky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesNewWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesNewWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1048"> <!-- New Movies Dubed Widget -->
+							<label>Widget Filmové novinky dabované</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesNewDubWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesNewDubWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1049"> <!-- Just Played Movies Widget -->
+							<label>Widget Právě sledované filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesJustPlayedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesJustPlayedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1050"> <!-- Favorites Movies Widget -->
+							<label>Widget Nejsledovanější filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesFavoritesWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesFavoritesWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1051"> <!-- Last Added Movies Widget -->
+							<label>Widget Nově Přidané filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesNewAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesNewAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1052"> <!-- Movies by Name (Letter) Widget -->
+							<label>Widget Název filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesNameWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesNameWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1053"> <!-- Movies by Quality Widget -->
+							<label>Widget Kvalita filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesQualityWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesQualityWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1054"> <!-- Movies by Country Widget -->
+							<label>Widget Země filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesCountryWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesCountryWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1055"> <!-- Movies by Genre Widget -->
+							<label>Widget Žánry filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesGenreWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesGenreWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1056"> <!-- Movies by Year Widget -->
+							<label>Widget Rok filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesYearWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesYearWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1057"> <!-- Movies Sets Widget -->
+							<label>Widget Sady filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesSetsWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesSetsWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1058"> <!-- Movies Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="scrollbar" id="1059">
+						<right>0</right>
+						<width>12</width>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(1059)">conditional</animation>
+						<onleft>1041</onleft>
+						<onright>1041</onright>
+						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+						<visible>Control.IsVisible(1041)</visible>
+					</control>
+					<control type="grouplist" id="1061"> <!-- Easy/SC+ TVShow -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1061</onup>
+						<ondown>1061</ondown>
+						<visible>Container(1000).HasFocus(1060)</visible>
+						<control type="radiobutton" id="1062"> <!-- TVShow Menu enable/disable -->
+							<label>Povolit Seriály Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShow)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
+						</control>
+						<control type="image" id="1063">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1064"> <!-- TVShows Menu Widget -->
+							<label>Widget Menu Seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1065"> <!-- TVshows Last Played Widget -->
+							<label>Widget Poslední sledované seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1066"> <!-- Switch to Trakt Watched TVShows Widget -->
+							<label>- Použít seznam z Trakt?</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidgetTrakt)</onclick>
+						</control>
+						<control type="radiobutton" id="1067"> <!-- TVShows New Added Widget -->
+							<label>Widget Poslední přidané seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsNewAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1068"> <!-- TVShows New Added Episodes Widget -->
+							<label>Widget Poslední přidané části</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsNewAddedEpisodesWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedEpisodesWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1069"> <!-- TVShows Favorites Widget -->
+							<label>Widget Nejsledovanější seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVshowsFavoritesWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVshowsFavoritesWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1070"> <!-- TVShows Just Played Widget -->
+							<label>Widget Právě hrané seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsJustPlayedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsJustPlayedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1071"> <!-- TVShows by Name (Letter) Widget -->
+							<label>Widget Název seriálu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsNameWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsNameWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1072"> <!-- TVShows Country Widget -->
+							<label>Widget Země seriálu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsCountryWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsCountryWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1073"> <!-- TVShows Genres Widget -->
+							<label>Widget Žánry seriálu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsGenreWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsGenreWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1074"> <!-- TVShows Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVShowsMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVShowsMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1081"> <!-- Easy/SC+ Stories -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1081</onup>
+						<ondown>1081</ondown>
+						<visible>Container(1000).HasFocus(1080)</visible>
+						<control type="radiobutton" id="1082"> <!-- Stories Menu enable/disable -->
+							<label>Povolit Pohádky Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStories)</selected>
+							<onclick>Skin.ToggleSetting(SCStories)</onclick>
+						</control>
+						<control type="image" id="1083">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1084"> <!-- Stories Menu Widget -->
+							<label>Widget Menu Pohádky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1085"> <!-- Stories Last Added Widget -->
+							<label>Widget Poslední přidané pohádky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesLastAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesLastAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1086"> <!-- Stories Movie Last Added Widget -->
+							<label>Widget Náhodně vybrané pohádkové filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesMovieLastAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesMovieLastAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1087"> <!-- Stories Cartoon Last Added Widget -->
+							<label>Widget Náhodně vybrané animované filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesCartoonLastAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesCartoonLastAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1088"> <!-- Stories Disney Last Added Widget -->
+							<label>Widget Náhodně vybrané od Disney</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesDisneyLastAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesDisneyLastAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1089"> <!-- Stories Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCStoriesMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCStoriesMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1101"> <!-- Easy/SC+ Concerts -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1101</onup>
+						<ondown>1101</ondown>
+						<visible>Container(1000).HasFocus(1100)</visible>
+						<control type="radiobutton" id="1102"> <!-- Concerts Menu enable/disable -->
+							<label>Povolit Koncerty Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCConcerts)</selected>
+							<onclick>Skin.ToggleSetting(SCConcerts)</onclick>
+						</control>
+						<control type="image" id="1003">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1104"> <!-- Concerts Menu Widget -->
+							<label>Widget Menu Koncerty</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCConcertsMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCConcertsMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1105"> <!-- Concerts Last Added Widget -->
+							<label>Widget Náhodně vybrané koncerty I. a II. část</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCConcertsLastAddedWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCConcertsLastAddedWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1106"> <!-- Concerts Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCConcertsMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCConcertsMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1121"> <!-- Easy/SC+ Anime -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1121</onup>
+						<ondown>1121</ondown>
+						<visible>Container(1000).HasFocus(1120)</visible>
+						<control type="radiobutton" id="1122"> <!-- Anime Menu enable/disable -->
+							<label>Povolit Anime Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCAnime)</selected>
+							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
+						</control>
+						<control type="image" id="1123">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1124"> <!-- Anime Menu Widget -->
+							<label>Widget Menu Anime</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCAnimeMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCAnimeMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1125"> <!-- Anime Movies Widget -->
+							<label>Widget Náhodně vybrané filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCAnimeMoviessWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCAnimeMoviessWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1126"> <!-- Anime TVShows Widget -->
+							<label>Widget Náhodně vybrané seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCAnimeTVShowsWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCAnimeTVShowsWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1127"> <!-- Anime Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCAnimeMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCAnimeMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1141"> <!-- Easy/SC+ TV -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1141</onup>
+						<ondown>1141</ondown>
+						<visible>Container(1000).HasFocus(1140)</visible>
+						<control type="radiobutton" id="1142"> <!-- TV Menu enable/disable -->
+							<label>Povolit TV Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTV)</selected>
+							<onclick>Skin.ToggleSetting(SCTV)</onclick>
+						</control>
+						<control type="image" id="1143">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1144"> <!-- TV Today Wall Widget -->
+							<label>Widget Dnešní program Wall</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVTodayWallWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVTodayWallWidget)</onclick>
+							<visible>false</visible>
+						</control>
+						<control type="image" id="1145">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+							<visible>false</visible>
+						</control>
+						<control type="radiobutton" id="1146"> <!-- TV Menu Widget -->
+							<label>Widget Menu TV</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1147"> <!-- TV Today Widget -->
+							<label>Widget Dnešní program</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVTodayWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVTodayWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1148"> <!-- TV TwoWeaks Widget -->
+							<label>Widget Program na 14 dní</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVTwoWeakWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVTwoWeakWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1149"> <!-- TV Main Menu Widget -->
+							<label>Widget Stream-Cinema Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTVMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTVMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1161"> <!-- Easy/SC+ Trakt.tv-->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1161</onup>
+						<ondown>1161</ondown>
+						<visible>Container(1000).HasFocus(1160)</visible>
+						<control type="radiobutton" id="1162"> <!-- Trakt Menu enable/disable -->
+							<label>Povolit Moje Seznamy Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTrakt)</selected>
+							<onclick>Skin.ToggleSetting(SCTrakt)</onclick>
+						</control>
+						<control type="image" id="1163">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1164"> <!-- Trakt Menu Widget -->
+							<label>Widget Menu Trakt</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTraktMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTraktMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1165"> <!-- Trakt ToWatch Widget -->
+							<label>Widget Trakt Seznam ke shlédnutí</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTraktToWatchWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTraktToWatchWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1166"> <!-- Trakt Watched Movies Widget -->
+							<label>Widget Trakt Shlédnuté filmy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTraktHistoryWatchedMoviesWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTraktHistoryWatchedMoviesWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1167"> <!-- Trakt Watched TVShows Widget -->
+							<label>Widget Trakt Shlédnuté seriály</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTraktHistoryWatchedTVShowsWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTraktHistoryWatchedTVShowsWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1168"> <!-- Trakt Main Menu Widget -->
+							<label>Widget Menu Stream-Cinema</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCTraktMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCTraktMainWidget)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1281"> <!-- iVysilani -->
+						<pagecontrol>1299</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1299</onright>
+						<onup>1281</onup>
+						<ondown>1281</ondown>
+						<visible>Container(1000).HasFocus(1280)</visible>
+						<control type="radiobutton" id="1182"> <!-- iVysilani Menu enable/disable -->
+							<label>Povolit iVysílání</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoiVysilaniButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onclick>
+						</control>
+						<control type="image" id="1283">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1284"> <!-- iVysilani Menu Widget -->
+							<label>Widget Menu iVysílání</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilaniMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilaniMenuWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1285"> <!-- iVysilani live Widget -->
+							<label>Widget Živé vysílání</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilaniliveWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilaniliveWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1286"> <!-- iVysilani byDate Widget -->
+							<label>Widget Podle data</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanibyDateWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanibyDateWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1287"> <!-- iVysilani byLetter Widget -->
+							<label>Widget Podle abecedy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanibyLetterWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanibyLetterWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1288"> <!-- iVysilani byGenre Widget -->
+							<label>Widget Podle žánru</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanibyGenreWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanibyGenreWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1289"> <!-- iVysilani tipsMain Widget -->
+							<label>Widget Tipy</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanitipsMainWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanitipsMainWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1290"> <!-- iVysilani topDay Widget -->
+							<label>Widget Nejsledovanější dne</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanitopDayWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanitopDayWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1291"> <!-- iVysilani topWeek Widget -->
+							<label>Widget Nejsledovanější týdne</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanitopWeekWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanitopWeekWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1292"> <!-- iVysilani tipsNote Widget -->
+							<label>Widget Nepřehlédněte</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanitipsNoteWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanitipsNoteWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1293"> <!-- iVysilani tipsArchive Widget -->
+							<label>Widget Z našeho archivu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilanitipsArchiveWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilanitipsArchiveWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1294"> <!-- iVysilani watching Widget -->
+							<label>Widget Ostatní právě sledují</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(iVysilaniwatchingWidget)</selected>
+							<onclick>Skin.ToggleSetting(iVysilaniwatchingWidget)</onclick>
+						</control>
+					</control>
+					<control type="scrollbar" id="1299">
+						<right>0</right>
+						<width>12</width>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(1299)">conditional</animation>
+						<onleft>1281</onleft>
+						<onright>1281</onright>
+						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+						<visible>Control.IsVisible(1281)</visible>
+					</control>
+					<control type="grouplist" id="1301"> <!-- Radio.de -->
+						<pagecontrol>1319</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1319</onright>
+						<onup>1301</onup>
+						<ondown>1301</ondown>
+						<visible>Container(1000).HasFocus(1300)</visible>
+						<control type="radiobutton" id="1302"> <!-- Radio.de Menu enable/disable -->
+							<label>Povolit Radio.de</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoRadiodeButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+						</control>
+						<control type="image" id="1303">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1304"> <!-- Radio.de Wall Widget -->
+							<label>Widget My Stations Wall</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeWallWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeWallWidget)</onclick>
+						</control>
+						<control type="image" id="1305">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1306"> <!-- Radio.de Menu Widget -->
+							<label>Widget Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeMenuWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1307"> <!-- Radio.de Local Stations Widget -->
+							<label>Widget Local Stations</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeLocalStationsWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeLocalStationsWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1308"> <!-- Radio.de Editorials Recommendations Widget -->
+							<label>Widget Editorials Recommendations</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeEditorialsWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeEditorialsWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1309"> <!-- Radio.de Top 100 Stations Widget -->
+							<label>Widget Top 100 Stations</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeTop100Widget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeTop100Widget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1310"> <!-- Radio.de Browse by genre Widget -->
+							<label>Widget Browse by genre</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeByGenreWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeByGenreWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1311"> <!-- Radio.de Local Browse by topic Widget -->
+							<label>Widget Browse by topic</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeByTopicWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeByTopicWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1312"> <!-- Radio.de Browse by country Widget -->
+							<label>Widget Browse by country</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeByCountryWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeByCountryWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1313"> <!-- Radio.de Browse by city Widget -->
+							<label>Widget Browse by city</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeByCityWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeByCityWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1314"> <!-- Radio.de Browse by Language Widget -->
+							<label>Widget Browse by language</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeByLanguageWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeByLanguageWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1315"> <!-- Radio.de Search for station Widget -->
+							<label>Widget Search for station</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeSearchWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeSearchWidget)</onclick>
+							<visible>false</visible>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1316"> <!-- Radio.de My Stations Widget -->
+							<label>Widget My Stations</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(RadiodeMyStationsWidget)</selected>
+							<onclick>Skin.ToggleSetting(RadiodeMyStationsWidget)</onclick>
+							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+					</control>
+					<control type="scrollbar" id="1319">
+						<right>0</right>
+						<width>12</width>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(1319)">conditional</animation>
+						<onleft>1301</onleft>
+						<onright>1301</onright>
+						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+						<visible>Control.IsVisible(1301)</visible>
+					</control>
+					<control type="grouplist" id="1321"> <!-- Trailer -->
+						<pagecontrol>1349</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1349</onright>
+						<onup>1321</onup>
+						<ondown>1321</ondown>
+						<visible>Container(1000).HasFocus(1320)</visible>
+						<control type="radiobutton" id="1322"> <!-- Trailer enable/disable -->
+							<label>Povolit Trailer</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoTrailerButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+						</control>
+						<control type="image" id="1323">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1324"> <!-- Trailer Wall Widget -->
+							<label>Widget Týdenní novinky Wall</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(TrailerWallWidget)</selected>
+							<onclick>Skin.ToggleSetting(TrailerWallWidget)</onclick>
+						</control>
+						<control type="image" id="1325">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1326"> <!-- Trailer Menu Widget -->
+							<label>Widget Menu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(TrailerMenuWidget)</selected>
+							<onclick>Skin.ToggleSetting(TrailerMenuWidget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1327"> <!-- Trailer00 Widget -->
+							<label>Widget Týdenní novinky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer00Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer00Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1328"> <!-- Trailer01 Widget -->
+							<label>Widget Total film</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer01Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer01Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1329"> <!-- Trailer02 Widget -->
+							<label>Widget Falcom</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer02Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer02Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1330"> <!-- Trailer03 Widget -->
+							<label>Widget Freeman</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer03Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer03Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1331"> <!-- Trailer04 Widget -->
+							<label>Widget Bonton film</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer04Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer04Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1332"> <!-- Trailer05 Widget -->
+							<label>Fim Select Trailer</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer05Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer05Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1333"> <!-- Trailer06 Widget -->
+							<label>Widget Movie Clips Comming Soon</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer06Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer06Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1334"> <!-- Trailer07 Widget -->
+							<label>Widget Movie Clips Trailers</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer07Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer07Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1335"> <!-- Trailer08 Widget -->
+							<label>Widget New on Netflix</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer08Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer08Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1336"> <!-- Trailer09 Widget -->
+							<label>Widget Filmové novinky</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer09Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer09Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1337"> <!-- Trailer10 Widget -->
+							<label>Widget High Five</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer10Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer10Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1338"> <!-- Trailer11 Widget -->
+							<label>Widget CinemArt SK</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer11Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer11Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1339"> <!-- Trailer12 Widget -->
+							<label>Widget Svět Filmu</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer12Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer12Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+						<control type="radiobutton" id="1340"> <!-- Trailer13 Widget -->
+							<label>Widget Film Europe</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(Trailer13Widget)</selected>
+							<onclick>Skin.ToggleSetting(Trailer13Widget)</onclick>
+							<enable>!Skin.HasSetting(TrailerWallWidget)</enable>
+						</control>
+					</control>
+					<control type="scrollbar" id="1349">
+						<right>0</right>
+						<width>12</width>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(1349)">conditional</animation>
+						<onleft>1321</onleft>
+						<onright>1321</onright>
+						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+						<visible>Control.IsVisible(1321)</visible>
+					</control>
+					<control type="grouplist" id="1401"> <!-- Movies -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1401</onup>
+						<ondown>1401</ondown>
+						<visible>Container(1000).HasFocus(1400)</visible>
+						<control type="radiobutton" id="1402">
+							<label>Povolit $LOCALIZE[342]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+						</control>
+						<control type="image" id="1403">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1404">
+							<label>$LOCALIZE[31157]</label>
+							<include>DefaultSettingButton</include>
+							<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
+							<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1421"> <!-- TVShows -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1421</onup>
+						<ondown>1421</ondown>
+						<visible>Container(1000).HasFocus(1420)</visible>
+						<control type="radiobutton" id="1422">
+							<label>Povolit $LOCALIZE[20343]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+						</control>
+						<control type="image" id="1423">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1424">
+							<label>$LOCALIZE[31157]</label>
+							<include>DefaultSettingButton</include>
+							<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
+							<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1461"> <!-- TV -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1461</onup>
+						<ondown>1461</ondown>
+						<visible>Container(1000).HasFocus(1460)</visible>
+						<control type="radiobutton" id="1462">
+							<label>Povolit $LOCALIZE[19020]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoTVButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+						</control>
+						<control type="image" id="1463">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton"id="1464">
+							<label>Spouštět přímo přehrávání TV</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(play_tv)</selected>
+							<onclick>Skin.ToggleSetting(play_tv)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1481"> <!-- Radio -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1481</onup>
+						<ondown>1481</ondown>
+						<visible>Container(1000).HasFocus(1480)</visible>
+						<control type="radiobutton" id="1482">
+							<label>Povolit $LOCALIZE[19021]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoRadioButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+						</control>
+						<control type="image" id="1483">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="radiobutton" id="1484">
+							<label>Spouštět přímo přehrávání Radio</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(play_radio)</selected>
+							<onclick>Skin.ToggleSetting(play_radio)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1501"> <!-- Music -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1501</onup>
+						<ondown>1501</ondown>
+						<visible>Container(1000).HasFocus(1500)</visible>
+						<control type="radiobutton" id="1502">
+							<label>Povolit $LOCALIZE[2]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+						</control>
+						<control type="image" id="1503">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1504">
+							<label>$LOCALIZE[31157]</label>
+							<include>DefaultSettingButton</include>
+							<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
+							<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						</control>
+					</control>
+					<control type="grouplist" id="1521"> <!-- Music Videos -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1521</onup>
+						<ondown>1521</ondown>
+						<visible>Container(1000).HasFocus(1520)</visible>
+						<control type="radiobutton" id="1522">
+							<label>Povolit $LOCALIZE[20389]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
+						</control>
+						<control type="image" id="1523">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1541"> <!-- Addons -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1541</onup>
+						<ondown>1541</ondown>
+						<visible>Container(1000).HasFocus(1540)</visible>
+						<control type="radiobutton" id="1542">
+							<label>Povolit $LOCALIZE[24001]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
+						</control>
+						<control type="image" id="1543">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1561"> <!-- Pictures -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1561</onup>
+						<ondown>1561</ondown>
+						<visible>Container(1000).HasFocus(1560)</visible>
+						<control type="radiobutton" id="1562">
+							<label>Povolit $LOCALIZE[1]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+						</control>
+						<control type="image" id="1563">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1581"> <!-- Videos -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1581</onup>
+						<ondown>1581</ondown>
+						<visible>Container(1000).HasFocus(1580)</visible>
+						<control type="radiobutton" id="1582">
+							<label>Povolit $LOCALIZE[3]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+						</control>
+						<control type="image" id="1583">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1601"> <!-- Favorites -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1601</onup>
+						<ondown>1601</ondown>
+						<visible>Container(1000).HasFocus(1600)</visible>
+						<control type="radiobutton" id="1602">
+							<label>Povolit $LOCALIZE[10134]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoFavButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
+						</control>
+						<control type="image" id="1603">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1621"> <!-- Weather -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1621</onup>
+						<ondown>1621</ondown>
+						<visible>Container(1000).HasFocus(1620)</visible>
+						<control type="radiobutton" id="1622">
+							<label>Povolit $LOCALIZE[8]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+						</control>
+						<control type="image" id="1623">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+					<control type="grouplist" id="1641"> <!-- Games -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1641</onup>
+						<ondown>1641</ondown>
+						<visible>Container(1000).HasFocus(1640)</visible>
+						<control type="radiobutton" id="1642">
+							<label>Povolit $LOCALIZE[15016]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(HomeMenuNoGamesButton)</selected>
+							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+						</control>
+						<control type="image" id="1643">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="10000"> <!-- Easy/SC* Others Menus Settings -->
+				<left>470</left>
+				<include>OpenClose_Right</include>
+				<control type="grouplist" id="700"> <!-- Easy/SC* General Menu (Obecné) -->
+					<top>160</top>
+					<left>0</left>
+					<right>0</right>
+					<bottom>140</bottom>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>700</onup>
+					<ondown>700</ondown>
+					<visible>Container(9000).HasFocus(1)</visible>
+					<control type="radiobutton" id="701">
+						<label>$LOCALIZE[31095]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(no_slide_animations)</selected>
+						<onclick>Skin.ToggleSetting(no_slide_animations)</onclick>
+					</control>
+					<control type="radiobutton" id="702">
+						<label>$LOCALIZE[20189]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
+						<selected>Skin.HasSetting(autoscroll)</selected>
+					</control>
+					<control type="radiobutton" id="703">
+						<label>$LOCALIZE[31158]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(touchmode)</onclick>
+						<selected>Skin.HasSetting(touchmode)</selected>
+					</control>
+					<!--
+					<control type="radiobutton" id="704">
+						<label>$LOCALIZE[31093]</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="!String.IsEmpty(Weather.Plugin)">Skin.ToggleSetting(show_weatherinfo)</onclick>
+						<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
+						<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
+					</control>
+					-->
+					<control type="radiobutton" id="705">
+						<label>$LOCALIZE[31160]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
+						<selected>!Skin.HasSetting(hide_mediaflags)</selected>
+					</control>
+					<!--
+					<control type="button" id="706">
+						<label>$LOCALIZE[31024]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SelectBool(31024, 38018|circle_userrating, 563|circle_rating, 16018|circle_none)</onclick>
+						<label2>$VAR[RatingSettingLabel2Var]</label2>
+					</control>
+					-->
+					<control type="button" id="707">
+						<label>$LOCALIZE[31164]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SelectBool(31164, 31165|show_profilename, 31166|show_profileavatar, 16018|show_none)</onclick>
+						<label2>$VAR[ProfileIdentificationLabel2Var]</label2>
+					</control>
+					<control type="image" id="710"> <!-- Easy/SC+ -->
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="radiobutton" id="711"> <!-- Easy/SC+ -->
+						<label>Zobrazit widgety na celé obrazovce</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_fullwidget)</onclick>
+						<selected>Skin.HasSetting(show_fullwidget)</selected>
+					</control>
+					<control type="radiobutton" id="712"> <!-- Easy/SC+ -->
+						<label>Zobrazit info widgetu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_info)</onclick>
+						<selected>Skin.HasSetting(show_info)</selected>
+					</control>
+					<control type="radiobutton" id="714"> <!-- Easy/SC+ -->
+						<label>Zobrazit krátké info widgetu vždy</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_always)</onclick>
+						<selected>Skin.HasSetting(show_always)</selected>
+					</control>
+					<control type="button" id="713"> <!-- Easy/SC+ -->
+						<label>Maximální počet položek widgetu</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),5)">Skin.SetString(widget_limit,10)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),10)">Skin.SetString(widget_limit,15)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),15)">Skin.SetString(widget_limit,20)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),20)">Skin.SetString(widget_limit,25)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),25)">Skin.SetString(widget_limit,30)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),30)">Skin.SetString(widget_limit,35)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),35)">Skin.SetString(widget_limit,40)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),40)">Skin.SetString(widget_limit,45)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),45)">Skin.SetString(widget_limit,50)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(widget_limit),50)">Skin.SetString(widget_limit,5)</onclick>
+						<label2>$INFO[Skin.String(widget_limit)]</label2>
+					</control>
+					<control type="image" id="720"> <!-- Easy/SC+ -->
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="radiobutton" id="721"> <!-- Easy/SC* Move from original section -->
+						<label>$LOCALIZE[31093]</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="!String.IsEmpty(Weather.Plugin)">Skin.ToggleSetting(show_weatherinfo)</onclick>
+						<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
+						<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
+					</control>
+					<control type="radiobutton" id="722"> <!-- Easy/SC+ -->
+						<label>Zobrazit lokalitu počasí v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_weatherlocation)</onclick>
+						<selected>Skin.HasSetting(show_weatherlocation)</selected>
+						<enable>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</enable>
+					</control>
+					<control type="radiobutton" id="723"> <!-- Easy/SC+ -->
+						<label>Zobrazit datum v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_date)</onclick>
+						<selected>Skin.HasSetting(show_date)</selected>
+					</control>
+					<control type="radiobutton" id="724"> <!-- Easy/SC+ -->
+						<label>Zobrazit využití CPU v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_CPUusage)</onclick>
+						<selected>Skin.HasSetting(show_CPUusage)</selected>
+					</control>
+					<control type="radiobutton" id="725"> <!-- Easy/SC+ -->
+						<label>Zobrazit využití MEM v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_MEMusage)</onclick>
+						<selected>Skin.HasSetting(show_MEMusage)</selected>
+					</control>
+					<control type="radiobutton" id="726"> <!-- Easy/SC+ -->
+						<label>Zobrazit teplotu CPU v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_CPUtemperature)</onclick>
+						<selected>Skin.HasSetting(show_CPUtemperature)</selected>
+					</control>
+					<control type="radiobutton" id="727"> <!-- Easy/SC+ -->
+						<label>Zobrazit teplotu GPU v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_GPUtemperature)</onclick>
+						<selected>Skin.HasSetting(show_GPUtemperature)</selected>
+					</control>
+					<control type="radiobutton" id="728"> <!-- Easy/SC+  -->
+						<label>Zobrazit příznak budoucího nahrávání</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_futurerecording)</onclick>
+						<selected>Skin.HasSetting(show_futurerecording)</selected>
+					</control>
+					<control type="radiobutton" id="729"> <!-- Easy/SC+ -->
+						<label>Zobrazit příznak probíhajícího nahrávání</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_currentrecording)</onclick>
+						<selected>Skin.HasSetting(show_currentrecording)</selected>
+					</control>
+					<control type="radiobutton" id="730"> <!-- Easy/SC+ -->
+						<label>Zobrazit využití pamětí pro nahrávání</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(show_capacityrecording)</onclick>
+						<selected>Skin.HasSetting(show_capacityrecording)</selected>
+					</control>
+					<control type="radiobutton" id="731"> <!-- Easy/SC+ -->
+						<label>Zobrazit porovnání verzí skinu v horním panelu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(SCCompare)</onclick>
+						<selected>Skin.HasSetting(SCCompare)</selected>
+						<visible>false</visible> <!-- EASY/SC- Leia -->
+					</control>
+					<control type="image" id="732"> <!-- Easy/SC+ -->
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="radiobutton" id="733"> <!-- Easy/SC+ -->
+						<label>Zobrazit uživatelský rating</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(circle_userrating)</onclick>
+						<selected>Skin.HasSetting(circle_userrating)</selected>
+					</control>
+					<control type="radiobutton" id="734"> <!-- Easy/SC+ -->
+						<label>Zobrazit scraper rating</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(circle_rating)</onclick>
+						<selected>Skin.HasSetting(circle_rating)</selected>
+					</control>
+					<control type="radiobutton" id="735"> <!-- Easy/SC+ -->
+						<label>Doplňující text položky hlavního menu</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(menu_postfix)</onclick>
+						<selected>Skin.HasSetting(menu_postfix)</selected>
+					</control>
+				</control>
+				<control type="grouplist" id="600">
+					<top>160</top>
+					<left>0</left>
+					<right>0</right>
+					<bottom>140</bottom>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<visible>Container(9000).HasFocus(3)</visible>
+					<control type="radiobutton" id="605">
+						<label>$LOCALIZE[31002]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(no_fanart)</onclick>
+						<selected>!Skin.HasSetting(no_fanart)</selected>
+					</control>
+					<control type="button" id="607">
+						<label>$LOCALIZE[31156]</label>
+						<label2>$VAR[BackgroundOverlayTypeVar]</label2>
+						<include>DefaultSettingButton</include>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),7)">Skin.SetString(background_overlay,0)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),6)">Skin.SetString(background_overlay,7)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),5)">Skin.SetString(background_overlay,6)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),4)">Skin.SetString(background_overlay,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),3)">Skin.SetString(background_overlay,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),2)">Skin.SetString(background_overlay,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),1)">Skin.SetString(background_overlay,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(background_overlay),0)">Skin.SetString(background_overlay,1)</onclick>
+					</control>
+					<control type="button" id="608">
+						<label>$LOCALIZE[31131]</label>
+						<label2>$INFO[Skin.String(HomeFanart.name)]</label2>
+						<include>DefaultSettingButton</include>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<enable>!Skin.HasSetting(no_fanart)</enable>
+					</control>
+					<control type="button" id="609">
+						<label>$LOCALIZE[31062]</label>
+						<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
+						<include>DefaultSettingButton</include>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<enable>!Skin.HasSetting(no_fanart)</enable>
+					</control>
+					<control type="button" id="6066">
+						<label>$LOCALIZE[31149]</label>
+						<label2>$INFO[Skin.String(MovieGenreFanart.Name)]</label2>
+						<include>DefaultSettingButton</include>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
+					</control>
+				</control>
+				<control type="grouplist" id="610">
+					<top>160</top>
+					<left>0</left>
+					<right>0</right>
+					<bottom>140</bottom>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>610</onup>
+					<pagecontrol>60</pagecontrol>
+					<ondown>610</ondown>
+					<visible>Container(9000).HasFocus(2)</visible>
+					<control type="radiobutton" id="621">
+						<label>$LOCALIZE[31008]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(home_no_categories_widget)</selected>
+						<onclick>Skin.ToggleSetting(home_no_categories_widget)</onclick>
+					</control>
+					<control type="radiobutton" id="611">
+						<label>$LOCALIZE[342]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+					</control>
+					<control type="button" id="6110">
+						<label>- $LOCALIZE[31157]</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
+						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						<enable>!Skin.HasSetting(HomeMenuNoMovieButton)</enable>
+					</control>
+					<control type="radiobutton" id="612">
+						<label>$LOCALIZE[20343]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+					</control>
+					<control type="button" id="6120">
+						<label>- $LOCALIZE[31157]</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
+						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						<enable>!Skin.HasSetting(HomeMenuNoTVShowButton)</enable>
+					</control>
+					<control type="radiobutton" id="613">
+						<label>$LOCALIZE[2]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+					</control>
+					<control type="button" id="6130">
+						<label>- $LOCALIZE[31157]</label>
+						<include>DefaultSettingButton</include>
+						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
+						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						<enable>!Skin.HasSetting(HomeMenuNoMusicButton)</enable>
+					</control>
+					<control type="radiobutton" id="6131">
+						<label>$LOCALIZE[20389]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
+					</control>
+					<control type="radiobutton" id="618">
+						<label>$LOCALIZE[19020]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoTVButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+					</control>
+					<control type="radiobutton" id="619">
+						<label>$LOCALIZE[19021]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoRadioButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+					</control>
+					<control type="radiobutton" id="614">
+						<label>$LOCALIZE[24001]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
+					</control>
+					<control type="radiobutton" id="615">
+						<label>$LOCALIZE[1]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+					</control>
+					<control type="radiobutton" id="616">
+						<label>$LOCALIZE[3]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+					</control>
+					<control type="radiobutton" id="620">
+						<label>$LOCALIZE[15016]</label>
+						<visible>System.GetBool(gamesgeneral.enable)</visible>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoGamesButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+					</control>
+					<control type="radiobutton" id="6160">
+						<label>$LOCALIZE[10134]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoFavButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
+					</control>
+					<control type="radiobutton" id="617">
+						<label>$LOCALIZE[8]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+					</control>
+				</control>
+				<control type="grouplist" id="800"> <!-- Easy/SC+ Specific Settings Menu (Specifická nastavení) -->
+					<top>160</top>
+					<left>0</left>
+					<right>0</right>
+					<bottom>140</bottom>
+					<onleft>9000</onleft>
+					<pagecontrol>80</pagecontrol>
+					<onright>80</onright>
+					<onup>800</onup>
+					<ondown>800</ondown>
+					<visible>Container(9000).HasFocus(4)</visible>
+					<control type="label" id="801"> <!-- Develop -->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>Develop</label>
+						<visible>Skin.HasSetting(develop_home)</visible>
+					</control>
+					<control type="radiobutton" id="802"> <!-- Develop Home locality enable/disable --> 
+						<label>Nastavit Home</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(develop_home)</selected>
+						<onclick>Skin.ToggleSetting(develop_home)</onclick>
+						<visible>Skin.HasSetting(develop_home)</visible>
+					</control>
+					<control type="radiobutton" id="803"> <!-- Develop Easy switch enable/disable --> 
+						<label>Nastavit Easy</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(develop_easy)</selected>
+						<onclick>Skin.ToggleSetting(develop_easy)</onclick>
+						<visible>Skin.HasSetting(develop_home)</visible>
+					</control>
+					<control type="radiobutton" id="804"> <!-- Develop Easy switch enable/disable --> 
+						<label>Nastavit Test</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(develop_test)</selected>
+						<onclick>Skin.ToggleSetting(develop_test)</onclick>
+						<visible>Skin.HasSetting(develop_home)</visible>
+					</control>
+					<control type="image" id="809">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+						<visible>Skin.HasSetting(develop_home)</visible>
+					</control>
+					<control type="label" id="810"> <!-- Stream Cinema -->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>Stream-Cinema</label>
+					</control>
+					<control type="radiobutton" id="811"> <!-- Easy/SC skin function general enable/disable --> 
+						<label>Povolit Stream-Cinema</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoStreamCinemaButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoStreamCinemaButton)</onclick>
+						<enable>System.HasAddon(plugin.video.stream-cinema)</enable>
+					</control>
+					<control type="radiobutton" id="812"> <!-- Easy/SC+ -->
+						<label>Rozšíření vyhledávání Kodi o Stream-Cinema</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(SCSearch)</selected>
+						<onclick>Skin.ToggleSetting(SCSearch)</onclick>
+					</control>
+					<!--
+					<control type="radiobutton" id="813">
+						<label>Vyhledávání Kodi bez historie</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(SCSearchNoHistory)</onclick>
+						<selected>Skin.HasSetting(SCSearchNoHistory)</selected>
+					</control>
+					-->
+					<control type="button" id="814"> <!-- Easy/SC+ -->
+						<label>Download adresář</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetPath(SCDownloadPath)</onclick>
+						<label2>$INFO[Skin.String(SCDownloadPath)]</label2>
+					</control>
+					<control type="image" id="815">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="label" id="816"> <!-- iVysilání -->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>iVysílání</label>
+					</control>
+					<control type="radiobutton" id="817"> <!-- iVysilani skin function general enable/disable --> 
+						<label>Povolit iVysilani</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoiVysilaniButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onclick>
+					</control>
+					<control type="image" id="818">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="label" id="819"> <!-- Trailer -->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>Trailer</label>
+					</control>
+					<control type="radiobutton" id="820"> <!-- Trailer skin function general enable/disable --> 
+						<label>Povolit Trailer</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoTrailerButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+					</control>
+					<control type="image" id="821">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="label" id="822"> <!-- Radio.de-->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>Radio Internet</label>
+					</control>
+					<control type="radiobutton" id="823"> <!-- Radio.de skin function general enable/disable --> 
+						<label>Povolit Radio Internet</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoRadiodeButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+					</control>
+					<control type="radiobutton" id="824"> <!-- Radio.de search extension -->
+						<label>Rozšíření vyhledávání Kodi o Radio</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(RadiodeSearch)</selected>
+						<onclick>Skin.ToggleSetting(RadiodeSearch)</onclick>
+					</control>
+					<control type="image" id="825">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+					<control type="label" id="826"> <!-- Android only -->
+						<include>DefaultSettingButton</include>
+						<textcolor>button_focus</textcolor>
+						<label>Pro ...ELEC instalovaný z externí paměti</label>
+					</control>
+					<control type="radiobutton" id="827"> <!-- Reboot from internal memory - Android only --> 
+						<label>Povolit reboot z vnitřní paměti</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(reboot_internal)</selected>
+						<onclick>Skin.ToggleSetting(reboot_internal)</onclick>
+					</control>
+					<control type="button" id="828"> <!-- Reboot command - Android only --> 
+						<label>Povel pro reboot</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(reboot_command)</onclick>
+						<label2>$INFO[Skin.String(reboot_command)]</label2>
+					</control>
+					<control type="image" id="829">
+						<height>3</height>
+						<texture>dialogs/separator-grey.png</texture>
+					</control>
+				</control>
+				<control type="image">
+					<description>Dialog Header image</description>
+					<left>0</left>
+					<top>160</top>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="image">
+					<description>Dialog Header image</description>
+					<left>0</left>
+					<bottom>134</bottom>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group"> <!-- Easy/SC* Skin Settings Main Menu -->
+			<depth>DepthContentPanel</depth>
+			<left>0</left>
+			<include>OpenClose_Left</include>
+			<include content="ContentPanel">
+				<param name="width" value="530" />
+			</include>
+			<control type="list" id="9000">
+				<description>button area</description>
+				<left>0</left>
+				<top>160</top>
+				<width>470</width>
+				<height>700</height>
+				<onleft>10001</onleft> <!-- Easy/SC* 10000 => 10001 -->
+				<onright>10001</onright> <!-- Easy/SC* 10000 => 10001 -->
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="90" width="470">
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font37</font>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="470">
+					<control type="image">
+						<width>470</width>
+						<height>90</height>
+						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<font>font37</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$LOCALIZE[128]</label>
+						<onclick>noop</onclick>
+					</item>
+<!--
+					<item id="2">
+						<label>$LOCALIZE[31061]</label>
+						<onclick>noop</onclick>
+					</item>
+-->
+					<item id="4"> <!-- Easy/SC+ -->
+						<label>Specifická nastavení</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5"> <!-- Easy/SC+ New Menu -->
+						<label>$LOCALIZE[31061]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[31159]</label>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<right>0</right>
+			<top>163</top>
+			<bottom>137</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(610)</visible>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+		</include>
+		<include>BottomBar</include>
+		<control type="textbox" id="6">
+			<include>OpenClose_Right</include>
+			<description>description area</description>
+			<left>510</left>
+			<bottom>27</bottom>
+			<width>1350</width>
+			<height>100</height>
+			<font>font12</font>
+			<align>justify</align>
+			<textcolor>button_focus</textcolor>
+			<label>$VAR[SkinSettingsHelpTextVar]</label>
+			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+		</control>
+	</controls>
+</window>

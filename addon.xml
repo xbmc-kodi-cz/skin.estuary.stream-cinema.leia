@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.estuary.stream-cinema.leia" version="2.0.13" name="Estuary Stream-Cinema (Leia)" provider-name="phil65, Ichabod Fletchman, mod by JiRo, Client">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<news>
+[B]Verze 2.0.12.a3[/B]
+- upraveny odkazy widgetů Filmy Stream Cinema
+[B]Verze 2.0.12.a2[/B]
+- opravena chyba zobrazování hodnocení (ratingu)
+[B]Verze 2.0.12.a1[/B]
+- určeno výhradně pro Kodi 18.x Leia
+- výchozí verze Estuary 2.0.12
+- úprava výchozího vzhledu podle verze Estuary Stream-Cinema 1.9.16.h
+- verze je určena k testování nedočkavými uživateli výhradě na Kodi 18.x
+		</news>
+		<summary lang="cs">Vzhled Estuary Stream-Cinema od autora phil65 s modifikací pro addon Stream-Cinema od JiRo</summary>
+		<summary lang="sk">Vzhľad Estuary Stream-Cinema od autora phil65 s modifikáciou pre addon Stream-Cinema od Jiro</summary>
+		<description lang="cs">Estuary Stream-Cinema je odvozený od výchozího vzhledu pro Kodi 18.0 a vyšší. Snaží se být jednoduše pochopitelný a použitelný pro nové uživatele Kodi. Modifikace pro Stream-Cinema přidává do vzhledu funkce pro přímé využívání tohoto populárního českého a slovenského addon.</description>
+		<description lang="sk">Estuary Stream-Cinema je odvodený od východiskového vzhľadu pre Kodi 18.0 a vyššie. Pokúša sa byť pre prvotných používateľov Kodi jednoduchým na pochopenie a používanie. Modifikácia pre Stream-Cienema pridáva do vzhľadu funkcie pre priame využívanie tohto populárneho českého a slovenského addon.</description>
+		<disclaimer lang="cs">Estuary Stream-Cinema je amatérskou úpravou vzhledu Estuary. Používáte ho na vlastní nebezpečí.[CR]Případnou podporu najdete na https://www.xbmc-kodi.cz/prispevek.estuary.stream-cinema</disclaimer>
+		<disclaimer lang="sk">Estuary Stream-Cinema je amatérskou úpravou vhľadu Estuary. Používate ho na vlastné nebezpečenstvo.[CR]Prípadnú podporu nájdete na https://www.xbmc-kodi.cz/prispevek.estuary.stream-cinema</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<forum>https://www.xbmc-kodi.cz/prispevek.estuary.stream-cinema</forum>
+		<source>https://github.com/jirkoun/skin.estuary.stream-cinema.leia/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+			<screenshot>resources/screenshot008.jpg</screenshot>
+			<screenshot>resources/screenshot009.jpg</screenshot>
+			<screenshot>resources/screenshot010.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>

@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> <!-- Easy/SC+ -->
+	<include name="HomeWidgets">
+		<control type="group" id="82000"> <!-- Easy/SC+ Movies Wall -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="82050"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),movieswall)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="movieswall"/>
+			</include>
+			<control type="grouplist" id="82001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetWallPoster" condition="false">
+					<param name="content_path" value="special://skin/playlists/inprogress_movies.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31010]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="82050"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="83000"> <!-- Easy/SC+ Episodes Wall -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="83050"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),episodeswall)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="episodeswall"/>
+			</include>
+			<control type="grouplist" id="83001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetWallEpisodes" condition="false">
+					<param name="content_path" value="special://skin/playlists/recent_unwatched_episodes.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[20387]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="83050"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="80000"> <!-- Easy/SC+ Radio.de -->
+			<include>ShiftWidgets</include>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),radiode)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="radiode"/>
+			</include>
+			<control type="grouplist" id="80001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListMenu" condition="Skin.HasSetting(RadiodeMenuWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="RadiodeMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Radio"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="80050"/>
+				</include>
+				<include content="WidgetListChannels" condition="Skin.HasSetting(RadiodeLocalStationsWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/local/"/>
+					<param name="widget_header" value="Local Stations"/>
+					<param name="widget_target" value="music"/>
+					<param name="label2" value=""/>
+					<param name="list_id" value="80150"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="always" value="true"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(80150).ListItem.Title,: [B],[/B]]$INFO[Container(80150).ListItem.Genre, - [COLOR button_focus],[/COLOR]]"/>
+				</include>
+				<include content="WidgetListChannels" condition="Skin.HasSetting(RadiodeEditorialsWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/recommended/"/>
+					<param name="widget_header" value="Editorials Recommendations"/>
+					<param name="widget_target" value="music"/>
+					<param name="label2" value=""/>
+					<param name="list_id" value="80200"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="always" value="true"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(80200).ListItem.Title,: [B],[/B]]$INFO[Container(80200).ListItem.Genre, - [COLOR button_focus],[/COLOR]]"/>
+				</include>
+				<include content="WidgetListChannels" condition="Skin.HasSetting(RadiodeTop100Widget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/top/"/>
+					<param name="widget_header" value="Top 100 Stations"/>
+					<param name="widget_target" value="music"/>
+					<param name="label2" value=""/>
+					<param name="list_id" value="80250"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="always" value="true"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(80250).ListItem.Title,: [B],[/B]]$INFO[Container(80250).ListItem.Genre, - [COLOR button_focus],[/COLOR]]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(RadiodeByGenreWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/genre/"/>
+					<param name="widget_header" value="Browse by genre"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="80300"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(RadiodeByTopicWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/topic/"/>
+					<param name="widget_header" value="Browse by topic"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="80350"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(RadiodeByCountryWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/country/"/>
+					<param name="widget_header" value="Browse by country"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="80400"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(RadiodeByCityWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/city/"/>
+					<param name="widget_header" value="Browse by city"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="80450"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(RadiodeByLanguageWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/language/"/>
+					<param name="widget_header" value="Browse by language"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="80500"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+				</include>
+				<include content="WidgetListChannels" condition="Skin.HasSetting(RadiodeMyStationsWidget) + !Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/my/"/>
+					<param name="widget_header" value="My Stations"/>
+					<param name="widget_target" value="music"/>
+					<param name="label2" value=""/>
+					<param name="list_id" value="80100"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="always" value="true"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(80100).ListItem.Title,: [B],[/B]]$INFO[Container(80100).ListItem.Genre, - [COLOR button_focus],[/COLOR]]"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="81000"> <!-- Easy/SC+ Radio.de -->
+			<include>ShiftWidgets</include>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),radiodewall)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="radiodewall"/>
+			</include>
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetWallChannels" condition="Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)">
+					<param name="content_path" value="plugin://plugin.audio.radio_de/stations/my/"/>
+					<param name="widget_header" value="My Stations"/>
+					<param name="widget_target" value="music"/>
+					<param name="label2" value=""/>
+					<param name="list_id" value="81050"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="always" value="true"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(81050).ListItem.Title,: [B],[/B]]$INFO[Container(81050).ListItem.Genre, - [COLOR button_focus],[/COLOR]]"/>
+				</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="5000"> <!-- Easy/SC* Movies -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="5100"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="5200"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="5300"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="5400"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="5600"/><param name="sets" value="true"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="movies"/>
+			</include>
+			<control type="grouplist" id="5001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>5010</pagecontrol>
+				<include content="WidgetListCategories" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">
+					<param name="content_path" value="library://video/movies/"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5900"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+					<param name="content_path" value="special://skin/playlists/inprogress_movies.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31010]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5100"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+					<param name="content_path" value="special://skin/playlists/recent_unwatched_movies.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[20386]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5200"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+					<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31007]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5300"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+					<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31006]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5400"/>
+				</include>
+				<include content="WidgetListCategories" condition="Library.HasContent(movies)">
+					<param name="content_path" value="videodb://movies/genres/"/>
+					<param name="widget_header" value="$LOCALIZE[135]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="5500"/>
+					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+					<param name="icon_height" value="70"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+					<param name="content_path" value="videodb://movies/sets/"/>
+					<param name="widget_header" value="$LOCALIZE[31075]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="sortby" value="random"/>
+					<param name="list_id" value="5600"/>
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!Library.HasContent(movies)">
+				<param name="text_label" value="$LOCALIZE[31104]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+				<param name="button_id" value="5500"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="5010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="6000"> <!-- Easy/SC* TVShows-->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="6100"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="6200"/><param name="episode" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="6300"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="tvshows"/>
+			</include>
+			<control type="grouplist" id="6001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>6010</pagecontrol>
+				<include content="WidgetListCategories" condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">
+					<param name="content_path" value="library://video/tvshows/"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6900"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+					<param name="content_path" value="videodb://inprogresstvshows"/>
+					<param name="sortby" value="lastplayed"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_header" value="$LOCALIZE[626]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6100"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows)">
+					<param name="content_path" value="special://skin/playlists/recent_unwatched_episodes.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[20387]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6200"/>
+				</include>
+				<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+					<param name="content_path" value="special://skin/playlists/unwatched_tvshows.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31122]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6300"/>
+				</include>
+				<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
+					<param name="content_path" value="videodb://tvshows/genres/"/>
+					<param name="widget_header" value="$LOCALIZE[135]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6400"/>
+					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+					<param name="icon_height" value="70"/>
+				</include>
+				<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
+					<param name="content_path" value="videodb://tvshows/studios/"/>
+					<param name="widget_header" value="$LOCALIZE[20388]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="6500"/>
+					<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
+					<param name="icon_height" value="70"/>
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
+				<param name="text_label" value="$LOCALIZE[31104]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+				<param name="button_id" value="6400"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="6010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="7000"> <!-- Easy/SC* Music-->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),music)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="music"/>
+			</include>
+			<control type="grouplist" id="7001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>7010</pagecontrol>
+				<include content="WidgetListCategories" condition="Library.HasContent(music) + !Skin.HasSetting(home_no_categories_widget)">
+					<param name="content_path" value="library://music/"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7900"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="musicdb://recentlyplayedalbums"/>
+					<param name="widget_header" value="$LOCALIZE[517]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7100"/>
+					<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="musicdb://recentlyaddedalbums/"/>
+					<param name="widget_header" value="$LOCALIZE[359]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7200"/>
+					<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="special://skin/playlists/random_albums.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31012]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7300"/>
+					<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="special://skin/playlists/random_artists.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31013]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7400"/>
+					<param name="fallback_icon" value="DefaultMusicArtists.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="special://skin/playlists/unplayed_albums.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31014]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7500"/>
+					<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(music)">
+					<param name="content_path" value="special://skin/playlists/mostplayed_albums.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31011]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="7600"/>
+					<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+					<param name="sortby" value="playcount"/>
+					<param name="sortorder" value="descending"/>
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!Library.HasContent(music)">
+				<param name="text_label" value="$LOCALIZE[31104]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(music,files)"/>
+				<param name="button_id" value="7600"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="7010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="8000"> <!-- Easy/SC* Addons-->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),addons)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="addons"/>
+			</include>
+			<control type="grouplist" id="8001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>8010</pagecontrol>
+				<include content="WidgetListCategories" condition="!Skin.HasSetting(home_no_categories_widget)" >
+					<param name="content_path" value="addons://"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="addonbrowser"/>
+					<param name="list_id" value="8900"/>
+					<param name="visible" value="Integer.IsGreater(Container(8100).NumItems,0) | Integer.IsGreater(Container(8200).NumItems,0) | Integer.IsGreater(Container(8300).NumItems,0) | Integer.IsGreater(Container(8400).NumItems,0) | Integer.IsGreater(Container(8500).NumItems,0) | Integer.IsGreater(Container(8700).NumItems,0)"/>
+				</include>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/video/"/>
+					<param name="widget_header" value="$LOCALIZE[1037]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8100"/>
+					<param name="fallback_icon" value="DefaultAddon.png"/>
+				</include>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/audio/"/>
+					<param name="widget_header" value="$LOCALIZE[1038]"/>
+					<param name="widget_target" value="music"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8200"/>
+					<param name="fallback_icon" value="DefaultAddon.png"/>
+				</include>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/game/"/>
+					<param name="widget_header" value="$LOCALIZE[35049]"/>
+					<param name="widget_target" value="games"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8700"/>
+					<param name="fallback_icon" value="DefaultAddonGame.png"/>
+					<param name="visible" value="System.GetBool(gamesgeneral.enable)"/>
+				</include>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/executable/"/>
+					<param name="widget_header" value="$LOCALIZE[1043]"/>
+					<param name="widget_target" value="programs"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8300"/>
+					<param name="fallback_icon" value="DefaultAddon.png"/>
+				</include>
+				<include content="WidgetListSquare" condition="System.Platform.Android">
+					<param name="content_path" value="androidapp://sources/apps/"/>
+					<param name="widget_header" value="$LOCALIZE[20244]"/>
+					<param name="widget_target" value="programs"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8400"/>
+					<param name="fallback_icon" value="DefaultAddon.png"/>
+				</include>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/image/"/>
+					<param name="widget_header" value="$LOCALIZE[1039]"/>
+					<param name="widget_target" value="pictures"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="8500"/>
+				</include>
+			</control>
+			<include content="ImageWidget">
+				<param name="text_label" value="$LOCALIZE[31119]" />
+				<param name="button_label" value="$LOCALIZE[31118]" />
+				<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
+				<param name="button_id" value="8600"/>
+				<param name="visible" value="!Integer.IsGreater(Container(8001).NumItems,0)"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="8010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="11000"> <!-- Easy/SC* Video-->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),video)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="video"/>
+			</include>
+			<control type="grouplist" id="11001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>11010</pagecontrol>
+				<include content="WidgetListCategories">
+					<param name="content_path" value="library://video/"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="11900"/>
+				</include>
+				<include content="WidgetListCategories">
+					<param name="content_path" value="sources://video/"/>
+					<param name="widget_header" value="$LOCALIZE[20094]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="11100"/>
+				</include>
+				<include content="WidgetListCategories">
+					<param name="content_path" value="special://videoplaylists/"/>
+					<param name="widget_header" value="$LOCALIZE[136]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="11200"/>
+					<param name="icon" value="DefaultPlaylist.png"/>
+				</include>
+			</control>
+			<include content="ImageWidget">
+				<param name="text_label" value="$LOCALIZE[31105]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(videos,root)"/>
+				<param name="button_id" value="11300"/>
+				<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0)"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="11010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="12000"> <!-- Easy/SC* TV -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),livetv)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="livetv"/>
+			</include>
+			<control type="grouplist" id="12001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>12010</pagecontrol>
+				<control type="grouplist" id="12855">
+					<height>390</height>
+					<left>50</left> <!-- Easy/SC* 0 => 50 -->
+					<right>0</right>
+					<top>36</top>
+					<orientation>horizontal</orientation>
+					<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
+					<align>left</align> <!-- Easy/SC* center => left -->
+					<control type="group">
+						<width>674</width>
+						<visible>PVR.IsRecordingTV</visible>
+						<include content="PVRWidget">
+							<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
+							<param name="header" value="$LOCALIZE[19158]" />
+							<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]" />
+							<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
+						</include>
+					</control>
+					<control type="group">
+						<width>674</width>
+						<visible>PVR.HasNonRecordingTVTimer</visible>
+						<include content="PVRWidget">
+							<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
+							<param name="header" value="$LOCALIZE[19157]" />
+							<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]" />
+							<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
+						</include>
+					</control>
+				</control>
+				<include content="WidgetListCategories" condition="System.HasPVRAddon">
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="list_id" value="12900"/>
+					<param name="pvr_submenu" value="true"/>
+					<param name="pvr_type" value="TV"/>
+				</include>
+				<include content="WidgetListChannels" condition="System.HasPVRAddon">
+					<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
+					<param name="sortby" value="lastplayed"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_header" value="$LOCALIZE[31016]"/>
+					<param name="widget_target" value="pvr"/>
+					<param name="list_id" value="12200"/>
+					<param name="param" value="true"/> <!-- Easy/SC+ -->
+					<param name="title" value="$INFO[Container(12200).ListItem.Title,: [B],[/B]]$INFO[Container(12200).ListItem.EpisodeName, [B](,)[/B]]$INFO[Container(12200).ListItem.StartTime, - ,]$INFO[Container(12200).ListItem.EndTime, - ,]"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListChannels" condition="System.HasPVRAddon">
+					<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+					<param name="sortby" value="date"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_header" value="$LOCALIZE[31015]"/>
+					<param name="widget_target" value="pvr"/>
+					<param name="list_id" value="12300"/>
+					<param name="label" value="$INFO[ListItem.ChannelName]"/>
+					<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
+					<param name="param" value="true"/> <!-- Easy/SC+ -->
+					<param name="title" value="$INFO[Container(12300).ListItem.Title,: [B],[/B]]$INFO[Container(12300).ListItem.EpisodeName, [B](,)[/B]]$INFO[Container(12300).ListItem.StartDate, - ,]$INFO[Container(12300).ListItem.StartTime, - ,]$INFO[Container(12300).ListItem.EndTime, - ,]"/> <!-- Easy/SC+ -->
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!System.HasPVRAddon">
+				<param name="text_label" value="$LOCALIZE[31143]" />
+				<param name="button_label" value="$LOCALIZE[31144]" />
+				<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+				<param name="button_id" value="12400"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="12010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="13000"> <!-- Easy/SC* Radio-->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),radio)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="radio"/>
+			</include>
+			<control type="grouplist" id="13001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>13010</pagecontrol>
+				<control type="grouplist" id="13855">
+					<height>390</height>
+					<left>45</left> <!-- Easy/SC* 0 => 45 -->
+					<right>0</right> <!-- Easy/SC+ like in TV -->
+					<top>36</top>
+					<orientation>horizontal</orientation>
+					<visible>PVR.IsRecordingRadio | PVR.HasNonRecordingRadioTimer</visible>
+					<align>left</align> <!-- Easy/SC* center => left -->
+					<control type="group">
+						<width>680</width>
+						<visible>PVR.IsRecordingRadio</visible>
+						<include content="PVRWidget">
+							<param name="icon" value="$INFO[PVR.RadioNowRecordingChannelIcon]" />
+							<param name="header" value="$LOCALIZE[19158]" />
+							<param name="label1" value="$INFO[PVR.RadioNowRecordingDateTime]" />
+							<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNowRecordingChannel][/COLOR]" />
+						</include>
+					</control>
+					<control type="group">
+						<visible>PVR.HasNonRecordingRadioTimer</visible>
+						<width>680</width>
+						<include content="PVRWidget">
+							<param name="icon" value="$INFO[PVR.RadioNextRecordingChannelIcon]" />
+							<param name="header" value="$LOCALIZE[19157]" />
+							<param name="label1" value="$INFO[PVR.RadioNextRecordingDateTime]" />
+							<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNextRecordingChannel][/COLOR]" />
+						</include>
+					</control>
+				</control>
+				<include content="WidgetListCategories" condition="System.HasPVRAddon">
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="list_id" value="13900"/>
+					<param name="pvr_submenu" value="true"/>
+					<param name="pvr_type" value="Radio"/>
+				</include>
+				<include content="WidgetListChannels" condition="System.HasPVRAddon">
+					<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
+					<param name="sortby" value="lastplayed"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_header" value="$LOCALIZE[31018]"/>
+					<param name="widget_target" value="files"/>
+					<param name="list_id" value="13200"/>
+					<param name="param" value="true"/> <!-- Easy/SC+ -->
+					<param name="title" value="$INFO[Container(13200).ListItem.Title,: [B],[/B]]$INFO[Container(13200).ListItem.EpisodeName, [B](,)[/B]]$INFO[Container(13200).ListItem.StartTime, - ,]$INFO[Container(13200).ListItem.EndTime, - ,]"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListChannels" condition="System.HasPVRAddon">
+					<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+					<param name="sortby" value="date"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_header" value="$LOCALIZE[31015]"/>
+					<param name="widget_target" value="pvr"/>
+					<param name="list_id" value="13300"/>
+					<param name="label" value="$INFO[ListItem.ChannelName]"/>
+					<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
+					<param name="param" value="true"/> <!-- Easy/SC+ -->
+					<param name="title" value="$INFO[Container(13300).ListItem.Title,: [B],[/B]]$INFO[Container(13300).ListItem.EpisodeName, [B](,)[/B]]$INFO[Container(13300).ListItem.StartDate, - ,]$INFO[Container(13300).ListItem.StartTime, - ,]$INFO[Container(13300).ListItem.EndTime, - ,]"/> <!-- Easy/SC+ -->
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!System.HasPVRAddon">
+				<param name="text_label" value="$LOCALIZE[31143]" />
+				<param name="button_label" value="$LOCALIZE[31144]" />
+				<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+				<param name="button_id" value="13400"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="13010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="14000"> <!-- Easy/SC* Favorites -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),favorites)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="favorites"/>
+			</include>
+			<control type="panel" id="14100">
+				<left>65</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>14100</onup>
+				<ondown>14100</ondown>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>14010</pagecontrol>
+				<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
+				<itemlayout width="330" height="396">
+					<control type="group">
+						<top>130</top>
+						<include content="InfoWallMusicLayout">
+							<param name="fallback_image" value="DefaultFavourites.png" />
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="330" height="396">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<top>130</top>
+						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
+						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
+						<include content="InfoWallMusicLayout">
+							<param name="fallback_image" value="DefaultFavourites.png" />
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content>favourites://</content>
+			</control>
+			<include content="ImageWidget">
+				<param name="text_label" value="$LOCALIZE[31025]" />
+				<param name="button_label" value="$LOCALIZE[31116]" />
+				<param name="button_onclick" value=""/>
+				<param name="button_id" value="5500"/>
+				<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
+				<param name="visible_1" value="false"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="14010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="15000"> <!-- Easy/SC* Weather -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="weather"/>
+			</include>
+			<control type="grouplist" id="15001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>15010</pagecontrol>
+				<control type="group" id="16678">
+					<description>Weather info</description>
+					<left>68</left>
+					<right>70</right>
+					<top>102</top>
+					<height>300</height>
+					<visible>!String.IsEmpty(Weather.plugin)</visible>
+					<control type="image">
+						<bottom>90</bottom>
+						<width>100%</width>
+						<texture border="21">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="label">
+						<left>840</left>
+						<top>60</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<right>60</right>
+						<align>right</align>
+						<font>font30_title</font>
+						<label>$INFO[Weather.Location]</label>
+					</control>
+					<control type="label">
+						<left>840</left>
+						<top>120</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<right>60</right>
+						<align>right</align>
+						<font>font14</font>
+						<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
+					</control>
+					<control type="grouplist">
+						<top>50</top>
+						<left>50</left>
+						<right>20</right>
+						<orientation>horizontal</orientation>
+						<align>left</align>
+						<itemgap>-110</itemgap>
+						<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="label" value="Window(weather).Property(Current.Wind)" />
+							<param name="texture" value="icons/weather/wind.png" />
+							<param name="header" value="404" />
+						</include>
+						<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="label" value="Window(weather).Property(Current.Humidity)" />
+							<param name="texture" value="icons/weather/humidity.png" />
+							<param name="header" value="406" />
+						</include>
+						<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+							<param name="texture" value="icons/weather/rain.png" />
+							<param name="header" value="33021" />
+						</include>
+						<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+							<param name="texture" value="icons/weather/sunrise.png" />
+							<param name="header" value="405" />
+						</include>
+						<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+							<param name="label" value="Window(weather).Property(Today.Sunset)" />
+							<param name="texture" value="icons/weather/sunset.png" />
+							<param name="header" value="403" />
+						</include>
+					</control>
+				</control>
+				<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+					<param name="content_include" value="DailyItems" />
+					<param name="list_id" value="15200" />
+					<param name="widget_header" value="$LOCALIZE[31019]"/>
+					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+				</include>
+				<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+					<param name="content_include" value="HourlyItems" />
+					<param name="list_id" value="15100" />
+					<param name="widget_header" value="$LOCALIZE[33036]"/>
+					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+				</include>
+			</control>
+			<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
+				<param name="text_label" value="$LOCALIZE[31120]" />
+				<param name="button_label" value="$LOCALIZE[31121]" />
+				<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+				<param name="button_id" value="15300"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoWeatherButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="15010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="16000"> <!-- Easy/SC* Music Videos -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="musicvideos"/>
+			</include>
+			<control type="grouplist" id="16001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>16010</pagecontrol>
+				<include content="WidgetListCategories" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(home_no_categories_widget)">
+					<param name="content_path" value="library://video/musicvideos/"/>
+					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="16900"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Library.HasContent(musicvideos)">
+					<param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
+					<param name="widget_header" value="$LOCALIZE[20390]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="main_label" value="$INFO[ListItem.Label]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist]" />
+					<param name="thumb_label" value="$INFO[ListItem.Year]" />
+					<param name="fallback_image" value="DefaultMusicSongs.png" />
+					<param name="list_id" value="16300"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Library.HasContent(musicvideos)">
+					<param name="content_path" value="special://skin/playlists/unwatched_musicvideos.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31151]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="main_label" value="$INFO[ListItem.Label]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist]" />
+					<param name="thumb_label" value="$INFO[ListItem.Year]" />
+					<param name="fallback_image" value="DefaultMusicSongs.png" />
+					<param name="list_id" value="16400"/>
+				</include>
+				<include content="WidgetListSquare" condition="Library.HasContent(musicvideos)">
+					<param name="content_path" value="special://skin/playlists/random_musicvideo_artists.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31013]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="16200"/>
+					<param name="widget_limit" value="10"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Library.HasContent(musicvideos)">
+					<param name="content_path" value="special://skin/playlists/random_musicvideos.xsp"/>
+					<param name="widget_header" value="$LOCALIZE[31152]"/>
+					<param name="widget_target" value="videos"/>
+					<param name="main_label" value="$INFO[ListItem.Label]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist]" />
+					<param name="thumb_label" value="$INFO[ListItem.Year]" />
+					<param name="fallback_image" value="DefaultMusicSongs.png" />
+					<param name="list_id" value="16500"/>
+				</include>
+				<include content="WidgetListCategories" condition="Library.HasContent(musicvideos)">
+					<param name="content_path" value="videodb://musicvideos/studios/"/>
+					<param name="widget_header" value="$LOCALIZE[20388]"/>
+					<param name="widget_target" value="music"/>
+					<param name="list_id" value="16600"/>
+					<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
+					<param name="icon_height" value="70"/>
+				</include>
+			</control>
+			<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
+				<param name="text_label" value="$LOCALIZE[31104]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+				<param name="button_id" value="16800"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicVideoButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="16010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="4000"> <!-- Easy/SC* Pictures -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),pictures)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="pictures"/>
+			</include>
+			<control type="grouplist" id="4001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
+					<param name="content_path" value="sources://pictures/"/>
+					<param name="widget_header" value="$LOCALIZE[20094]"/>
+					<param name="widget_target" value="pictures"/>
+					<param name="list_id" value="4100"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="17000"> <!-- Easy/SC* Games -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),games)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="games"/>
+			</include>
+			<control type="grouplist" id="17001">
+				<include>WidgetGroupListCommon</include>
+				<pagecontrol>17010</pagecontrol>
+				<include content="WidgetListSquare">
+					<param name="content_path" value="addons://sources/game/"/>
+					<param name="widget_header" value="$LOCALIZE[35049]"/>
+					<param name="widget_target" value="games"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="17200"/>
+					<param name="fallback_icon" value="DefaultAddonGame.png"/>
+				</include>
+			</control>
+			<include content="ImageWidget">
+				<param name="text_label" value="$LOCALIZE[31162]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(games)"/>
+				<param name="button_id" value="17100"/>
+				<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0)"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoGamesButton)"/>
+			</include>
+			<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="17010"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="21000"> <!-- Easy/SC* Disc -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),disc)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="disc"/>
+			</include>
+			<include content="ImageWidget">
+				<param name="text_label" value="$INFO[System.DVDLabel]" />
+				<param name="button_label" value="$LOCALIZE[341]" />
+				<param name="button_onclick" value="PlayDisc"/>
+				<param name="button_id" value="21100"/>
+				<param name="visible" value="true"/>
+				<param name="button2_label" value="$LOCALIZE[13391]"/>
+				<param name="button2_onclick" value="EjectTray()"/>
+			</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+		<control type="group" id="40000"> <!-- Easy/SC+ SC Main -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40000"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40200"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40300"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40400"/><param name="year" value="false"/><param name="episode" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40500"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="40600"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinema)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinema"/>
+			</include>
+			<control type="grouplist" id="40001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMainMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6c6174657374&amp;title=243330393530&amp;url=2f464d6f766965732f6c6174657374"/>
+					<param name="widget_header" value="Filmové novinky"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d"/>
+					<param name="widget_header" value="Nově přidané filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f6c6174657374&amp;title=243330393231&amp;url=2f5365726965732f6c6174657374"/>
+					<param name="widget_header" value="Posledni přidané seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40300"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMainTVShowsNewAddedEpisodesWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f6e65776570&amp;title=243330393230&amp;url=2f5365726965732f6e65776570"/>
+					<param name="widget_header" value="Posledni přidané epizody"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40400"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="episode" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTraktWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
+					<param name="widget_header" value="Seznam ke shlédnutí (trakt.tv)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40500"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVTodayWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476"/>
+					<param name="widget_header" value="TV program dnes"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40600"/>
+					<param name="item_limit" value="$INFO[Container(40600).NumItems]"/> <!-- Easy/SC* -->
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="41000"> <!-- Easy/SC+ SC Movies -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41110"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41200"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41250"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41300"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41350"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemamovies)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinemamovies"/>
+			</include>
+			<control type="grouplist" id="41001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMoviesMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesLastPlayedWidget) + !Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=6c617374&amp;id=6c6173746d&amp;title=243330393237"/>
+					<param name="widget_header" value="Poslední sledované filmy"/>
+					<param name="widget_target" value="movies"/>
+					<param name="list_id" value="41100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesLastPlayedWidget) + Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65"/>
+					<param name="widget_header" value="Poslední sledované filmy (T)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41110"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6c6174657374&amp;title=243330393530&amp;url=2f464d6f766965732f6c6174657374"/>
+					<param name="widget_header" value="Filmové novinky"/>
+					<param name="widget_target" value="movies"/>
+					<param name="list_id" value="41150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewDubWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6c617465737464&amp;title=24333039353020647562&amp;url=2f464d6f766965732f6c617465737464"/>
+					<param name="widget_header" value="Filmové novinky dabované"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesJustPlayedWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f7761746368696e67&amp;title=243330393536&amp;url=2f464d6f766965732f7761746368696e67"/>
+					<param name="widget_header" value="Právě sledované filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41250"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesFavoritesWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f706f70756c6172&amp;title=243330393035&amp;url=2f464d6f766965732f706f70756c6172"/>
+					<param name="widget_header" value="Nejsledovanější filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41300"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewAddedWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d"/>
+					<param name="widget_header" value="Nově přidané filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41350"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(SCMoviesNameWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f617a&amp;title=243330393033&amp;url=2f464d6f766965732f617a"/>
+					<param name="widget_header" value="Název"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41400"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesCountryWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f636f756e747279&amp;title=243330393036&amp;url=2f464d6f766965732f636f756e747279"/>
+					<param name="widget_header" value="Země"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41450"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesQualityWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f7175616c697479&amp;title=243330393037&amp;url=2f464d6f766965732f7175616c697479"/>
+					<param name="widget_header" value="Kvalita"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41500"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesGenreWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e7265&amp;title=243330393038&amp;url=2f464d6f766965732f67656e7265"/>
+					<param name="widget_header" value="Žánry filmů"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41550"/>
+					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesYearWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f79656172&amp;title=243330393039&amp;url=2f464d6f766965732f79656172"/>
+					<param name="widget_header" value="Rok"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41600"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesSetsWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f636f6c6c656374696f6e&amp;title=4b6f6c656b636965&amp;url=2f464d6f766965732f636f6c6c656374696f6e"/>
+					<param name="widget_header" value="Kolekce"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41650"/>
+					<param name="icon" value="defaultsets.png"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesMainWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="42000"> <!-- Easy/SC+ SC TVShows -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42200"/><param name="year" value="false"/><param name="episode" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42250"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42300"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinematvshows)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinematvshows"/>
+			</include>
+			<control type="grouplist" id="42001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMenuWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCTVShowsMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + !Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=6c617374&amp;id=6c617374&amp;title=243330393237"/>
+					<param name="widget_header" value="Poslední sledované seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
+					<param name="widget_header" value="Poslední sledované seriály (T)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42110"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsNewAddedWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f6c6174657374&amp;title=243330393231&amp;url=2f5365726965732f6c6174657374"/>
+					<param name="widget_header" value="Posledni přidané seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCTVShowsNewAddedEpisodesWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f6e65776570&amp;title=243330393230&amp;url=2f5365726965732f6e65776570"/>
+					<param name="widget_header" value="Posledni přidané části"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVshowsFavoritesWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f706f70756c6172&amp;title=243330393035&amp;url=2f5365726965732f706f70756c6172"/>
+					<param name="widget_header" value="Nejsledovanější seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42250"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsJustPlayedWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f7761746368696e67&amp;title=243330393536&amp;url=2f5365726965732f7761746368696e67"/>
+					<param name="widget_header" value="Právě sledované seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42300"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(SCTVShowsNameWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f617a&amp;title=243330393033&amp;url=2f5365726965732f617a"/>
+					<param name="widget_header" value="Název"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42350"/>
+				</include>
+				<include content="WidgetListLabel" condition="Skin.HasSetting(SCTVShowsCountryWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f636f756e747279&amp;title=243330393036&amp;url=2f5365726965732f636f756e747279"/>
+					<param name="widget_header" value="Země"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42400"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsGenreWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f67656e7265&amp;title=243330393038&amp;url=2f5365726965732f67656e7265"/>
+					<param name="widget_header" value="Žánry"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42450"/>
+					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMainWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="43000"> <!-- Easy/SC+ SC Koncerty -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="43100"/><param name="year" value="false"/></include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="43150"/><param name="year" value="false"/></include>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaconcerts)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinemaconcerts"/>
+			</include>
+			<control type="grouplist" id="43001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCConcertsMenuWidget) + Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCConcertsMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="43050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCConcertsLastAddedWidget) + Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274"/>
+					<param name="widget_header" value="Náhodně vybrané koncerty I. část"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="43100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCConcertsLastAddedWidget) + Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6b6f6e636572743f703d32&amp;title=6e657874&amp;url=2f464d6f766965732f6b6f6e636572743f703d32"/>
+					<param name="widget_header" value="Náhodně vybrané koncerty II. část"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="43150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+¨						<include content="WidgetListCategories" condition="Skin.HasSetting(SCConcertsMainWidget) + Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="43950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="44000"> <!-- Easy/SC+ SC Anime -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="44100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="44150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaanime)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinemaanime"/>
+			</include>
+			<control type="grouplist" id="44001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCAnimeMenuWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCAnimeMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Anime"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="44050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCAnimeMoviessWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?id=616d6f76696573&amp;list=2f416e696d652f4d6f76696573&amp;title=243330393031&amp;url=2f416e696d652f4d6f76696573"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_header" value="Náhodně vybrané filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="44100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCAnimeTVShowsWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?id=61736572696573&amp;list=2f416e696d652f536572696573&amp;title=243330393032&amp;url=2f416e696d652f536572696573"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_header" value="Náhodně vybrané seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="44150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCAnimeMainWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="44950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="45000"> <!-- Easy/SC+ SC TV -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="45100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinematv)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinematv"/>
+			</include>
+			<control type="grouplist" id="45001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVMenuWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCTVMenu_submenu" value="true"/>
+					<param name="widget_header" value="TV Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="45050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVTodayWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476"/>
+					<param name="widget_header" value="TV program dnes"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="45100"/>
+					<param name="item_limit" value="$INFO[Container(45100).NumItems]"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVTwoWeakWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976"/>
+					<param name="widget_header" value="TV program na 14 dní"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="45150"/>
+					<param name="icon" value="defaultyear.png"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVMainWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="45950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="46000"> <!-- Easy/SC+ SC Moje seznamy (Trakt.tv) -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="46100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="46150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="46200"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinematrakt)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinematrakt"/>
+			</include>
+			<control type="grouplist" id="46001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMenuWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCTraktMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Moje seznamy (Trakt.tv)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="46050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktToWatchWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
+					<param name="widget_header" value="Seznam ke shlédnutí"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="46100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedMoviesWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65"/>
+					<param name="widget_header" value="Historie - Shlédnuté filmy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="46150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedTVShowsWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
+					<param name="widget_header" value="Historie - Shlédnuté seriály"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="46200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMainWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="46950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="47000"> <!-- Easy/SC+ SC Pohádky -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="47100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="47150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="47200"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="47250"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemastories)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinemastories"/>
+			</include>
+			<control type="grouplist" id="47001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCStoriesMenuWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCStoriesMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu Pohádky"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47050"/>
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCStoriesLastAddedWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?id=36&amp;list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36"/>
+					<param name="widget_header" value="Poslední přidané pohádky"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCStoriesMovieLastAddedWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e72652f706f6861646b61&amp;title=243332383230&amp;url=2f464d6f766965732f67656e72652f706f6861646b61"/>
+					<param name="widget_header" value="Náhodně vybrané filmové pohádky"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCStoriesCartoonLastAddedWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f67656e72652f616e696d6f76616e79&amp;title=243331313238&amp;url=2f464d6f766965732f67656e72652f616e696d6f76616e79"/>
+					<param name="widget_header" value="Náhodně vybrané animované pohádky"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCStoriesDisneyLastAddedWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?id=3836&amp;list=2f5365617263682f6765744c6973742f3836&amp;title=4469736e6579&amp;url=2f5365617263682f6765744c6973742f3836"/>
+					<param name="widget_header" value="Náhodně vybrané od Disney"/>
+					<param name="sortby" value="random"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47250"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCStoriesMainWidget) + Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+					<param name="SCMainMenu_submenu" value="true"/>
+					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="47950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="62000"> <!-- Easy/SC+ iVysílání -->
+			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62100"/><param name="header" value="false"/><param name="source" value="Živé vysílání"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62300"/><param name="header" value="false"/><param name="source" value="Tipy"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62350"/><param name="header" value="false"/><param name="source" value="Nejsledovanější dne"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62400"/><param name="header" value="false"/><param name="source" value="Nejsledovanější týdne"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62450"/><param name="header" value="false"/><param name="source" value="Nepřehlédněte"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62500"/><param name="header" value="false"/><param name="source" value="Z našeho archivu"/></include> <!-- Stream-Cinema+ -->
+			<include content="WidgetOnlineInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="62550"/><param name="header" value="false"/><param name="source" value="Ostatní právě sledují"/></include> <!-- Stream-Cinema+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),ivysilani)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="ivysilani"/>
+			</include>
+			<control type="grouplist" id="62001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilaniMenuWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="iVysilaniMenu_submenu" value="true"/>
+					<param name="widget_header" value="Menu iVysílání"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62050"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniliveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=live"/>
+					<param name="widget_header" value="Živé vysílání"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62100"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62100).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyDateWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byDate"/>
+					<param name="widget_header" value="Podle data"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62150"/>
+					<param name="icon" value="defaultyear.png"/>
+				</include>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(iVysilanibyLetterWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byLetter"/>
+					<param name="widget_header" value="Podle abecedy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62200"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyGenreWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byGenre"/>
+					<param name="widget_header" value="Podle žánru"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62250"/>
+					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+					<param name="icon_height" value="100"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsMainWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsMain"/>
+					<param name="widget_header" value="Tipy"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62300"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62300).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopDayWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=topDay"/>
+					<param name="widget_header" value="Nejsledovanější dne"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62350"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62350).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopWeekWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=topWeek"/>
+					<param name="widget_header" value="Nejsledovanější týdne"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62400"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62400).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsNoteWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsNote"/>
+					<param name="widget_header" value="Nepřehlédněte"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62450"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62450).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsArchiveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsArchive"/>
+					<param name="widget_header" value="Z našeho archivu"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62500"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62500).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniwatchingWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=watching"/>
+					<param name="widget_header" value="Ostatní právě sledují"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="62550"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(62550).ListItem.Label,: [B],[/B]]"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include> 
+		</control>
+		<control type="group" id="70000"> <!-- Easy/SC+ Trailer -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70100"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70150"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70200"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70250"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70300"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70350"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70400"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70450"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70500"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70550"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70600"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70650"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70700"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="70750"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),trailer)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="trailer"/>
+			</include>
+			<control type="grouplist" id="70001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(TrailerMenuWidget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.trailer/"/>
+					<param name="widget_header" value="Menu Trailer"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70050"/>
+					<param name="item_limit" value="$INFO[Container(70050).NumItems]"/>
+					<param name="icon_height" value="85"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer00Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/channel/UCrnvx9KJ8v63SODw082L3Ww/playlists/"/>
+					<param name="widget_header" value="Týdenní novinky (Total film)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70100"/>
+					<param name="main_label" value="$INFO[ListItem.Label]"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70100).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer01Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/totalfilmvideo/"/>
+					<param name="widget_header" value="Total film"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70150"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70150).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer02Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/falcondistribuce/"/>
+					<param name="widget_header" value="Falcon"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70200"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70200).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer03Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/WarnerBrosCzech/"/>
+					<param name="widget_header" value="Freeman"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70250"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70250).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer04Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/BontonfilmCZ/"/>
+					<param name="widget_header" value="Bonton film"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70300"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70300).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer05Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/channel/UCT0hbLDa-unWsnZ6Rjzkfug/"/>
+					<param name="widget_header" value="Film Select Trailer"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70350"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70350).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer06Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/MovieclipsCOMINGSOON/"/>
+					<param name="widget_header" value="Movie Clips Comming Soon"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70400"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70400).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer07Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/movieclipsTRAILERS/"/>
+					<param name="widget_header" value="Movie Clips Trailers"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70450"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70450).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer08Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/NewOnNetflix/"/>
+					<param name="widget_header" value="New on Netflix"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70500"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70500).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer09Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/filmnovinky/"/>
+					<param name="widget_header" value="Filmové novinky"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70550"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70550).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer10Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/channel/UC_h3dIgci4Hmb66yhQJyLoA/"/>
+					<param name="widget_header" value="HighFive"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70600"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70600).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer11Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/barracudamoviesro/"/>
+					<param name="widget_header" value="CinemArt SK"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70650"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70650).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer12Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/svetfilmu/"/>
+					<param name="widget_header" value="Svět filmu"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70700"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70700).ListItem.Label,: [B],[/B]]"/>
+				</include>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(Trailer13Widget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)">
+					<param name="content_path" value="plugin://plugin.video.youtube/user/filmeuropepictures/"/>
+					<param name="widget_header" value="Film Europe"/>
+					<param name="sortby" value="dateadded"/>
+					<param name="sortorder" value="descending"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="70750"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(70750).ListItem.Label,: [B],[/B]]"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include> 
+		</control>
+		<control type="group" id="71000"> <!-- Easy/SC+ Trailer -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="71050"/><param name="year" value="false"/><param name="episode" value="true"/><param name="thumb" value="true"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),trailerwall)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="trailerwall"/>
+			</include>
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetWallEpisodes" condition="true">
+					<param name="content_path" value="plugin://plugin.video.youtube/channel/UCrnvx9KJ8v63SODw082L3Ww/playlists/"/>
+					<param name="widget_header" value="Týdenní novinky (Total film)"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="71050"/>
+					<param name="main_label" value="$INFO[ListItem.Label]"/>
+					<param name="param" value="true"/>
+					<param name="title" value="$INFO[Container(71050).ListItem.Label,: [B],[/B]]"/>
+				</include>
+			<include>WidgetTitle</include> <!-- Easy/SC+ -->
+		</control>
+	</include>
+</includes>
