@@ -1,3 +1,5 @@
+Verze 2.0.23
+- opraveny odkazy widgetu "TV dnes" a "TV program na 14 dni"
 Verze 2.0.12.a3
 - upraveny odkazy widgetů Filmy Stream Cinema
 Verze 2.0.12.a2

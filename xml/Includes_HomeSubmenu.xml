@@ -176,12 +176,12 @@
 			</item>
 			<item>
 				<label>TV dnes</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>
 			<item>
 				<label>TV program na 14 dni</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976,return)</onclick>
 				<thumb>defaultyear.png</thumb>
 			</item>
 			<item>
@@ -394,12 +394,12 @@
 		<content>
 			<item>
 				<label>TV program dnes</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>
 			<item>
 				<label>TV program na 14 dní</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976,return)</onclick>
 				<thumb>defaultyear.png</thumb>
 			</item>
 		</content>

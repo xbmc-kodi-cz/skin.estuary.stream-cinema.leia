@@ -1002,7 +1002,7 @@
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVTodayWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476"/>
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f465476&amp;title=243330393130&amp;url=2f465476"/>
 					<param name="widget_header" value="TV program dnes"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40600"/>
@@ -1318,7 +1318,7 @@
 					<param name="list_id" value="45050"/>
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVTodayWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5476&amp;title=243330393130&amp;url=2f5476"/>
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f465476&amp;title=243330393130&amp;url=2f465476"/>
 					<param name="widget_header" value="TV program dnes"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="45100"/>
@@ -1327,7 +1327,7 @@
 					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
 				</include>
 				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVTwoWeakWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f54762f617263686976&amp;title=243330393238&amp;url=2f54762f617263686976"/>
+					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976"/>
 					<param name="widget_header" value="TV program na 14 dní"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="45150"/>
