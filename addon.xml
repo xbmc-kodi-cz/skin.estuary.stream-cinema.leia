@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stream-cinema.leia" version="2.0.22" name="Estuary Stream-Cinema (Leia)" provider-name="phil65, Ichabod Fletchman, mod by JiRo, Client">
+<addon id="skin.estuary.stream-cinema.leia" version="2.0.23" name="Estuary Stream-Cinema (Leia)" provider-name="phil65, Ichabod Fletchman, mod by JiRo, Client">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
@@ -15,6 +15,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
+[B]Verze 2.0.23[/B]
+- opraveny odkazy widgetů "TV dnes" a "TV program na 14 dni"
 [B]Verze 2.0.12.a3[/B]
 - upraveny odkazy widgetů Filmy Stream Cinema
 [B]Verze 2.0.12.a2[/B]
