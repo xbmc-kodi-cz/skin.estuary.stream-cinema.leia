@@ -16,7 +16,7 @@
 	<extension point="xbmc.addon.metadata">
 		<news>
 [B]Verze 2.0.23[/B]
-- opraveny odkazy widgetů "TV dnes" a "TV program na 14 dni"
+- opraveny odkazy widgetu "TV dnes" a "TV program na 14 dni"
 [B]Verze 2.0.12.a3[/B]
 - upraveny odkazy widgetů Filmy Stream Cinema
 [B]Verze 2.0.12.a2[/B]
