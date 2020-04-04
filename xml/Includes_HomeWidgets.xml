@@ -1159,7 +1159,7 @@
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
-					<param name="widget_header" value="Poslední sledované seriály (T)"/>
+					<param name="widget_header" value="Poslední sledované seriály (Tr)"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42110"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
