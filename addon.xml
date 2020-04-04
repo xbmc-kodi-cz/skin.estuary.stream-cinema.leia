@@ -15,6 +15,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
+[B]Verze 2.0.24[/B]
+- opravena chyba zobrazeni widgetu Posledni sledovane serialy s pouzitim seznamu Trakt
 [B]Verze 2.0.23[/B]
 - opraveny odkazy widgetu "TV dnes" a "TV program na 14 dni"
 [B]Verze 2.0.12.a3[/B]
