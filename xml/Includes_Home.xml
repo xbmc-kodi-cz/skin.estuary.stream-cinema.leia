@@ -1728,7 +1728,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://home/addons/skin.estuary.stream-cinema.leia/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture> <!-- Saxel -->
+						<texture fallback="special://home/addons/skin.estuary.stream-cinema.leia/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture>  <!-- Saxel -->
 					</control>
 					<control type="textbox">
 						<height>450</height>
