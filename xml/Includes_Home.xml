@@ -1728,7 +1728,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://home/addons/skin.estuary.easy/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture>
+						<texture fallback="special://home/addons/skin.estuary.stream-cinema.leia/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture> <!-- Saxel -->
 					</control>
 					<control type="textbox">
 						<height>450</height>
@@ -1804,7 +1804,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://home/addons/skin.estuary.easy/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture>
+						<texture fallback="special://home/addons/skin.estuary.stream-cinema.leia/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture> <!-- Saxel -->
 						<visible>!$PARAM[thumb]</visible>
 					</control>
 					<control type="image">
@@ -1812,7 +1812,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://home/addons/skin.estuary.easy/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(thumb)]</texture>
+						<texture fallback="special://home/addons/skin.estuary.stream-cinema.leia/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(thumb)]</texture> <!-- Saxel -->
 						<visible>$PARAM[thumb]</visible>
 					</control>
 					<control type="textbox">
