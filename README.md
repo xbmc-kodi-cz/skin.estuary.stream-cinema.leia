@@ -1,8 +1,8 @@
 # skin.estuary.stream-cinema.leia
-Vzhled Estuary Stream-Cinema pro Kodi Leia
+**Vzhled Estuary Stream-Cinema pro Kodi Leia**
 
 Verze 2.0.26
-- drobné opravy cest
+* drobné opravy cest
 
 Verze 2.0.25
 - oprava cesty k tvnoise.gif pri nedostupnem obrazku (plakatu)
