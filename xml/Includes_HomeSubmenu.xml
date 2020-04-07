@@ -187,7 +187,7 @@
 			<item>
 				<label>HDR</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f484452&amp;title=484452&amp;url=2f484452,return)</onclick>
-				<thumb>special://home/addons/skin.estuary.stream-cinema/extras/icons/hdr.png</thumb>
+				<thumb>special://skin/extras/icons/hdr.png</thumb>
 			</item>
 			<item>
 				<label>Zoznamy/Rebricky</label>
