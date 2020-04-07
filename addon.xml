@@ -45,17 +45,14 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot000.jpg</screenshot>
-			<screenshot>resources/screenshot001.jpg</screenshot>
-			<screenshot>resources/screenshot002.jpg</screenshot>
-			<screenshot>resources/screenshot003.jpg</screenshot>
-			<screenshot>resources/screenshot004.jpg</screenshot>
-			<screenshot>resources/screenshot005.jpg</screenshot>
-			<screenshot>resources/screenshot006.jpg</screenshot>
-			<screenshot>resources/screenshot007.jpg</screenshot>
-			<screenshot>resources/screenshot008.jpg</screenshot>
-			<screenshot>resources/screenshot009.jpg</screenshot>
-			<screenshot>resources/screenshot010.jpg</screenshot>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
