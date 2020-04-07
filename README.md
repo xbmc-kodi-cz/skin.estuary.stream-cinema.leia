@@ -5,11 +5,11 @@ Verze 2.0.26
 * drobné opravy cest
 
 Verze 2.0.25
-- oprava cesty k tvnoise.gif pri nedostupnem obrazku (plakatu)
+* oprava cesty k tvnoise.gif pri nedostupnem obrazku (plakatu)
 
 Verze 2.0.24
-- oprava chybneho volani pluginu Youtube pokud neni plugin Youtube nainstalovan
-- oprava chyby zobrazeni widgetu Posledni sledovane serialy s pouzitim seznamu Trakt
+* oprava chybneho volani pluginu Youtube pokud neni plugin Youtube nainstalovan
+* oprava chyby zobrazeni widgetu Posledni sledovane serialy s pouzitim seznamu Trakt
 
 Verze 2.0.23
 - opraveny odkazy widgetu "TV dnes" a "TV program na 14 dni"
