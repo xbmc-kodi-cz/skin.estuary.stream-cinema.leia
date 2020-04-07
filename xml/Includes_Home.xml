@@ -1701,7 +1701,7 @@
 						<height>100</height>
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture background="true">special://skin/extras/banners/$PARAM[source].jpg</texture>
+						<texture background="true">special://skin/extras/banners/$PARAM[source].jpg</texture> <!-- Saxel -->
 						<visible>$PARAM[header]</visible>
 					</control>
 					<control type="fadelabel">
