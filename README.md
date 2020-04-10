@@ -2,6 +2,7 @@
 **Vzhled Estuary Stream-Cinema pro Kodi Leia**
 
 Verze 2.0.26
+* pridana podpora archivu Skylink
 * drobné opravy cest
 
 Verze 2.0.25
