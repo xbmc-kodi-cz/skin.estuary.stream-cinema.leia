@@ -647,12 +647,12 @@
 				<onclick>ActivateWindow($PARAM[pvr_type]Recordings)</onclick>
 				<thumb>icons/pvr/recording.png</thumb>
 			</item>
-            <item>
-                <label>Skylink Archiv</label>
-                <onclick>ActivateWindow(10025,plugin://plugin.video.sl/?replay=channels,return)</onclick>
-                <thumb>special://skin/extras/icons/pvr/skylink.png</thumb>
-                <visible>System.HasAddon(plugin.video.sl)</visible>
-            </item>			
+			<item>
+				<label>$LOCALIZE[31167]</label>
+				<onclick>ActivateWindow(10025,plugin://plugin.video.sl/?replay=channels,return)</onclick>
+				<thumb>special://skin/extras/icons/pvr/skylink.png</thumb>
+				<visible>System.HasAddon(plugin.video.sl)</visible>
+			</item>
 			<item>
 				<label>$LOCALIZE[19040]</label>
 				<onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
