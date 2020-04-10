@@ -556,6 +556,14 @@
 					<param name="param" value="true"/> <!-- Easy/SC+ -->
 					<param name="title" value="$INFO[Container(12300).ListItem.Title,: [B],[/B]]$INFO[Container(12300).ListItem.EpisodeName, [B](,)[/B]]$INFO[Container(12300).ListItem.StartDate, - ,]$INFO[Container(12300).ListItem.StartTime, - ,]$INFO[Container(12300).ListItem.EndTime, - ,]"/> <!-- Easy/SC+ -->
 				</include>
+				<include content="WidgetListChannels" condition="System.HasAddon(plugin.video.sl) + System.HasPVRAddon">
+					<param name="content_path" value="plugin://plugin.video.sl/?replay=channels"/>
+					<param name="widget_header" value="Skylink Archiv"/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="12500"/>
+					<param name="item_limit" value="$INFO[NumItems]"/>
+					<param name="label2" value=""/>
+				</include>
 			</control>
 			<include content="ImageWidget" condition="!System.HasPVRAddon">
 				<param name="text_label" value="$LOCALIZE[31143]" />
