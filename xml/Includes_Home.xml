@@ -648,6 +648,12 @@
 				<thumb>icons/pvr/recording.png</thumb>
 			</item>
 			<item>
+				<label>$LOCALIZE[31167]</label>
+				<onclick>ActivateWindow(10025,plugin://plugin.video.sl/?replay=channels,return)</onclick>
+				<thumb>special://skin/extras/icons/pvr/skylink.png</thumb>
+				<visible>System.HasAddon(plugin.video.sl)</visible>
+			</item>
+			<item>
 				<label>$LOCALIZE[19040]</label>
 				<onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
 				<thumb>icons/pvr/timer.png</thumb>
@@ -1701,7 +1707,7 @@
 						<height>100</height>
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture background="true">special://home/addons/skin.estuary.easy/extras/banners/$PARAM[source].jpg</texture>
+						<texture background="true">special://skin/extras/banners/$PARAM[source].jpg</texture> <!-- Saxel -->
 						<visible>$PARAM[header]</visible>
 					</control>
 					<control type="fadelabel">
@@ -1728,7 +1734,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://skin/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture>  <!-- Saxel -->
+						<texture fallback="special://skin/extras/backgrounds/pattern1.jpg" background="true">$INFO[Container($PARAM[list_id]).ListItem.Icon]</texture>  <!-- Saxel -->
 					</control>
 					<control type="textbox">
 						<height>450</height>
@@ -1804,7 +1810,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://skin/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture> <!-- Saxel -->
+						<texture fallback="special://skin/extras/backgrounds/pattern1.jpg" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture> <!-- Saxel -->
 						<visible>!$PARAM[thumb]</visible>
 					</control>
 					<control type="image">
@@ -1812,7 +1818,7 @@
 						<width>442</width>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture background="true"></texture>
-						<texture fallback="special://skin/extras/images/tvnoise.gif" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(thumb)]</texture> <!-- Saxel -->
+						<texture fallback="special://skin/extras/backgrounds/pattern1.jpg" background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(thumb)]</texture> <!-- Saxel -->
 						<visible>$PARAM[thumb]</visible>
 					</control>
 					<control type="textbox">
