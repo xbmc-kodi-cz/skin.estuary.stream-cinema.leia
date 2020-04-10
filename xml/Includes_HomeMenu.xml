@@ -26,7 +26,7 @@
 			<visible>Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Movies -->
-			<label>Filmy</label>
+			<label>$LOCALIZE[20342]</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6d6f76696573&amp;list=2f464d6f76696573&amp;title=243330393031&amp;url=2f464d6f76696573,return)</onclick>
 			<property name="menu_id">$NUMBER[41000]</property>
@@ -35,7 +35,7 @@
 			<visible>Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema TVShows -->
-			<label>Seriály</label>
+			<label>$LOCALIZE[20343]</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
 			<property name="menu_id">$NUMBER[42000]</property>
