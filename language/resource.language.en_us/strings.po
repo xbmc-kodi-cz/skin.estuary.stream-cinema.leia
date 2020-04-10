@@ -575,3 +575,7 @@ msgstr "Profile avatar"
 msgctxt "#31167"
 msgid "Skylink Archive"
 msgstr "Skylink Archive"
+
+msgctxt "#31168"
+msgid "Stream-Cinema"
+msgstr "Stream-Cinema"
