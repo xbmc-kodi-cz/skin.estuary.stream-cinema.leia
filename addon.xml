@@ -16,6 +16,7 @@
 	<extension point="xbmc.addon.metadata">
 		<news>
 [B]Verze 2.0.26[/B]
+- pridana podpora archivu Skylink
 - drobné opravy cest
 [B]Verze 2.0.25[/B]
 - oprava cesty k tvnoise.gif pri nedostupnem obrazku (plakatu)
