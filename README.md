@@ -1,6 +1,10 @@
 # skin.estuary.stream-cinema.leia
 **Vzhled Estuary Stream-Cinema pro Kodi Leia**
 
+Verze 2.0.27
+* doplnena dlazdice CoreELEC do systemovych nastaveni
+* oprava cest k doplnku iVysilani - Ceska televize (doplnek instalujte z repozitare XBMC-Kodi CZ/SK)
+
 Verze 2.0.26
 * pridana podpora archivu Skylink
 * drobné opravy cest
