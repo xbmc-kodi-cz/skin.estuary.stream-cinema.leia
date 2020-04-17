@@ -1472,83 +1472,83 @@
 			</include>
 			<control type="grouplist" id="62001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilaniMenuWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilaniMenuWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
 					<param name="iVysilaniMenu_submenu" value="true"/>
 					<param name="widget_header" value="Menu iVysílání"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62050"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniliveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=live"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniliveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=live"/>
 					<param name="widget_header" value="Živé vysílání"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62100"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62100).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyDateWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byDate"/>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyDateWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=byDate"/>
 					<param name="widget_header" value="Podle data"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62150"/>
 					<param name="icon" value="defaultyear.png"/>
 				</include>
-				<include content="WidgetListLetters" condition="Skin.HasSetting(iVysilanibyLetterWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byLetter"/>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(iVysilanibyLetterWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=byLetter"/>
 					<param name="widget_header" value="Podle abecedy"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62200"/>
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyGenreWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=byGenre"/>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(iVysilanibyGenreWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=byGenre"/>
 					<param name="widget_header" value="Podle žánru"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62250"/>
 					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
 					<param name="icon_height" value="100"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsMainWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsMain"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsMainWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=tipsMain"/>
 					<param name="widget_header" value="Tipy"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62300"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62300).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopDayWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=topDay"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopDayWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=topDay"/>
 					<param name="widget_header" value="Nejsledovanější dne"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62350"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62350).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopWeekWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=topWeek"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitopWeekWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=topWeek"/>
 					<param name="widget_header" value="Nejsledovanější týdne"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62400"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62400).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsNoteWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsNote"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsNoteWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=tipsNote"/>
 					<param name="widget_header" value="Nepřehlédněte"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62450"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62450).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsArchiveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=tipsArchive"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilanitipsArchiveWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=tipsArchive"/>
 					<param name="widget_header" value="Z našeho archivu"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62500"/>
 					<param name="param" value="true"/>
 					<param name="title" value="$INFO[Container(62500).ListItem.Label,: [B],[/B]]"/>
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniwatchingWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)">
-					<param name="content_path" value="plugin://plugin.video.ivysilani/?menu=watching"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(iVysilaniwatchingWidget) + !Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)">
+					<param name="content_path" value="plugin://plugin.video.ivysilani.cz/?menu=watching"/>
 					<param name="widget_header" value="Ostatní právě sledují"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="62550"/>

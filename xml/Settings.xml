@@ -111,6 +111,12 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>icons/settings/system.png</icon>
 					</item>
+					<item> <!--Saxel-->
+						<label>CoreELEC</label>
+						<onclick>RunAddon(service.coreelec.settings)</onclick>
+						<icon>icons/settings/coreelec.png</icon>
+						<visible>System.HasAddon(service.coreelec.settings)</visible>
+					</item>
 					<item>
 						<label>LibreELEC</label>
 						<onclick>RunAddon(service.libreelec.settings)</onclick>
