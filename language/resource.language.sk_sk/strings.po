@@ -579,3 +579,11 @@ msgstr "Skylink Archiv"
 msgctxt "#31168"
 msgid "Stream-Cinema"
 msgstr "Stream-Cinema"
+
+msgctxt "#31169"
+msgid "Fairytale"
+msgstr "Rozprávky"
+
+msgctxt "#31170"
+msgid "Concerts"
+msgstr "Koncerty"
