@@ -442,52 +442,52 @@
 		<content>
 			<item>
 				<label>Živé vysílání</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=live,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=live,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>
 			<item>
 				<label>Podle data</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byDate,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=byDate,return)</onclick>
 				<thumb>defaultyear.png</thumb>
 			</item>
 			<item>
 				<label>Podle abecedy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byLetter,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=byLetter,return)</onclick>
 				<thumb>defaultmovietitle.png</thumb>
 			</item>
 			<item>
 				<label>Podle žánru</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=byGenre,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=byGenre,return)</onclick>
 				<thumb>defaultgenre.png</thumb>
 			</item>
 			<item>
 				<label>Tipy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsMain,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=tipsMain,return)</onclick>
 				<thumb>defaultfavourites.png</thumb>
 			</item>
 			<item>
 				<label>Nejsledovanější dne</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=topDay,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=topDay,return)</onclick>
 				<thumb>defaultmusictop100.png</thumb>
 			</item>
 			<item>
 				<label>Nejsledovanější týdne</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=topWeek,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=topWeek,return)</onclick>
 				<thumb>defaultmusictop100.png</thumb>
 			</item>
 			<item>
 				<label>Nepřehlédněte</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsNote,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=tipsNote,return)</onclick>
 				<thumb>defaulticonwarning.png</thumb>
 			</item>
 			<item>
 				<label>Z našeho archivu</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=tipsArchive,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=tipsArchive,return)</onclick>
 				<thumb></thumb>
 			</item>
 			<item>
 				<label>Ostatní právě sledují</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani/?menu=watching,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.ivysilani.cz/?menu=watching,return)</onclick>
 				<thumb>defaultinprogressshows.png</thumb>
 			</item>
 		</content>

@@ -44,8 +44,8 @@
 			<visible>Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Pohádky -->
-			<label>Pohádky</label>
-			<label2>[CR][CR]Stream-Cinema</label2>
+			<label>$LOCALIZE[31169]</label>
+			<label2>[CR][CR]$LOCALIZE[31168]</label2>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=36&amp;list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36,return)</onclick>
 			<property name="menu_id">$NUMBER[47000]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
@@ -53,8 +53,8 @@
 			<visible>Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Koncerty -->
-			<label>Koncerty</label>
-			<label2>[CR][CR]Stream-Cinema</label2>
+			<label>$LOCALIZE[31170]</label>
+			<label2>[CR][CR]$LOCALIZE[31168]</label2>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
 			<property name="menu_id">$NUMBER[43000]</property>
 			<thumb>icons/sidemenu/musicvideos.png</thumb>
@@ -92,10 +92,10 @@
 			<label>iVysílání</label>
 			<label2>[CR][CR]Česká televize</label2>
 			<property name="menu_id">$NUMBER[62000]</property>
-			<onclick>ActivateWindow(videos,plugin://plugin.video.ivysilani,return)</onclick>
+			<onclick>ActivateWindow(videos,plugin://plugin.video.ivysilani.cz,return)</onclick>
 			<thumb>icons/sidemenu/livetv.png</thumb>
 			<property name="id">ivysilani</property>
-			<visible>!Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani)</visible>
+			<visible>!Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)</visible>
 		</item>
 		<item> <!-- Trailer -->
 			<label>Trailer</label>
