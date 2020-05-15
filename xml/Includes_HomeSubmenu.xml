@@ -139,27 +139,32 @@
 	</include>
 	<include name="SCMainMenuContent">
 		<content>
-			<item>
+<!-- 			<item>
 				<label>Stažené soubory</label>
 				<onclick>ActivateWindow(Videos,$INFO[Skin.String(SCDownloadPath)],return)</onclick>
 				<thumb>defaultaddonsrepo.png</thumb>
+			</item> -->
+			<item>
+				<label>Vyhledávání Filmů</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/movies,return)</onclick>
+				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
-				<label>Vyhledávání</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6d656e75&amp;title=5b425d2433303935335b2f425d&amp;url=2f5365617263682f6d656e75,return)</onclick>
+				<label>Vyhledávání Seriálů</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/tvshows,return)</onclick>
 				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
 				<label>Filmy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6d6f76696573&amp;list=2f464d6f76696573&amp;title=243330393031&amp;url=2f464d6f76696573,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/movies,return)</onclick>
 				<thumb>defaultmovies.png</thumb>
 			</item>
 			<item>
 				<label>Seriály</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/tvshows,return)</onclick>
 				<thumb>defaulttvshows.png</thumb>
 			</item>
-			<item>
+<!-- 			<item>
 				<label>Koncerty</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
 				<thumb>defaultmusicvideos.png</thumb>
@@ -173,13 +178,13 @@
 				<label>Moje seznamy (trakt.tv)</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
 				<thumb>defaultplaylist.png</thumb>
-			</item>
+			</item> -->
 			<item>
-				<label>TV dnes</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
+				<label>TV dnes (Filmy)</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/csfd_tips/movies,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>
-			<item>
+<!-- 			<item>
 				<label>TV program na 14 dni</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976,return)</onclick>
 				<thumb>defaultyear.png</thumb>
@@ -187,16 +192,16 @@
 			<item>
 				<label>HDR</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f484452&amp;title=484452&amp;url=2f484452,return)</onclick>
-				<thumb>special://skin/extras/icons/hdr.png</thumb> <!-- Saxel -->
+				<thumb>special://skin/extras/icons/hdr.png</thumb>
 			</item>
 			<item>
 				<label>Zoznamy/Rebricky</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6765744c697374&amp;title=5a6f7a6e616d792f5265627269636b79&amp;url=2f5365617263682f6765744c697374,return)</onclick>
 				<thumb>defaultmusictop100.png</thumb>
-			</item>
+			</item> -->
 			<item>
 				<label>Nastavení</label>
-				<onclick>Addon.OpenSettings(plugin.video.stream-cinema-2)</onclick>
+				<onclick>Addon.OpenSettings(plugin.video.stream-cinema-2/command/open-settings)</onclick>
 				<thumb>defaultaddonservice.png</thumb>
 			</item>
 			<item>

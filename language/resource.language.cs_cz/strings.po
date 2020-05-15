@@ -631,3 +631,19 @@ msgstr "Nejlepší TV tipy dne"
 msgctxt "#31182"
 msgid "Watch history"
 msgstr "historie shlédnutí"
+
+msgctxt "#31200"
+msgid "Specific settings"
+msgstr "Specifická nastavení"
+
+msgctxt "#31201"
+msgid "Skin settings"
+msgstr "Nastavení skinu"
+
+msgctxt "#31202"
+msgid "Reload skins"
+msgstr "Obnovení skinu"
+
+msgctxt "#31203"
+msgid "SC2 Movies"
+msgstr "SC2 Filmy"

@@ -632,6 +632,23 @@ msgctxt "#31182"
 msgid "Watch history"
 msgstr "história zhliadnutí"
 
+msgctxt "#31200"
+msgid "Specific settings"
+msgstr "Specifická nastavenie"
+
+msgctxt "#31201"
+msgid "Skin settings"
+msgstr "Nastavenia skinu"
+
+msgctxt "#31202"
+msgid "Reload skins"
+msgstr "Znovu načítať skin"
+
+msgctxt "#31203"
+msgid "SC2 Movies"
+msgstr "SC2 Filmečky"
+
+
 msgctxt "#31300"
 msgid "Widget Popular series"
 msgstr "Widget Populárny seriály"
@@ -639,3 +656,4 @@ msgstr "Widget Populárny seriály"
 msgctxt "#31301"
 msgid "Popular series"
 msgstr "Populárny seriály"
+

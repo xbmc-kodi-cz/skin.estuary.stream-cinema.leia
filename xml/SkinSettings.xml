@@ -1931,7 +1931,7 @@
 					</item>
 -->
 					<item id="4"> <!-- Easy/SC+ -->
-						<label>Specifická nastavení</label>
+						<label>$LOCALIZE[31200]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="5"> <!-- Easy/SC+ New Menu -->

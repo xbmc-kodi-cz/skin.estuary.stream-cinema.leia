@@ -632,6 +632,22 @@ msgctxt "#31182"
 msgid "Watch history"
 msgstr "Watch history"
 
+msgctxt "#31200"
+msgid "Specific settings"
+msgstr "Specific settings"
+
+msgctxt "#31201"
+msgid "Skin settings"
+msgstr "NSkin settings"
+
+msgctxt "#31202"
+msgid "Reload skin"
+msgstr "Reload skin"
+
+msgctxt "#31203"
+msgid "SC2 Movies"
+msgstr "SC2 Movies"
+
 msgctxt "#31300"
 msgid "Widget Popular series"
 msgstr "Widget Popular series"
@@ -639,3 +655,4 @@ msgstr "Widget Popular series"
 msgctxt "#31301"
 msgid "Popular series"
 msgstr "Popular series"
+
