@@ -654,6 +654,22 @@ msgctxt "#31204"
 msgid "Genre"
 msgstr "Žánr"
 
+msgctxt "#31205"
+msgid "Enable Strem Cinema 2 Movies"
+msgstr "Povolit Strem Cinema 2 Filmy"
+
+msgctxt "#31206"
+msgid "Widget Menu Movies"
+msgstr "Widget Menu Filmy"
+
+msgctxt "#31207"
+msgid "Widget Watched Movies"
+msgstr "Widget naposledy sledované filmy"
+
+msgctxt "#31208"
+msgid "Widget Popular Movies"
+msgstr "Widget Populární filmy"
+
 
 
 msgctxt "#31300"

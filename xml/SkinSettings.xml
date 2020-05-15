@@ -321,7 +321,7 @@
 						<ondown>1041</ondown>
 						<visible>Container(1000).HasFocus(1040)</visible>
 						<control type="radiobutton" id="1042"> <!-- Movies Menu enable/disable -->
-							<label>Povolit Filmy stream-cinema-2</label>
+							<label>$LOCALIZE[31205]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMovie)</selected>
 							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
@@ -331,95 +331,95 @@
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
 						<control type="radiobutton" id="1044"> <!-- Movies Menu Widget -->
-							<label>Widget Menu Filmy</label>
+							<label>$LOCALIZE[31206]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesMenuWidget)</onclick>
 						</control>
+						<control type="radiobutton" id="1050">  <!-- Popular Movies Widget -->
+							<label>$LOCALIZE[31208]</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMoviesPopularWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMoviesPopularWidget)</onclick>
+						</control>
 						<control type="radiobutton" id="1045"> <!-- Last Played Movies Widget -->
-							<label>Widget Poslední sledované filmy</label>
+							<label>$LOCALIZE[31207]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesLastPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1046"> <!-- Switch to Trakt Watched Movies Widget -->
-							<label>- Použít seznam z Trakt?</label>
+						<!-- <control type="radiobutton" id="1046">  --><!-- Switch to Trakt Watched Movies Widget -->
+							<!-- <label>- Použít seznam z Trakt?</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidgetTrakt)</onclick>
-						</control>
-						<control type="radiobutton" id="1047"> <!-- New Movies Widget -->
-							<label>Widget Filmové novinky</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1047">  --><!-- New Movies Widget -->
+							<!-- <label>Widget Filmové novinky</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesNewWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesNewWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1048"> <!-- New Movies Dubed Widget -->
-							<label>Widget Filmové novinky dabované</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1048">  --><!-- New Movies Dubed Widget -->
+							<!-- <label>Widget Filmové novinky dabované</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesNewDubWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesNewDubWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1049"> <!-- Just Played Movies Widget -->
-							<label>Widget Právě sledované filmy</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1049">  --><!-- Just Played Movies Widget -->
+							<!-- <label>Widget Právě sledované filmy</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesJustPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesJustPlayedWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1050"> <!-- Favorites Movies Widget -->
-							<label>Widget Nejsledovanější filmy</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesFavoritesWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesFavoritesWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1051"> <!-- Last Added Movies Widget -->
-							<label>Widget Nově Přidané filmy</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1051">  --><!-- Last Added Movies Widget -->
+							<!-- <label>Widget Nově Přidané filmy</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesNewAddedWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1052"> <!-- Movies by Name (Letter) Widget -->
-							<label>Widget Název filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1052">  --><!-- Movies by Name (Letter) Widget -->
+							<!-- <label>Widget Název filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesNameWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesNameWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1053"> <!-- Movies by Quality Widget -->
-							<label>Widget Kvalita filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1053">  --><!-- Movies by Quality Widget -->
+							<!-- <label>Widget Kvalita filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesQualityWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesQualityWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1054"> <!-- Movies by Country Widget -->
-							<label>Widget Země filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1054">  --><!-- Movies by Country Widget -->
+							<!-- <label>Widget Země filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesCountryWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesCountryWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1055"> <!-- Movies by Genre Widget -->
-							<label>Widget Žánry filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1055">  --><!-- Movies by Genre Widget -->
+							<!-- <label>Widget Žánry filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesGenreWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesGenreWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1056"> <!-- Movies by Year Widget -->
-							<label>Widget Rok filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1056">  --><!-- Movies by Year Widget -->
+							<!-- <label>Widget Rok filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesYearWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesYearWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1057"> <!-- Movies Sets Widget -->
-							<label>Widget Sady filmu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1057">  --><!-- Movies Sets Widget -->
+							<!-- <label>Widget Sady filmu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesSetsWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesSetsWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1058"> <!-- Movies Main Menu Widget -->
-							<label>Widget stream-cinema-2 Menu</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1058">  --><!-- Movies Main Menu Widget -->
+							<!-- <label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesMainWidget)</onclick>
-						</control>
+						</control>  -->
 					</control>
 					<control type="scrollbar" id="1059">
 						<right>0</right>

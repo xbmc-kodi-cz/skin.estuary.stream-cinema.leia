@@ -1077,7 +1077,7 @@
 					<param name="list_id" value="41250"/>
 					<param name="stream-cinema" value="true"/>
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesFavoritesWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesPopularWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f706f70756c6172&amp;title=243330393035&amp;url=2f464d6f766965732f706f70756c6172"/>
 					<param name="widget_header" value="Nejsledovanější filmy"/>
 					<param name="widget_target" value="videos"/>

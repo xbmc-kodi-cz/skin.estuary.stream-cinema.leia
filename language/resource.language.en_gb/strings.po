@@ -655,6 +655,22 @@ msgctxt "#31204"
 msgid "Genre"
 msgstr "Genre"
 
+msgctxt "#31205"
+msgid "Enable Strem Cinema 2 Movies"
+msgstr "Enable Strem Cinema 2 Movies"
+
+msgctxt "#31206"
+msgid "Widget Menu Movies"
+msgstr "Widget Menu Movies"
+
+msgctxt "#31207"
+msgid "Widget Watched Movies"
+msgstr "Widget Watched Movies"
+
+msgctxt "#31208"
+msgid "Widget Popular Movies"
+msgstr "Widget Popular Movies"
+
 
 
 
