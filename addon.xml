@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stream-cinema.leia" version="3.0.0.a1" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
+<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.0.a1" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
