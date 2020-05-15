@@ -593,13 +593,25 @@ msgid "Films"
 msgstr "Filmy"
 
 msgctxt "#31172"
-msgid "Serials"
+msgid "series"
 msgstr "Seriály"
 
 msgctxt "#31173"
-msgid "Widget Menu stream-cinema-2"
-msgstr "Widget Menu stream-cinema-2"
+msgid "Widget stream-cinema-2"
+msgstr "Widget stream-cinema-2"
 
 msgctxt "#31174"
 msgid "Widget Popular films"
 msgstr "Widget Populárne filmy"
+
+msgctxt "#31175"
+msgid "Widget Popular series"
+msgstr "Widget Populárny seriály"
+
+msgctxt "#31176"
+msgid "Widget TV tips of the day"
+msgstr "Widget Najlepšie TV tipy dňa"
+
+msgctxt "#31177"
+msgid "Widget Watch history"
+msgstr "Widget história zhliadnutí"
