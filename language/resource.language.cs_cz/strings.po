@@ -632,6 +632,8 @@ msgctxt "#31182"
 msgid "Watch history"
 msgstr "historie shlédnutí"
 
+
+
 msgctxt "#31200"
 msgid "Specific settings"
 msgstr "Specifická nastavení"
@@ -651,3 +653,30 @@ msgstr "SC2 Filmy"
 msgctxt "#31204"
 msgid "Genre"
 msgstr "Žánr"
+
+
+
+msgctxt "#31300"
+msgid "Widget Popular series"
+msgstr "Widget Populární seriály"
+
+msgctxt "#31301"
+msgid "Popular series"
+msgstr "Populární seriály"
+
+msgctxt "#31302"
+msgid "Widget name series"
+msgstr "Widget Název seriálu"
+
+msgctxt "#31303"
+msgid "Name series"
+msgstr "Název seriálu"
+
+msgctxt "#31304"
+msgid "Widget genre series"
+msgstr "Widget Žánry seriálu"
+
+msgctxt "#31305"
+msgid "Genre series"
+msgstr "Žánry seriálu"
+

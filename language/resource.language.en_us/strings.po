@@ -632,6 +632,9 @@ msgctxt "#31182"
 msgid "Watch history"
 msgstr "Watch history"
 
+
+
+
 msgctxt "#31200"
 msgid "Specific settings"
 msgstr "Specific settings"
@@ -651,3 +654,31 @@ msgstr "SC2 Movies"
 msgctxt "#31204"
 msgid "Genre"
 msgstr "Genre"
+
+
+
+
+msgctxt "#31300"
+msgid "Widget Popular series"
+msgstr "Widget Popular series"
+
+msgctxt "#31301"
+msgid "Popular series"
+msgstr "Popular series"
+
+msgctxt "#31302"
+msgid "Widget name series"
+msgstr "Widget name series"
+
+msgctxt "#31303"
+msgid "Name series"
+msgstr "Name series"
+
+msgctxt "#31304"
+msgid "Widget genre series"
+msgstr "Widget genre series"
+
+msgctxt "#31305"
+msgid "Genre series"
+msgstr "Genre series"
+

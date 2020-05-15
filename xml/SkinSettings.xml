@@ -451,72 +451,72 @@
 							<height>3</height>
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
-						<control type="radiobutton" id="1064"> <!-- TVShows Menu Widget -->
-							<label>Widget Menu Seriály</label>
+						<!-- <control type="radiobutton" id="1064"> --> <!-- Popular Series Menu Widget -->
+							<!-- <label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMenuWidget)</onclick>
-						</control>
+						</control> -->
 						<control type="radiobutton" id="1065"> <!-- TVshows Last Played Widget -->
-							<label>Widget Poslední sledované seriály</label>
+							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1066"> <!-- Switch to Trakt Watched TVShows Widget -->
-							<label>- Použít seznam z Trakt?</label>
+						<!-- <control type="radiobutton" id="1066"> --> <!-- Switch to Trakt Watched TVShows Widget -->
+							<!-- <label>- Použít seznam z Trakt?</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidgetTrakt)</onclick>
-						</control>
-						<control type="radiobutton" id="1067"> <!-- TVShows New Added Widget -->
-							<label>Widget Poslední přidané seriály</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1067"> --> <!-- TVShows New Added Widget -->
+							<!-- <label>Widget Poslední přidané seriály</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1068"> <!-- TVShows New Added Episodes Widget -->
-							<label>Widget Poslední přidané části</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1068"> --> <!-- TVShows New Added Episodes Widget -->
+							<!-- <label>Widget Poslední přidané části</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsNewAddedEpisodesWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedEpisodesWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1069"> <!-- TVShows Favorites Widget -->
-							<label>Widget Nejsledovanější seriály</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1069"> --> <!-- TVShows Favorites Widget -->
+							<!-- <label>Widget Nejsledovanější seriály</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVshowsFavoritesWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVshowsFavoritesWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1070"> <!-- TVShows Just Played Widget -->
-							<label>Widget Právě hrané seriály</label>
+						</control> -->
+						<!-- <control type="radiobutton" id="1070"> --> <!-- TVShows Just Played Widget -->
+							<!-- <label>Widget Právě hrané seriály</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsJustPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsJustPlayedWidget)</onclick>
-						</control>
+						</control> -->
 						<control type="radiobutton" id="1071"> <!-- TVShows by Name (Letter) Widget -->
-							<label>Widget Název seriálu</label>
+							<label>$LOCALIZE[31302]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsNameWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsNameWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1072"> <!-- TVShows Country Widget -->
-							<label>Widget Země seriálu</label>
+						<!-- <control type="radiobutton" id="1072"> --> <!-- TVShows Country Widget -->
+							<!-- <label>Widget Země seriálu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsCountryWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsCountryWidget)</onclick>
-						</control>
+						</control> -->
 						<control type="radiobutton" id="1073"> <!-- TVShows Genres Widget -->
-							<label>Widget Žánry seriálu</label>
+							<label>$LOCALIZE[31304]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsGenreWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsGenreWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1074"> <!-- TVShows Main Menu Widget -->
-							<label>Widget stream-cinema-2 Menu</label>
+						<!-- <control type="radiobutton" id="1074"> --> <!-- TVShows Main Menu Widget -->
+							<!-- <label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMainWidget)</onclick>
-						</control>
+						</control> -->
 					</control>
 					<control type="grouplist" id="1081"> <!-- Easy/SC+ Stories -->
 						<onleft>1000</onleft>
