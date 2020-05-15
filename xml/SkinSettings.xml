@@ -451,14 +451,14 @@
 							<height>3</height>
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
-						<control type="radiobutton" id="1064"> <!-- TVShows Menu Widget -->
-							<label>Widget Menu Seriály</label>
+						<!-- <control type="radiobutton" id="1064"> --> <!-- Popular Series Menu Widget -->
+							<!-- <label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMenuWidget)</onclick>
-						</control>
+						</control> -->
 						<control type="radiobutton" id="1065"> <!-- TVshows Last Played Widget -->
-							<label>Widget Poslední sledované seriály</label>
+							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidget)</onclick>

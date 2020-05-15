@@ -631,3 +631,11 @@ msgstr "TV tips of the day"
 msgctxt "#31182"
 msgid "Watch history"
 msgstr "Watch history"
+
+msgctxt "#31300"
+msgid "Widget Popular series"
+msgstr "Widget Popular series"
+
+msgctxt "#31301"
+msgid "Popular series"
+msgstr "Popular series"

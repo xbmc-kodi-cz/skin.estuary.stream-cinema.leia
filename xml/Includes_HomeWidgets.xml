@@ -1153,14 +1153,15 @@
 			<control type="grouplist" id="42001">
 				<include>WidgetGroupListCommon</include>
 				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMenuWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
 					<param name="SCTVShowsMenu_submenu" value="true"/>
-					<param name="widget_header" value="Menu Seriály"/>
+					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42050"/>
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + !Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=6c617374&amp;id=6c617374&amp;title=243330393237"/>
-					<param name="widget_header" value="Poslední sledované seriály"/>
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
