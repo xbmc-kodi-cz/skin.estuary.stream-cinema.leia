@@ -35,7 +35,7 @@
 			<visible>Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema TVShows -->
-			<label>$LOCALIZE[20343]</label>
+			<label>$LOCALIZE[31306]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
 			<property name="menu_id">$NUMBER[42000]</property>
