@@ -696,3 +696,7 @@ msgctxt "#31305"
 msgid "Genre series"
 msgstr "Žánry seriálu"
 
+msgctxt "#31306"
+msgid "SC2 series"
+msgstr "SC2 seriály"
+

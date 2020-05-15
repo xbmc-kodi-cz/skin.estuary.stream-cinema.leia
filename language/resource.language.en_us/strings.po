@@ -594,7 +594,7 @@ msgstr "Films"
 
 msgctxt "#31172"
 msgid "series"
-msgstr "series"
+msgstr "Series"
 
 msgctxt "#31173"
 msgid "Widget stream-cinema-2"
@@ -698,3 +698,6 @@ msgctxt "#31305"
 msgid "Genre series"
 msgstr "Genre series"
 
+msgctxt "#31306"
+msgid "SC2 series"
+msgstr "SC2 series"
