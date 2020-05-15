@@ -603,3 +603,19 @@ msgstr "Widget Menu stream-cinema-2"
 msgctxt "#31174"
 msgid "Widget Popular films"
 msgstr "Widget Populárne filmy"
+
+msgctxt "#31200"
+msgid "Specific settings"
+msgstr "Specifická nastavenie"
+
+msgctxt "#31201"
+msgid "Skin settings"
+msgstr "Nastavenia skinu"
+
+msgctxt "#31202"
+msgid "Reload skins"
+msgstr "Znovu načítať skin"
+
+msgctxt "#31203"
+msgid "SC2 Movies"
+msgstr "SC2 Filmečky"

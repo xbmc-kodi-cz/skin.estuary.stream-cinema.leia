@@ -18,11 +18,11 @@
 				<include>ButtonMenuList</include>
 				<content>
 					<item> <!-- Easy/SC+ -->
-						<label>Reload skin</label>
+						<label>$LOCALIZE[31202]</label>
 						<onclick>ReloadSkin()</onclick>
 					</item>
 					<item> <!-- Easy/SC+ -->
-						<label>Nastavení skinu</label>
+						<label>$LOCALIZE[31201]</label>
 						<onclick>dialog.close(all,true)</onclick>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
 					</item>
