@@ -647,3 +647,7 @@ msgstr "Obnovení skinu"
 msgctxt "#31203"
 msgid "SC2 Movies"
 msgstr "SC2 Filmy"
+
+msgctxt "#31204"
+msgid "Genre"
+msgstr "Žánr"

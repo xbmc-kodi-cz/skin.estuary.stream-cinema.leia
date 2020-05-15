@@ -647,3 +647,7 @@ msgstr "Znovu načítať skin"
 msgctxt "#31203"
 msgid "SC2 Movies"
 msgstr "SC2 Filmečky"
+
+msgctxt "#31204"
+msgid "Genre"
+msgstr "Žánr"

@@ -127,11 +127,11 @@
 				<include condition="$PARAM[SCMainMenu_submenu]">SCMainMenuContent</include>
 				<include condition="$PARAM[SCMoviesMenu_submenu]">SCMoviesMenuContent</include>
 				<include condition="$PARAM[SCTVShowsMenu_submenu]">SCTVShowsMenuContent</include>
-				<include condition="$PARAM[SCStoriesMenu_submenu]">SCStoriesMenuContent</include>
-				<include condition="$PARAM[SCConcertsMenu_submenu]">SCConcertsMenuContent</include>
-				<include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include>
-				<include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include>
-				<include condition="$PARAM[SCTraktMenu_submenu]">SCTraktMenuContent</include>
+				<!-- <include condition="$PARAM[SCStoriesMenu_submenu]">SCStoriesMenuContent</include> -->
+				<!-- <include condition="$PARAM[SCConcertsMenu_submenu]">SCConcertsMenuContent</include> -->
+				<!-- <include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include> -->
+				<!-- <include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include> -->
+				<!-- <include condition="$PARAM[SCTraktMenu_submenu]">SCTraktMenuContent</include> -->
 				<include condition="$PARAM[iVysilaniMenu_submenu]">iVysilaniMenuContent</include>
 				<include condition="$PARAM[RadiodeMenu_submenu]">RadiodeMenuContent</include>
 			</control>
@@ -199,11 +199,11 @@
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6765744c697374&amp;title=5a6f7a6e616d792f5265627269636b79&amp;url=2f5365617263682f6765744c697374,return)</onclick>
 				<thumb>defaultmusictop100.png</thumb>
 			</item> -->
-			<item>
+<!-- 			<item>
 				<label>Nastavení</label>
 				<onclick>Addon.OpenSettings(plugin.video.stream-cinema-2/command/open-settings)</onclick>
 				<thumb>defaultaddonservice.png</thumb>
-			</item>
+			</item> -->
 			<item>
 				<label>Plugin</label>
 				<onclick>RunAddon(plugin.video.stream-cinema-2)</onclick>
@@ -213,7 +213,7 @@
 	</include>
 	<include name="SCMoviesMenuContent">
 		<content>
-			<item>
+<!-- 			<item>
 				<label>Poslední sledované</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=6c617374&amp;id=6c6173746d&amp;title=243330393237,return)</onclick>
 				<thumb>defaultinprogressshows.png</thumb>
@@ -249,13 +249,18 @@
 				<label>Nově přidané</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d,return)</onclick>
 				<thumb>DefaultRecentlyAddedMovies.png</thumb>
+			</item> -->
+			<item>
+				<label>$LOCALIZE[31179]</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/media/movies/popular,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
 			</item>
 			<item>
 				<label>A-Z</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f617a&amp;title=243330393033&amp;url=2f464d6f766965732f617a,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/a_to_z/movies,return)</onclick>
 				<thumb>DefaultMovieTitle.png</thumb>
 			</item>
-			<item>
+<!-- 			<item>
 				<label>Země</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f636f756e747279&amp;title=243330393036&amp;url=2f464d6f766965732f636f756e747279,return)</onclick>
 				<thumb>DefaultCountry.png</thumb>
@@ -264,13 +269,13 @@
 				<label>Kvalita</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f7175616c697479&amp;title=243330393037&amp;url=2f464d6f766965732f7175616c697479,return)</onclick>
 				<thumb>flags/videoresolution/1080.png</thumb>
-			</item>
+			</item> -->
 			<item>
-				<label>Žánr</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f67656e7265&amp;title=243330393038&amp;url=2f464d6f766965732f67656e7265,return)</onclick>
+				<label>$LOCALIZE[31204]</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/filter/movies/genre,return)</onclick>
 				<thumb>DefaultGenre.png</thumb>
 			</item>
-			<item>
+<!-- 			<item>
 				<label>Rok</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f79656172&amp;title=243330393039&amp;url=2f464d6f766965732f79656172,return)</onclick>
 				<thumb>DefaultYear.png</thumb>
@@ -284,7 +289,7 @@
 				<label>Knihovna</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?cmd=416374697661746557696e646f7728566964656f732c4d6f7669657329&amp;title=243330393235&amp;url=636d643a2f2f416374697661746557696e646f7728566964656f732c4d6f7669657329,return)</onclick>
 				<thumb>defaultaddoninfolibrary.png</thumb>
-			</item>
+			</item> -->
 		</content>
 	</include>
 	<include name="SCTVShowsMenuContent">
@@ -343,7 +348,7 @@
 			</item>
 		</content>
 	</include>
-	<include name="SCStoriesMenuContent">
+<!-- 	<include name="SCStoriesMenuContent">
 		<content>
 			<item>
 				<label>Pohádky</label>
@@ -366,8 +371,8 @@
 				<thumb>special://skin/extras/icons/studios/disneycompany.png</thumb>
 			</item>
 		</content>
-	</include>
-	<include name="SCConcertsMenuContent">
+	</include> -->
+<!-- 	<include name="SCConcertsMenuContent">
 		<content>
 			<item>
 				<label>Koncerty I. část</label>
@@ -380,8 +385,8 @@
 				<thumb>defaultmusicvideos.png</thumb>
 			</item>
 		</content>
-	</include>
-	<include name="SCAnimeMenuContent">
+	</include> -->
+<!-- 	<include name="SCAnimeMenuContent">
 		<content>
 			<item>
 				<label>Filmy</label>
@@ -442,7 +447,7 @@
 				<thumb>defaultfavourites.png</thumb>
 			</item>
 		</content>
-	</include>
+	</include> -->
 	<include name="iVysilaniMenuContent">
 		<content>
 			<item>

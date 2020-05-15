@@ -647,3 +647,7 @@ msgstr "Reload skin"
 msgctxt "#31203"
 msgid "SC2 Movies"
 msgstr "SC2 Movies"
+
+msgctxt "#31204"
+msgid "Genre"
+msgstr "Genre"
