@@ -26,19 +26,19 @@
 					<!-- <item> --> <!-- Easy/SC+ Search TVShows -->
 						<!-- <label>[B]Seriály[/B] na stream-cinema-2</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d736572696573&amp;title=243330393032,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=63736561726368&amp;id=7365617263682d736572696573&amp;title=243330393032,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
 					</item> -->
 					<!-- <item> --> <!-- Easy/SC+ Search People (Movies) -->
 						<!-- <label>[B]Lidé (filmy)[/B] na stream-cinema-2</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d70656f706c652d6d6f766965&amp;title=243330393531,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=63736561726368&amp;id=7365617263682d70656f706c652d6d6f766965&amp;title=243330393531,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
 					</item> -->
 					<!-- <item> --> <!-- Easy/SC+ Search People (TVShows) -->
 						<!-- <label>[B]Lidé (seriály)[/B] na stream-cinema-2</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d70656f706c652d736572696573&amp;title=243330393532,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=63736561726368&amp;id=7365617263682d70656f706c652d736572696573&amp;title=243330393532,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
 					</item> -->
 					<!-- <item> --> <!-- Easy/SC+ Search Stations -->

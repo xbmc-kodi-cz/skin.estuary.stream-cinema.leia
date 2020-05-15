@@ -19,74 +19,74 @@
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema -->
 			<label>$LOCALIZE[31168]</label>
-			<onclick>RunAddon(plugin.video.stream-cinema)</onclick>
+			<onclick>RunAddon(plugin.video.stream-cinema-2)</onclick>
 			<property name="menu_id">$NUMBER[40000]</property>
 			<thumb>icons/sidemenu/favourites.png</thumb>
 			<property name="id">streamcinema</property>
-			<visible>Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Movies -->
 			<label>$LOCALIZE[20342]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6d6f76696573&amp;list=2f464d6f76696573&amp;title=243330393031&amp;url=2f464d6f76696573,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6d6f76696573&amp;list=2f464d6f76696573&amp;title=243330393031&amp;url=2f464d6f76696573,return)</onclick>
 			<property name="menu_id">$NUMBER[41000]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">streamcinemamovies</property>
-			<visible>Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema TVShows -->
 			<label>$LOCALIZE[20343]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=736572696573&amp;list=2f536572696573&amp;title=243330393032&amp;url=2f536572696573,return)</onclick>
 			<property name="menu_id">$NUMBER[42000]</property>
 			<thumb>icons/sidemenu/tv.png</thumb>
 			<property name="id">streamcinematvshows</property>
-			<visible>Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Pohádky -->
 			<label>$LOCALIZE[31169]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=36&amp;list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=36&amp;list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36,return)</onclick>
 			<property name="menu_id">$NUMBER[47000]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">streamcinemastories</property>
-			<visible>Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCStories) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Koncerty -->
 			<label>$LOCALIZE[31170]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
 			<property name="menu_id">$NUMBER[43000]</property>
 			<thumb>icons/sidemenu/musicvideos.png</thumb>
 			<property name="id">streamcinemaconcerts</property>
-			<visible>Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCConcerts) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Anime -->
 			<label>Anime</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?id=616e696d65&amp;list=2f416e696d65&amp;title=416e696d65&amp;url=2f416e696d65,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=616e696d65&amp;list=2f416e696d65&amp;title=416e696d65&amp;url=2f416e696d65,return)</onclick>
 			<property name="menu_id">$NUMBER[44000]</property>
 			<thumb>icons/sidemenu/videos.png</thumb>
 			<property name="id">streamcinemaanime</property>
-			<visible>Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema TV -->
 			<label>Televize</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
 			<property name="menu_id">$NUMBER[45000]</property>
 			<thumb>icons/sidemenu/livetv.png</thumb>
 			<property name="id">streamcinematv</property>
-			<visible>Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Trakt -->
 			<label>Moje seznamy</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
 			<property name="menu_id">$NUMBER[46000]</property>
 			<thumb>defaultplaylist.png</thumb>
 			<property name="id">streamcinematrakt</property>
-			<visible>Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)</visible>
+			<visible>Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- iVysilani -->
 			<label>iVysílání</label>
