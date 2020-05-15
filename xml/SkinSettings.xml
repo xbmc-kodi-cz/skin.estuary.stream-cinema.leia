@@ -94,43 +94,43 @@
 					</focusedlayout>
 					<content>
 						<item id="1020"> <!-- SC Main Menu -->
-							<label>Stream-Cinema</label>
+							<label>stream-cinema-2</label>
 							<label2></label2>
 							<onclick>Skin.ToggleSetting(SCMain)</onclick>
 						</item>
 						<item id="1040"> <!-- SC Movies -->
 							<label>Filmy</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
 						</item>
 						<item id="1060"> <!-- SC TVShows -->
 							<label>Seriály</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
 						<item id="1080"> <!-- SC Stories -->
 							<label>Pohádky</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCStories)</onclick>
 						</item>
 						<item id="1100"> <!-- SC Concerts -->
 							<label>Koncerty</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCConcerts)</onclick>
 						</item>
 						<item id="1120"> <!-- SC Anime -->
 							<label>Anime</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
 						</item>
 						<item id="1140"> <!-- SC TV -->
 							<label>Televize</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTV)</onclick>
 						</item>
 						<item id="1160">  <!-- SC Trakt -->
 							<label>Moje seznamy</label>
-							<label2>[CR][CR]Stream-Cinema</label2>
+							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTrakt)</onclick>
 						</item>
 						<item id="1280">  <!-- iVysilani Czech TV -->
@@ -255,7 +255,7 @@
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
 						<control type="radiobutton" id="1024"> <!-- Main Menu Widget -->
-							<label>Widget Menu Stream-Cinema</label>
+							<label>Widget Menu stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMenuWidget)</onclick>
@@ -321,7 +321,7 @@
 						<ondown>1041</ondown>
 						<visible>Container(1000).HasFocus(1040)</visible>
 						<control type="radiobutton" id="1042"> <!-- Movies Menu enable/disable -->
-							<label>Povolit Filmy Stream-Cinema</label>
+							<label>Povolit Filmy stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMovie)</selected>
 							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
@@ -415,7 +415,7 @@
 							<onclick>Skin.ToggleSetting(SCMoviesSetsWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1058"> <!-- Movies Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMoviesMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesMainWidget)</onclick>
@@ -442,7 +442,7 @@
 						<ondown>1061</ondown>
 						<visible>Container(1000).HasFocus(1060)</visible>
 						<control type="radiobutton" id="1062"> <!-- TVShow Menu enable/disable -->
-							<label>Povolit Seriály Stream-Cinema</label>
+							<label>Povolit Seriály stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShow)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
@@ -512,7 +512,7 @@
 							<onclick>Skin.ToggleSetting(SCTVShowsGenreWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1074"> <!-- TVShows Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMainWidget)</onclick>
@@ -525,7 +525,7 @@
 						<ondown>1081</ondown>
 						<visible>Container(1000).HasFocus(1080)</visible>
 						<control type="radiobutton" id="1082"> <!-- Stories Menu enable/disable -->
-							<label>Povolit Pohádky Stream-Cinema</label>
+							<label>Povolit Pohádky stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCStories)</selected>
 							<onclick>Skin.ToggleSetting(SCStories)</onclick>
@@ -565,7 +565,7 @@
 							<onclick>Skin.ToggleSetting(SCStoriesDisneyLastAddedWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1089"> <!-- Stories Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCStoriesMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCStoriesMainWidget)</onclick>
@@ -578,7 +578,7 @@
 						<ondown>1101</ondown>
 						<visible>Container(1000).HasFocus(1100)</visible>
 						<control type="radiobutton" id="1102"> <!-- Concerts Menu enable/disable -->
-							<label>Povolit Koncerty Stream-Cinema</label>
+							<label>Povolit Koncerty stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCConcerts)</selected>
 							<onclick>Skin.ToggleSetting(SCConcerts)</onclick>
@@ -600,7 +600,7 @@
 							<onclick>Skin.ToggleSetting(SCConcertsLastAddedWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1106"> <!-- Concerts Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCConcertsMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCConcertsMainWidget)</onclick>
@@ -613,7 +613,7 @@
 						<ondown>1121</ondown>
 						<visible>Container(1000).HasFocus(1120)</visible>
 						<control type="radiobutton" id="1122"> <!-- Anime Menu enable/disable -->
-							<label>Povolit Anime Stream-Cinema</label>
+							<label>Povolit Anime stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCAnime)</selected>
 							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
@@ -641,7 +641,7 @@
 							<onclick>Skin.ToggleSetting(SCAnimeTVShowsWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1127"> <!-- Anime Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCAnimeMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCAnimeMainWidget)</onclick>
@@ -654,7 +654,7 @@
 						<ondown>1141</ondown>
 						<visible>Container(1000).HasFocus(1140)</visible>
 						<control type="radiobutton" id="1142"> <!-- TV Menu enable/disable -->
-							<label>Povolit TV Stream-Cinema</label>
+							<label>Povolit TV stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTV)</selected>
 							<onclick>Skin.ToggleSetting(SCTV)</onclick>
@@ -694,7 +694,7 @@
 							<onclick>Skin.ToggleSetting(SCTVTwoWeakWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1149"> <!-- TV Main Menu Widget -->
-							<label>Widget Stream-Cinema Menu</label>
+							<label>Widget stream-cinema-2 Menu</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVMainWidget)</onclick>
@@ -707,7 +707,7 @@
 						<ondown>1161</ondown>
 						<visible>Container(1000).HasFocus(1160)</visible>
 						<control type="radiobutton" id="1162"> <!-- Trakt Menu enable/disable -->
-							<label>Povolit Moje Seznamy Stream-Cinema</label>
+							<label>Povolit Moje Seznamy stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTrakt)</selected>
 							<onclick>Skin.ToggleSetting(SCTrakt)</onclick>
@@ -741,7 +741,7 @@
 							<onclick>Skin.ToggleSetting(SCTraktHistoryWatchedTVShowsWidget)</onclick>
 						</control>
 						<control type="radiobutton" id="1168"> <!-- Trakt Main Menu Widget -->
-							<label>Widget Menu Stream-Cinema</label>
+							<label>Widget Menu stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTraktMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTraktMainWidget)</onclick>
@@ -1752,17 +1752,17 @@
 					<control type="label" id="810"> <!-- Stream Cinema -->
 						<include>DefaultSettingButton</include>
 						<textcolor>button_focus</textcolor>
-						<label>Stream-Cinema</label>
+						<label>stream-cinema-2</label>
 					</control>
 					<control type="radiobutton" id="811"> <!-- Easy/SC skin function general enable/disable --> 
-						<label>Povolit Stream-Cinema</label>
+						<label>Povolit stream-cinema-2</label>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoStreamCinemaButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoStreamCinemaButton)</onclick>
 						<enable>System.HasAddon(plugin.video.stream-cinema)</enable>
 					</control>
 					<control type="radiobutton" id="812"> <!-- Easy/SC+ -->
-						<label>Rozšíření vyhledávání Kodi o Stream-Cinema</label>
+						<label>Rozšíření vyhledávání Kodi o stream-cinema-2</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(SCSearch)</selected>
 						<onclick>Skin.ToggleSetting(SCSearch)</onclick>
