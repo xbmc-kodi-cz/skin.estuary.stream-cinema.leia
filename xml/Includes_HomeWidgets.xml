@@ -975,7 +975,7 @@
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2"/>
-					<param name="widget_header" value="Stream-Cinema-2"/>
+					<param name="widget_header" value=$LOCALIZE[31168]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40100"/>
 					<param name="stream-cinema" value="true"/> 
