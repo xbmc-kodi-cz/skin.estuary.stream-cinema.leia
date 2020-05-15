@@ -615,3 +615,19 @@ msgstr "Widget Nejlepší TV tipy dne"
 msgctxt "#31177"
 msgid "Widget Watch history"
 msgstr "Widget historie shlédnutí"
+
+msgctxt "#31179"
+msgid "Popular films"
+msgstr "Populární filmy"
+
+msgctxt "#31180"
+msgid "Popular series"
+msgstr "Populární seriály"
+
+msgctxt "#31181"
+msgid "TV tips of the day"
+msgstr "Nejlepší TV tipy dne"
+
+msgctxt "#31182"
+msgid "Watch history"
+msgstr "historie shlédnutí"

@@ -982,21 +982,21 @@
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
-					<param name="widget_header" value="Populární filmy"/>
+					<param name="widget_header" value=$LOCALIZE[31179]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40200"/>
 					<param name="stream-cinema-2" value="true"/> <!-- Easy/SC+ -->
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
-					<param name="widget_header" value="Populární Seriály"/>
+					<param name="widget_header" value=$LOCALIZE[31180]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
 				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMainTVShowsNewAddedEpisodesWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/csfd_tips/movies"/>
-					<param name="widget_header" value="Nejlepší TV tipy dne"/>
+					<param name="widget_header" value=$LOCALIZE[31181]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40400"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
@@ -1011,7 +1011,7 @@
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVTodayWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
-					<param name="widget_header" value="Widget historie shlédnutí"/>
+					<param name="widget_header" value=$LOCALIZE[31182]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40600"/>
 					<param name="item_limit" value="$INFO[Container(40600).NumItems]"/> <!-- Easy/SC* -->
