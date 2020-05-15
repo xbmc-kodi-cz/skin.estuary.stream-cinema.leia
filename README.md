@@ -1,5 +1,12 @@
-# skin.estuary.stream-cinema.leia
-**Vzhled Estuary Stream-Cinema pro Kodi Leia**
+# skin.estuary.stream-cinema-2.leia
+**Vzhled Estuary Stream-Cinema-2 pro Kodi Leia**
+
+Tento skin pochazi kompletne z puvodniho skinu *** Estuary Stream-Cinema pro Kodi Leia *** Ktery je upraven aby fungoval s pluginem 
+ Estuary Stream-Cinema-2 pro Kodi Leia
+
+Verze 3.0.0.a1
+* 
+
 
 Verze 2.0.27
 * doplnena dlazdice CoreELEC do systemovych nastaveni
