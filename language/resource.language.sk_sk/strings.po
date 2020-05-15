@@ -587,3 +587,19 @@ msgstr "Rozprávky"
 msgctxt "#31170"
 msgid "Concerts"
 msgstr "Koncerty"
+
+msgctxt "#31171"
+msgid "Films"
+msgstr "Filmy"
+
+msgctxt "#31172"
+msgid "Serials"
+msgstr "Seriály"
+
+msgctxt "#31173"
+msgid "Widget Menu stream-cinema-2"
+msgstr "Widget Menu stream-cinema-2"
+
+msgctxt "#31174"
+msgid "Widget Popular films"
+msgstr "Widget Populárne filmy"

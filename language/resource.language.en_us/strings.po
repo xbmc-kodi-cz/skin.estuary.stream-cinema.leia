@@ -587,3 +587,19 @@ msgstr "Fairytale"
 msgctxt "#31170"
 msgid "Concerts"
 msgstr "Concerts"
+
+msgctxt "#31171"
+msgid "Films"
+msgstr "Films"
+
+msgctxt "#31172"
+msgid "Serials"
+msgstr "Serials"
+
+msgctxt "#31173"
+msgid "Widget Menu stream-cinema-2"
+msgstr "Widget Menu stream-cinema-2"
+
+msgctxt "#31174"
+msgid "Widget Popular films"
+msgstr "Widget Popular films"

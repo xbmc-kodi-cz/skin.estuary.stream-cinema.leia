@@ -967,9 +967,9 @@
 			</include>
 			<control type="grouplist" id="40001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMainMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMainMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
 					<param name="SCMainMenu_submenu" value="true"/>
-					<param name="widget_header" value="Stream-Cinema Menu"/>
+					<param name="widget_header" value="Stream-Cinema-2 Menu"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40050"/>
 				</include>
@@ -980,12 +980,12 @@
 					<param name="list_id" value="40100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d"/>
-					<param name="widget_header" value="Nově přidané filmy"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
+					<param name="widget_header" value="Populární filmy"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40200"/>
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="stream-cinema-2" value="true"/> <!-- Easy/SC+ -->
 				</include>
 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsNewAddedWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema)">
 					<param name="content_path" value="plugin://plugin.video.stream-cinema/?list=2f5365726965732f6c6174657374&amp;title=243330393231&amp;url=2f5365726965732f6c6174657374"/>

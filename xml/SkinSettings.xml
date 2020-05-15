@@ -94,45 +94,45 @@
 					</focusedlayout>
 					<content>
 						<item id="1020"> <!-- SC Main Menu -->
-							<label>stream-cinema-2</label>
+							<label>$LOCALIZE[31168]</label>
 							<label2></label2>
 							<onclick>Skin.ToggleSetting(SCMain)</onclick>
 						</item>
 						<item id="1040"> <!-- SC Movies -->
-							<label>Filmy</label>
+							<label>$LOCALIZE[31171]</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
 						</item>
-						<item id="1060"> <!-- SC TVShows -->
-							<label>Seriály</label>
+						<item id="1060"> <!-- SC Serials -->
+							<label>$LOCALIZE[31172]</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
-						<item id="1080"> <!-- SC Stories -->
-							<label>Pohádky</label>
+						<!-- <item id="1080"> --> <!-- SC Stories -->
+							<!-- <label>Pohádky</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCStories)</onclick>
-						</item>
-						<item id="1100"> <!-- SC Concerts -->
-							<label>Koncerty</label>
+						</item> -->
+						<!-- <item id="1100"> --> <!-- SC Concerts -->
+							<!-- <label>Koncerty</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCConcerts)</onclick>
-						</item>
-						<item id="1120"> <!-- SC Anime -->
-							<label>Anime</label>
+						</item> -->
+						<!-- <item id="1120"> --> <!-- SC Anime -->
+							<!-- <label>Anime</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
-						</item>
-						<item id="1140"> <!-- SC TV -->
-							<label>Televize</label>
+						</item> -->
+						<!-- <item id="1140"> --> <!-- SC TV -->
+							<!-- <label>Televize</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTV)</onclick>
-						</item>
-						<item id="1160">  <!-- SC Trakt -->
-							<label>Moje seznamy</label>
+						</item> -->
+						<!-- <item id="1160"> -->  <!-- SC Trakt -->
+							<!-- <label>Moje seznamy</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTrakt)</onclick>
-						</item>
+						</item> -->
 						<item id="1280">  <!-- iVysilani Czech TV -->
 							<label>iVysílání</label>
 							<label2>[CR][CR]Česká televize</label2>
@@ -255,19 +255,19 @@
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
 						<control type="radiobutton" id="1024"> <!-- Main Menu Widget -->
-							<label>Widget Menu stream-cinema-2</label>
+							<label>$LOCALIZE[31173]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMenuWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1025"> <!-- Main Movies Widget -->
-							<label>Widget Filmové novinky</label>
+						<!-- <control type="radiobutton" id="1025"> --> <!-- Main Movies Widget -->
+							<!-- <label>Widget Filmové novinky</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainMoviesNewWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMoviesNewWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1026"> <!-- Main Last Added Movies Widget -->
-							<label>Widget Poslední přidané filmy</label>
+						</control> -->
+						<control type="radiobutton" id="1026"> <!-- Main Popular Movies Widget -->
+							<label>$LOCALIZE[31174]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainMoviesNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMoviesNewAddedWidget)</onclick>
@@ -1759,7 +1759,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoStreamCinemaButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoStreamCinemaButton)</onclick>
-						<enable>System.HasAddon(plugin.video.stream-cinema)</enable>
+						<enable>System.HasAddon(plugin.video.stream-cinema-2)</enable>
 					</control>
 					<control type="radiobutton" id="812"> <!-- Easy/SC+ -->
 						<label>Rozšíření vyhledávání Kodi o stream-cinema-2</label>
