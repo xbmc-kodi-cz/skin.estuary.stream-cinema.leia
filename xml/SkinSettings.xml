@@ -457,24 +457,24 @@
 							<selected>Skin.HasSetting(SCTVShowsMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMenuWidget)</onclick>
 						</control> -->
-						<control type="radiobutton" id="1065"> <!-- TVshows Last Played Widget -->
-							<label>$LOCALIZE[31300]</label>
+						<!-- <control type="radiobutton" id="1065"> --> <!-- TVshows Last Played Widget -->
+							<!-- <label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidget)</onclick>
-						</control>
+						</control> -->
 						<!-- <control type="radiobutton" id="1066"> --> <!-- Switch to Trakt Watched TVShows Widget -->
 							<!-- <label>- Použít seznam z Trakt?</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidgetTrakt)</onclick>
 						</control> -->
-						<!-- <control type="radiobutton" id="1067"> --> <!-- TVShows New Added Widget -->
-							<!-- <label>Widget Poslední přidané seriály</label>
+						<control type="radiobutton" id="1067"> <!-- TVShows New Added Widget -->
+							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCTVShowsNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedWidget)</onclick>
-						</control> -->
+						</control>
 						<!-- <control type="radiobutton" id="1068"> --> <!-- TVShows New Added Episodes Widget -->
 							<!-- <label>Widget Poslední přidané části</label>
 							<include>DefaultSettingButton</include>
