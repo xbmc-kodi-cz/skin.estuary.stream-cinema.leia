@@ -701,3 +701,287 @@ msgstr "Genre series"
 msgctxt "#31306"
 msgid "SC2 series"
 msgstr "SC2 series"
+
+msgctxt "#31307"
+msgid "Show widgets on fullscreen"
+msgstr "Show widgets on fullscreen"
+
+msgctxt "#31308"
+msgid "Show info about widget"
+msgstr "Show info about widget"
+
+msgctxt "#31309"
+msgid "Show short info about widget everytime"
+msgstr "Show short info about widget everytime"
+
+msgctxt "#31310"
+msgid "Maximum number of widget items"
+msgstr "Maximum number of widget items"
+
+msgctxt "#31311"
+msgid "Show location weather in top"
+msgstr "Show location weather in top"
+
+msgctxt "#31312"
+msgid "Show date in top"
+msgstr "Show date in top"
+
+msgctxt "#31313"
+msgid "Show CPU usage in top"
+msgstr "Show CPU usage in top"
+
+msgctxt "#31314"
+msgid "Show MEM usage in top"
+msgstr "Show MEM usage in top"
+
+msgctxt "#31315"
+msgid "Show CPU temp in top"
+msgstr "Show CPU temp in top"
+
+msgctxt "#31316"
+msgid "Show GPU temp in top"
+msgstr "Show GPU temp in top"
+
+msgctxt "#31317"
+msgid "Show flag of future recording"
+msgstr "Show flag of future recording"
+
+msgctxt "#31318"
+msgid "Show flag of recording in progress"
+msgstr "Show flag of recording in progress"
+
+msgctxt "#31319"
+msgid "Show usage memory for recording"
+msgstr "Show usage memory for recording"
+
+msgctxt "#31320"
+msgid "Show a comparison of skin versions in the top panel"
+msgstr "Show a comparison of skin versions in the top panel"
+
+msgctxt "#31321"
+msgid "Show user rating"
+msgstr "Show user rating"
+
+msgctxt "#31322"
+msgid "Show scraper rating"
+msgstr "Show scraper rating"
+
+msgctxt "#31323"
+msgid "Additional text of the main menu item"
+msgstr "Additional text of the main menu item"
+
+msgctxt "#31324"
+msgid "Enable stream-cinema-2"
+msgstr "Enable stream-cinema-2"
+
+msgctxt "#31325"
+msgid "Expand search Kodi of stream-cinema-2"
+msgstr "Expand search Kodi of stream-cinema-2"
+
+msgctxt "#31326"
+msgid "Download directory"
+msgstr "Download directory"
+
+msgctxt "#31327"
+msgid "Enable iVysilani"
+msgstr "Enable iVysilani"
+
+msgctxt "#31328"
+msgid "Enable trailer"
+msgstr "Enable trailer"
+
+msgctxt "#31329"
+msgid "Enable Radio internet"
+msgstr "Enable Radio internet"
+
+msgctxt "#31330"
+msgid "Expand search Kodi of Radio"
+msgstr "Expand search Kodi of Radio"
+
+msgctxt "#31331"
+msgid "Enable reboot from internal memory"
+msgstr "Enable reboot from internal memory"
+
+msgctxt "#31332"
+msgid "Command for reboot"
+msgstr "Command for reboot"
+
+msgctxt "#31333"
+msgid "For ... LEC installed from external memory"
+msgstr "For ... LEC installed from external memory"
+
+msgctxt "#31334"
+msgid "Enable"
+msgstr "Enable"
+
+msgctxt "#31335"
+msgid "Enable series stream-cinema-2"
+msgstr "Enable series stream-cinema-2"
+
+msgctxt "#31336"
+msgid "Enable iVysílání"
+msgstr "Enable iVysílání"
+
+msgctxt "#31337"
+msgid "Widget menu iVysílání"
+msgstr "Widget menu iVysílání"
+
+msgctxt "#31338"
+msgid "Winget live stream"
+msgstr "Winget live stream"
+
+msgctxt "#31339"
+msgid "Widget by date"
+msgstr "Widget by date"
+
+msgctxt "#31340"
+msgid "Widget by alphabet"
+msgstr "Widget by alphabet"
+
+msgctxt "#31341"
+msgid "Widget by genre"
+msgstr "Widget by genre"
+
+msgctxt "#31342"
+msgid "Widget tips"
+msgstr "Widget tips"
+
+msgctxt "#31343"
+msgid "Widget most watching per day"
+msgstr "Widget most watching per day"
+
+msgctxt "#31344"
+msgid "Widget most watching per week"
+msgstr "Widget most watching per week"
+
+msgctxt "#31345"
+msgid "Widget don't miss"
+msgstr "Widget don't miss"
+
+msgctxt "#31346"
+msgid "Widget from our archive"
+msgstr "Widget from our archive"
+
+msgctxt "#31347"
+msgid "Widget others now watching"
+msgstr "Widget others now watching"
+
+msgctxt "#31348"
+msgid "Enable Trailer"
+msgstr "Enable Trailer"
+
+msgctxt "#31349"
+msgid "Widget week news Wall"
+msgstr "WWidget week news Wall"
+
+msgctxt "#31350"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31351"
+msgid "Widget week news"
+msgstr "Widget week news"
+
+msgctxt "#31352"
+msgid "Widget Total film"
+msgstr "Widget Total film"
+
+msgctxt "#31353"
+msgid "Widget Falcom"
+msgstr "Widget Falcom"
+
+msgctxt "#31354"
+msgid "Widget Freeman"
+msgstr "Widget Freeman"
+
+msgctxt "#31355"
+msgid "Widget Bonton film"
+msgstr "Widget Bonton film"
+
+msgctxt "#31356"
+msgid "Fim Select Trailer"
+msgstr "Fim Select Trailer"
+
+msgctxt "#31357"
+msgid "Widget Movie Clips Comming Soon"
+msgstr "Widget Movie Clips Comming Soon"
+
+msgctxt "#31358"
+msgid "Widget Movie Clips Trailers"
+msgstr "Widget Movie Clips Trailers"
+
+msgctxt "#31359"
+msgid "Widget New on Netflix"
+msgstr ">Widget nové na Netflix"
+
+msgctxt "#31360"
+msgid "Widget Films news"
+msgstr "Widget Filmové novinky"
+
+msgctxt "#31361"
+msgid "Widget High Five"
+msgstr "Widget High Five"
+
+msgctxt "#31362"
+msgid "Widget CinemArt SK"
+msgstr "Widget CinemArt SK"
+
+msgctxt "#31363"
+msgid "Widget Svět Filmu"
+msgstr "Widget Svět Filmu"
+
+msgctxt "#31364"
+msgid "Widget Film Europe"
+msgstr "Widget Film Europe"
+
+msgctxt "#31365"
+msgid "Enable Radio.de"
+msgstr "Enable Radio.de"
+
+msgctxt "#31366"
+msgid "Widget My Stations Wall"
+msgstr "Widget My Stations Wall"
+
+msgctxt "#31367"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31368"
+msgid "Widget Local Stations"
+msgstr "Widget Local Stations"
+
+msgctxt "#31369"
+msgid "Widget Editorials Recommendations"
+msgstr "Widget Editorials Recommendations"
+
+msgctxt "#31370"
+msgid "Widget Top 100 Stations"
+msgstr "Widget Top 100 Stations"
+
+msgctxt "#31371"
+msgid "Widget Browse by genre"
+msgstr "Widget Browse by genre"
+
+msgctxt "#31372"
+msgid "Widget Browse by topic"
+msgstr "Widget Browse by topic"
+
+msgctxt "#31373"
+msgid "Widget Browse by country"
+msgstr "Widget Browse by country"
+
+msgctxt "#31374"
+msgid "Widget Browse by city"
+msgstr "Widget Browse by city"
+
+msgctxt "#31375"
+msgid "Widget Browse by language"
+msgstr "Widget Browse by language"
+
+msgctxt "#31376"
+msgid "Widget Search for station"
+msgstr "Widget Search for station"
+
+msgctxt "#31377"
+msgid "Widget My Stations"
+msgstr "Widget My Stations"

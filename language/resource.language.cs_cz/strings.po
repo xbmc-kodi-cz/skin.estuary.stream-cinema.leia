@@ -700,3 +700,286 @@ msgctxt "#31306"
 msgid "SC2 series"
 msgstr "SC2 seriály"
 
+msgctxt "#31307"
+msgid "Show widgets on fullscreen"
+msgstr "Zobrazit widgety na celé obrazovce"
+
+msgctxt "#31308"
+msgid "Show info about widget"
+msgstr "Zobrazit info widgetu"
+
+msgctxt "#31309"
+msgid "Show short info about widget everytime"
+msgstr "Zobrazit krátké info widgetu vždy"
+
+msgctxt "#31310"
+msgid "Maximum number of widget items"
+msgstr "Maximální počet položek widgetu"
+
+msgctxt "#31311"
+msgid "Show location weather in top"
+msgstr "Zobrazit lokalitu počasí v horním panelu"
+
+msgctxt "#31312"
+msgid "Show date in top"
+msgstr "Zobrazit datum v horním panelu"
+
+msgctxt "#31313"
+msgid "Show CPU usage in top"
+msgstr "Zobrazit využití CPU v horním panelu"
+
+msgctxt "#31314"
+msgid "Show MEM usage in top"
+msgstr "Zobrazit využití MEM v horním panelu"
+
+msgctxt "#31315"
+msgid "Show CPU temp in top"
+msgstr "Zobrazit teplotu CPU v horním panelu"
+
+msgctxt "#31316"
+msgid "Show GPU temp in top"
+msgstr "Zobrazit teplotu GPU v horním panelu"
+
+msgctxt "#31317"
+msgid "Show flag of future recording"
+msgstr "Zobrazit příznak budoucího nahrávání"
+
+msgctxt "#31318"
+msgid "Show flag of recording in progress"
+msgstr "Zobrazit příznak probíhajícího nahrávání"
+
+msgctxt "#31319"
+msgid "Show usage memory for recording"
+msgstr "Zobrazit využití pamětí pro nahrávání"
+
+msgctxt "#31320"
+msgid "Show a comparison of skin versions in the top panel"
+msgstr "Zobrazit porovnání verzí skinu v horním panelu"
+
+msgctxt "#31321"
+msgid "Show user rating"
+msgstr "Zobrazit uživatelský rating"
+
+msgctxt "#31322"
+msgid "Show scraper rating"
+msgstr "Zobrazit scraper rating"
+
+msgctxt "#31323"
+msgid "Additional text of the main menu item"
+msgstr "Doplňující text položky hlavního menu"
+
+msgctxt "#31324"
+msgid "Enable stream-cinema-2"
+msgstr "Povolit stream-cinema-2"
+
+msgctxt "#31325"
+msgid "Expand search Kodi of stream-cinema-2"
+msgstr "Rozšíření vyhledávání Kodi o stream-cinema-2"
+
+msgctxt "#31326"
+msgid "Download directory"
+msgstr "Download adresář"
+
+msgctxt "#31327"
+msgid "Enable iVysilani"
+msgstr "Povolit iVysilani"
+
+msgctxt "#31328"
+msgid "Enable trailer"
+msgstr "Povolit Trailer"
+
+msgctxt "#31329"
+msgid "Enable Radio internet"
+msgstr "Povolit Radio Internet"
+
+msgctxt "#31330"
+msgid "Expand search Kodi of Radio"
+msgstr "Rozšíření vyhledávání Kodi o Radio"
+
+msgctxt "#31331"
+msgid "Enable reboot from internal memory"
+msgstr "Povolit reboot z vnitřní paměti"
+
+msgctxt "#31332"
+msgid "Command for reboot"
+msgstr "Povel pro reboot"
+
+msgctxt "#31333"
+msgid "For ... LEC installed from external memory"
+msgstr "Pro ...ELEC instalovaný z externí paměti"
+
+msgctxt "#31334"
+msgid "Enable"
+msgstr "Povolit"
+
+msgctxt "#31335"
+msgid "Enable series stream-cinema-2"
+msgstr "Povolit Seriály stream-cinema-2"
+
+msgctxt "#31336"
+msgid "Enable iVysílání"
+msgstr "Povolit iVysílání"
+
+msgctxt "#31337"
+msgid "Widget menu iVysílání"
+msgstr "Widget Menu iVysílání"
+
+msgctxt "#31338"
+msgid "Winget live stream"
+msgstr "Widget Živé vysílání"
+
+msgctxt "#31339"
+msgid "Widget by date"
+msgstr "Widget Podle data"
+
+msgctxt "#31340"
+msgid "Widget by alphabet"
+msgstr "Widget Podle abecedy"
+
+msgctxt "#31341"
+msgid "Widget by genre"
+msgstr "Widget Podle žánru"
+
+msgctxt "#31342"
+msgid "Widget tips"
+msgstr "Widget Tipy"
+
+msgctxt "#31343"
+msgid "Widget most watching per day"
+msgstr "Widget Nejsledovanější dne"
+
+msgctxt "#31344"
+msgid "Widget most watching per week"
+msgstr "Widget Nejsledovanější týdne"
+
+msgctxt "#31345"
+msgid "Widget don't miss"
+msgstr "Widget Nepřehlédněte"
+
+msgctxt "#31346"
+msgid "Widget from our archive"
+msgstr "Widget Z našeho archivu"
+
+msgctxt "#31347"
+msgid "Widget others now watching"
+msgstr "Widget Ostatní právě sledují"
+
+msgctxt "#31348"
+msgid "Enable Trailer"
+msgstr "Povolit Trailer"
+
+msgctxt "#31349"
+msgid "Widget week news Wall"
+msgstr "Widget Týdenní novinky Wall"
+
+msgctxt "#31350"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31351"
+msgid "Widget week news"
+msgstr "Widget Týdenní novinky"
+
+msgctxt "#31352"
+msgid "Widget Total film"
+msgstr "Widget Total film"
+
+msgctxt "#31353"
+msgid "Widget Falcom"
+msgstr "Widget Falcom"
+
+msgctxt "#31354"
+msgid "Widget Freeman"
+msgstr "Widget Freeman"
+
+msgctxt "#31355"
+msgid "Widget Bonton film"
+msgstr "Widget Bonton film"
+
+msgctxt "#31356"
+msgid "Fim Select Trailer"
+msgstr "Fim Select Trailer"
+
+msgctxt "#31357"
+msgid "Widget Movie Clips Comming Soon"
+msgstr "Widget Filmové záběry (nevydané)"
+
+msgctxt "#31358"
+msgid "Widget Movie Clips Trailers"
+msgstr "Widget Filmové trailery"
+
+msgctxt "#31359"
+msgid "Widget New on Netflix"
+msgstr ">Widget nové na Netflix"
+
+msgctxt "#31360"
+msgid "Widget Films news"
+msgstr "Widget Filmové novinky"
+
+msgctxt "#31361"
+msgid "Widget High Five"
+msgstr "Widget High Five"
+
+msgctxt "#31362"
+msgid "Widget CinemArt SK"
+msgstr "Widget CinemArt SK"
+
+msgctxt "#31363"
+msgid "Widget Svět Filmu"
+msgstr "Widget Svět Filmu"
+
+msgctxt "#31364"
+msgid "Widget Film Europe"
+msgstr "Widget Film Europe"
+
+msgctxt "#31365"
+msgid "Enable Radio.de
+msgstr "Povolit Radio.de"
+
+msgctxt "#31366"
+msgid "Widget My Stations Wall"
+msgstr "Widget moje stanice Wall"
+
+msgctxt "#31367"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31368"
+msgid "Widget Local Stations"
+msgstr "Fim místní stanice"
+
+msgctxt "#31369"
+msgid "Widget Editorials Recommendations"
+msgstr "Widget správcovo doporučení"
+
+msgctxt "#31370"
+msgid "Widget Top 100 Stations"
+msgstr "Widget top 100 stanic"
+
+msgctxt "#31371"
+msgid "Widget Browse by genre"
+msgstr "Widget Procházet podle žánru"
+
+msgctxt "#31372"
+msgid "Widget Browse by topic"
+msgstr "Widget procházet podle témat"
+
+msgctxt "#31373"
+msgid "Widget Browse by country"
+msgstr "Widget procházet podle země"
+
+msgctxt "#31374"
+msgid "Widget Browse by city"
+msgstr "Widget procházet podle města"
+
+msgctxt "#31375"
+msgid "Widget Browse by language"
+msgstr "Widget procházet podle jazyků"
+
+msgctxt "#31376"
+msgid "Widget Search for station"
+msgstr "Widget hledat stanici"
+
+msgctxt "#31377"
+msgid "Widget My Stations"
+msgstr "Widget moje stanice"
