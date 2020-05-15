@@ -593,16 +593,44 @@ msgid "Films"
 msgstr "Films"
 
 msgctxt "#31172"
-msgid "Serials"
-msgstr "Serials"
+msgid "series"
+msgstr "series"
 
 msgctxt "#31173"
-msgid "Widget Menu stream-cinema-2"
-msgstr "Widget Menu stream-cinema-2"
+msgid "Widget stream-cinema-2"
+msgstr "Widget stream-cinema-2"
 
 msgctxt "#31174"
 msgid "Widget Popular films"
 msgstr "Widget Popular films"
+
+msgctxt "#31175"
+msgid "Widget Popular series"
+msgstr "Widget Popular series"
+
+msgctxt "#31176"
+msgid "Widget TV tips of the day"
+msgstr "Widget TV tips of the day"
+
+msgctxt "#31177"
+msgid "Widget Watch history"
+msgstr "Widget Watch history"
+
+msgctxt "#31179"
+msgid "Popular films"
+msgstr "Popular films"
+
+msgctxt "#31180"
+msgid "Popular series"
+msgstr "Popular series"
+
+msgctxt "#31181"
+msgid "TV tips of the day"
+msgstr "TV tips of the day"
+
+msgctxt "#31182"
+msgid "Watch history"
+msgstr "Watch history"
 
 msgctxt "#31200"
 msgid "Specific settings"

@@ -23,12 +23,12 @@
 						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2/search/movies&quot;,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
 					</item>
-					<!-- <item> --> <!-- Easy/SC+ Search TVShows -->
-						<!-- <label>[B]Seriály[/B] na stream-cinema-2</label>
+					<item> <!-- Easy/SC+ Search Series -->
+						<label>[B]Seriály[/B] na stream-cinema-2</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=63736561726368&amp;id=7365617263682d736572696573&amp;title=243330393032,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2/search/tvshows&quot;,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
-					</item> -->
+					</item>
 					<!-- <item> --> <!-- Easy/SC+ Search People (Movies) -->
 						<!-- <label>[B]Lidé (filmy)[/B] na stream-cinema-2</label>
 						<onclick>Dialog.Close(all)</onclick>

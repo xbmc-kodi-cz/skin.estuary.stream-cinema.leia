@@ -272,26 +272,26 @@
 							<selected>Skin.HasSetting(SCMainMoviesNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMoviesNewAddedWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1027"> <!-- Main Last Added TVShows Widget -->
-							<label>Widget Poslední přidané seriály</label>
+						<control type="radiobutton" id="1027"> <!-- Main Popular serials Widget -->
+							<label>$LOCALIZE[31175]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainTVShowsNewAddedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainTVShowsNewAddedWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1028"> <!-- Main Last Added TVShows Episodes Widget -->
-							<label>Widget Poslední přidané části seriálů</label>
+						<control type="radiobutton" id="1028"> <!-- Main TV tips of the day Widget -->
+							<label>$LOCALIZE[31176]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainTVShowsNewAddedEpisodesWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainTVShowsNewAddedEpisodesWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1030"> <!-- Main Trakt.tv Widget -->
-							<label>Widget Ke shlédnutí (trakt.tv)</label>
+						<!-- <control type="radiobutton" id="1030"> --> <!-- Main Trakt.tv Widget -->
+							<!-- <label>Widget Ke shlédnutí (trakt.tv)</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainTraktWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainTraktWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1031"> <!-- Main TV Programm Today Widget -->
-							<label>Widget TV program dnes</label>
+						</control> -->
+						<control type="radiobutton" id="1031"> <!-- Main Watch history Widget -->
+							<label>$LOCALIZE[31177]</label>
 							<include>DefaultSettingButton</include>
 							<selected>Skin.HasSetting(SCMainTVTodayWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainTVTodayWidget)</onclick>
