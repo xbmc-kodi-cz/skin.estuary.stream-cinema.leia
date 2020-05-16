@@ -593,7 +593,7 @@ msgid "Films"
 msgstr "Filmy"
 
 msgctxt "#31172"
-msgid "series"
+msgid "Series"
 msgstr "Seriály"
 
 msgctxt "#31173"
@@ -983,3 +983,15 @@ msgstr "Widget hledat stanici"
 msgctxt "#31377"
 msgid "Widget My Stations"
 msgstr "Widget moje stanice"
+
+msgctxt "#31378"
+msgid "List"
+msgstr "List"
+
+msgctxt "#31379"
+msgid "Wall"
+msgstr "Zeď"
+
+msgctxt "#31380"
+msgid "none"
+msgstr "nic"

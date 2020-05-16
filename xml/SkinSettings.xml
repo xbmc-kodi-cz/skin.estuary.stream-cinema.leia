@@ -336,11 +336,11 @@
 							<selected>Skin.HasSetting(SCMoviesMenuWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesMenuWidget)</onclick>
 						</control>
-						<control type="radiobutton" id="1050">  <!-- Popular Movies Widget -->
+						<control type="button" id="1050">  <!-- Popular Movies Widget -->
 							<label>$LOCALIZE[31208]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesPopularWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesPopularWidget)</onclick>
+							<onclick>Skin.SelectBool(31208, 31378|SCMoviesPopularWidgetlist, 31379|SCMoviesPopularWidgetwall , 31380|nic)</onclick>
+							<label2>$VAR[MoviesPopularVar]</label2>
 						</control>
 						<control type="radiobutton" id="1045"> <!-- Last Played Movies Widget -->
 							<label>$LOCALIZE[31207]</label>
@@ -469,11 +469,11 @@
 							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidgetTrakt)</onclick>
 						</control> -->
-						<control type="radiobutton" id="1067"> <!-- TVShows New Added Widget -->
+						<control type="button" id="1067"> <!-- TVShows New Added Widget -->
 							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsNewAddedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedWidget)</onclick>
+							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetlist, 31379|SCTVShowsPopularWidgetwall , 31380|nic)</onclick>
+							<label2>$VAR[TVshowsPopularVar]</label2>
 						</control>
 						<!-- <control type="radiobutton" id="1068"> --> <!-- TVShows New Added Episodes Widget -->
 							<!-- <label>Widget Poslední přidané části</label>
