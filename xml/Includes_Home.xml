@@ -11,7 +11,7 @@
 	</include>
 	<include name="CategoryLabel">  <!-- Easy/SC* Full change of original code -->
 		<param name="visible">true</param>
-		<param name="info">false</param>`
+		<param name="info">false</param>
 		<param name="always">false</param>
 		<param name="param">false</param>
 		<param name="default">false</param>
