@@ -147,6 +147,10 @@
 							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
 							<visible>Skin.HasSetting(RadiodeWallWidget)</visible>
 						</item>
+						<item id="1350">  <!-- Nova Plus -->
+							<label>Nova Plus</label>
+							<onclick>Skin.ToggleSetting(Nova)</onclick>
+						</item>
 						<item id="1400"> <!-- Movies -->
 							<label>$LOCALIZE[342]</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
@@ -822,6 +826,84 @@
 							<selected>Skin.HasSetting(RadiodeMyStationsWidget)</selected>
 							<onclick>Skin.ToggleSetting(RadiodeMyStationsWidget)</onclick>
 							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
+						</control>
+					</control>
+					<control type="grouplist" id="1351"> <!-- Nova -->
+						<pagecontrol>1319</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1319</onright>
+						<onup>1301</onup>
+						<ondown>1301</ondown>
+						<visible>Container(1000).HasFocus(1350)</visible>
+						<control type="radiobutton" id="1352"> <!-- Nova Menu enable/disable -->
+							<label>$LOCALIZE[31384]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(Nova)</selected>
+							<onclick>Skin.ToggleSetting(Nova)</onclick>
+						</control>
+						<control type="image" id="1353">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1354"> <!-- Nova vsechny sou Widget -->
+							<label>$LOCALIZE[31385]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31385, 31378|NovaAllWidgetList, 31379|NovaAllWidgetWall , 31380|NoneNovaAll)</onclick>
+							<label2>$VAR[NovaAllWidgetVar]</label2>
+						</control>
+						<control type="button" id="1355"> <!-- Nova top porady Widget -->
+							<label>$LOCALIZE[31386]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31385, 31378|NovaTopWidgetList, 31379|NovaTopWidgetWall , 31380|NoneNovaTop)</onclick>
+							<label2>$VAR[NovaTopWidgetVar]</label2>
+						</control>
+						<control type="button" id="1356"> <!-- Nova posledni dily Widget -->
+							<label>$LOCALIZE[31387]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31387, 31378|NovaLastWidgetList, 31379|NovaLastWidgetWall , 31380|NoneNovaLast)</onclick>
+							<label2>$VAR[NovaLastWidgetVar]</label2>
+						</control>
+						<control type="button" id="1357"> <!-- Nova ukazky Widget -->
+							<label>$LOCALIZE[31388]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31388, 31378|NovaShowWidgetList, 31379|NovaShowWidgetWall , 31380|NoneNovaShow)</onclick>
+							<label2>$VAR[NovaShowWidgetVar]</label2>
+						</control>
+						<control type="button" id="1358"> <!-- Nova bonusy Widget -->
+							<label>$LOCALIZE[31389]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31389, 31378|NovaBonusWidgetList, 31379|NovaBonusWidgetWall , 31380|NoneNovaBonus)</onclick>
+							<label2>$VAR[NovaBonusWidgetVar]</label2>
+						</control>
+						<control type="button" id="1359"> <!-- Nova kriminalni serialy Widget -->
+							<label>$LOCALIZE[31390]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31390, 31378|NovaCriminalWidgetList, 31379|NovaCriminalWidgetWall , 31380|NoneNovaCriminal)</onclick>
+							<label2>$VAR[NovaCriminalWidgetVar]</label2>
+						</control>
+						<control type="button" id="1360"> <!-- Nova zahranicni porady Widget -->
+							<label>$LOCALIZE[31391]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31391, 31391|NovaForeignWidgetList, 31379|NovaForeignWidgetWall , 31380|NoneNovaForeign)</onclick>
+							<label2>$VAR[NovaForeignWidgetVar]</label2>
+						</control>
+						<control type="button" id="1361"> <!-- Nova porad pro deti Widget -->
+							<label>$LOCALIZE[31392]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31392, 31378|NovaChildWidgetList, 31379|NovaChildWidgetWall , 31380|NoneNovaChild)</onclick>
+							<label2>$VAR[NovaChildWidgetVar]</label2>
+						</control>
+						<control type="button" id="1362"> <!-- Nova zabavne porady Widget -->
+							<label>$LOCALIZE[31393]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31393, 31378|NovaFunWidgetList, 31379|NovaFunWidgetWall , 31380|NoneNovaFun)</onclick>
+							<label2>$VAR[NovaFunWidgetVar]</label2>
+						</control>
+						<control type="button" id="1363"> <!-- Nova magaziny Widget -->
+							<label>$LOCALIZE[31394]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31394, 31378|NovaMagazineWidgetList, 31379|NovaMagazineWidgetWall , 31380|NoneNovaMagazine)</onclick>
+							<label2>$VAR[NovaMagazineWidgetVar]</label2>
 						</control>
 					</control>
 					<control type="scrollbar" id="1319">
