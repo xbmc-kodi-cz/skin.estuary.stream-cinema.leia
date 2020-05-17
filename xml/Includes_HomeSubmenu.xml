@@ -207,43 +207,6 @@
 	</include>
 	<include name="SCMoviesMenuContent">
 		<content>
-<!-- 			<item>
-				<label>Poslední sledované</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=6c617374&amp;id=6c6173746d&amp;title=243330393237,return)</onclick>
-				<thumb>defaultinprogressshows.png</thumb>
-				<visible>!Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</visible>
-			</item>
-			<item>
-				<label>Poslední sledované (T)</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65,return)</onclick>
-				<thumb>defaultinprogressshows.png</thumb>
-				<visible>Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</visible>
-			</item>
-			<item>
-				<label>Novinky</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6c6174657374&amp;title=243330393530&amp;url=2f464d6f766965732f6c6174657374,return)</onclick>
-				<thumb>defaultaddonsrecentlyupdated.png</thumb>
-			</item>
-			<item>
-				<label>Novinky dub</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6c617465737464&amp;title=24333039353020647562&amp;url=2f464d6f766965732f6c617465737464,return)</onclick>
-				<thumb>defaultaddonsrecentlyupdated.png</thumb>
-			</item>
-			<item>
-				<label>Práve sledované</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f7761746368696e67&amp;title=243330393536&amp;url=2f464d6f766965732f7761746368696e67,return)</onclick>
-				<thumb>defaultmovies.png</thumb>
-			</item>
-			<item>
-				<label>Nejsledovanější</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f706f70756c6172&amp;title=243330393035&amp;url=2f464d6f766965732f706f70756c6172,return)</onclick>
-				<thumb>defaultfavourites.png</thumb>
-			</item>
-			<item>
-				<label>Nově přidané</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d,return)</onclick>
-				<thumb>DefaultRecentlyAddedMovies.png</thumb>
-			</item> -->
 			<item>
 				<label>$LOCALIZE[31179]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/media/movies/popular,return)</onclick>
@@ -254,109 +217,17 @@
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/a_to_z/movies,return)</onclick>
 				<thumb>DefaultMovieTitle.png</thumb>
 			</item>
-<!-- 			<item>
-				<label>Země</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f636f756e747279&amp;title=243330393036&amp;url=2f464d6f766965732f636f756e747279,return)</onclick>
-				<thumb>DefaultCountry.png</thumb>
-			</item>
-			<item>
-				<label>Kvalita</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f7175616c697479&amp;title=243330393037&amp;url=2f464d6f766965732f7175616c697479,return)</onclick>
-				<thumb>flags/videoresolution/1080.png</thumb>
-			</item> -->
+
 			<item>
 				<label>$LOCALIZE[31204]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/filter/movies/genre,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/genre_menu/movies,return)</onclick>
 				<thumb>DefaultGenre.png</thumb>
-			</item>
-<!-- 			<item>
-				<label>Rok</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f79656172&amp;title=243330393039&amp;url=2f464d6f766965732f79656172,return)</onclick>
-				<thumb>DefaultYear.png</thumb>
-			</item>
-			<item>
-				<label>Kolekcie</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f636f6c6c656374696f6e&amp;title=4b6f6c656b636965&amp;url=2f464d6f766965732f636f6c6c656374696f6e,return)</onclick>
-				<thumb>defaultsets.png</thumb>
-			</item>
-			<item>
-				<label>Knihovna</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?cmd=416374697661746557696e646f7728566964656f732c4d6f7669657329&amp;title=243330393235&amp;url=636d643a2f2f416374697661746557696e646f7728566964656f732c4d6f7669657329,return)</onclick>
-				<thumb>defaultaddoninfolibrary.png</thumb>
-			</item> -->
-		</content>
-	</include>
-	<include name="SCTVShowsMenuContent">
-		<content>
-			<item>
-				<label>Poslední sledované</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=6c617374&amp;id=6c617374&amp;title=243330393237,return)</onclick>
-				<thumb>defaultinprogressshows.png</thumb>
-				<visible>!Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</visible>
-			</item>
-			<item>
-				<label>Poslední sledované (T)</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65,return)</onclick>
-				<thumb>defaultinprogressshows.png</thumb>
-				<visible>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</visible>
-			</item>
-			<item>
-				<label>Poslední přidané seriály</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f6c6174657374&amp;title=243330393231&amp;url=2f5365726965732f6c6174657374,return)</onclick>
-				<thumb>DefaultRecentlyAddedMovies.png</thumb>
-			</item>
-			<item>
-				<label>Poslední přidané části</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f6e65776570&amp;title=243330393230&amp;url=2f5365726965732f6e65776570,return)</onclick>
-				<thumb>DefaultRecentlyAddedMovies.png</thumb>
-			</item>
-			<item>
-				<label>Nejsledovanější</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f706f70756c6172&amp;title=243330393035&amp;url=2f5365726965732f706f70756c6172,return)</onclick>
-				<thumb>defaultfavourites.png</thumb>
-			</item>
-			<item>
-				<label>Práve sledované</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f7761746368696e67&amp;title=243330393536&amp;url=2f5365726965732f7761746368696e67,return)</onclick>
-				<thumb>defaulttvshows.png</thumb>
-			</item>
-			<item>
-				<label>A-Z</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f617a&amp;title=243330393033&amp;url=2f5365726965732f617a,return)</onclick>
-				<thumb>DefaultMovieTitle.png</thumb>
-			</item>
-			<item>
-				<label>Země</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f636f756e747279&amp;title=243330393036&amp;url=2f5365726965732f636f756e747279,return)</onclick>
-				<thumb>DefaultCountry.png</thumb>
-			</item>
-			<item>
-				<label>Žánr</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365726965732f67656e7265&amp;title=243330393038&amp;url=2f5365726965732f67656e7265,return)</onclick>
-				<thumb>DefaultGenre.png</thumb>
-			</item>
-			<item>
-				<label>Knihovna</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?cmd=416374697661746557696e646f7728566964656f732c547653686f777329&amp;title=243330393235&amp;url=636d643a2f2f416374697661746557696e646f7728566964656f732c547653686f777329,return)</onclick>
-				<thumb>defaultaddoninfolibrary.png</thumb>
 			</item>
 		</content>
 	</include>
 
-<!--	<include name="SCTVMenuContent">
-		<content>
-			<item>
-				<label>TV program dnes</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f465476&amp;title=243330393130&amp;url=2f465476,return)</onclick>
-				<thumb>defaultaddonpvrclient.png</thumb>
-			</item>
-			<item>
-				<label>TV program na 14 dní</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976,return)</onclick>
-				<thumb>defaultyear.png</thumb>
-			</item>
-		</content>
-	</include>
+
+<!--	
 	<include name="SCTraktMenuContent">
 		<content>
 			<item>
