@@ -1003,3 +1003,11 @@ msgstr "Zeď"
 msgctxt "#31380"
 msgid "none"
 msgstr "nic"
+
+msgctxt "#31381"
+msgid "History"
+msgstr "Historie"
+
+msgctxt "#31382"
+msgid "Widget istory"
+msgstr "Widget Historie"

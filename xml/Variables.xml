@@ -156,6 +156,16 @@
 		<value condition="Skin.HasSetting(SCTVShowsPopularWidgetlist)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
+	<variable name="MainMoviesPopularVar">
+		<value condition="Skin.HasSetting(SCMainMoviesPopularWidgetwall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMainMoviesPopularWidgetlist)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="MainTVshowPopularVar">
+		<value condition="Skin.HasSetting(SCMainTVShowsPopularWidgetwall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMainTVShowsPopularWidgetlist)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
 	<variable name="AddonsListIconVar">
 		<value condition="!String.IsEmpty(ListItem.AddonBroken)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.orphaned)">icons/addonstatus/orphan.png</value>

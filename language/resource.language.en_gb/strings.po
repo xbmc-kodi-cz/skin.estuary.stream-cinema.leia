@@ -997,3 +997,11 @@ msgstr "Wall"
 msgctxt "#31380"
 msgid "none"
 msgstr "none"
+
+msgctxt "#31381"
+msgid "History"
+msgstr "History"
+
+msgctxt "#31382"
+msgid "Widget istory"
+msgstr "Widget History"

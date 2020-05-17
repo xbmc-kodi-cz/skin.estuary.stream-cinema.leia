@@ -108,6 +108,11 @@
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
+						<item id="1060"> <!-- SC History -->
+							<label>$LOCALIZE[31381]</label>
+							<label2>[CR][CR]stream-cinema-2</label2>
+							<onclick>Skin.ToggleSetting(History)</onclick>
+						</item>
 						<!-- <item id="1080"> --> <!-- SC Stories -->
 							<!-- <label>Pohádky</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
@@ -266,17 +271,17 @@
 							<selected>Skin.HasSetting(SCMainMoviesNewWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMainMoviesNewWidget)</onclick>
 						</control> -->
-						<control type="radiobutton" id="1026"> <!-- Main Popular Movies Widget -->
+						<control type="button" id="1026"> <!-- Main Popular Movies Widget -->
 							<label>$LOCALIZE[31174]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMainMoviesNewAddedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMainMoviesNewAddedWidget)</onclick>
+							<onclick>Skin.SelectBool(31174, 31378|SCMainMoviesPopularWidgetlist, 31379|SCMainMoviesPopularWidgetwall , 31380|nic)</onclick>
+							<label2>$VAR[MainMoviesPopularVar]</label2>
 						</control>
-						<control type="radiobutton" id="1027"> <!-- Main Popular serials Widget -->
+						<control type="button" id="1027"> <!-- Main Popular serials Widget -->
 							<label>$LOCALIZE[31175]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMainTVShowsNewAddedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMainTVShowsNewAddedWidget)</onclick>
+							<onclick>Skin.SelectBool(31175, 31378|SCMainTVShowsPopularWidgetlist, 31379|SCMainTVShowsPopularWidgetwall , 31380|nic)</onclick>
+							<label2>$VAR[MainTVshowPopularVar]</label2>
 						</control>
 						<control type="radiobutton" id="1028"> <!-- Main TV tips of the day Widget -->
 							<label>$LOCALIZE[31176]</label>
@@ -517,6 +522,29 @@
 							<selected>Skin.HasSetting(SCTVShowsMainWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsMainWidget)</onclick>
 						</control> -->
+					</control>
+					<control type="grouplist" id="1091"> <!-- Easy/SC+ History -->
+						<onleft>1000</onleft>
+						<onright>1000</onright>
+						<onup>1091</onup>
+						<ondown>1091</ondown>
+						<visible>Container(1000).HasFocus(1060)</visible>
+						<control type="radiobutton" id="1092"> <!-- History Menu enable/disable -->
+							<label>$LOCALIZE[31382]</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCHistory)</selected>
+							<onclick>Skin.ToggleSetting(SCHistory)</onclick>
+						</control>
+						<control type="image" id="1093">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1097"> <!-- TVShows New Added Widget -->
+							<label>$LOCALIZE[31300]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetlist, 31379|SCTVShowsPopularWidgetwall , 31380|nic)</onclick>
+							<label2>$VAR[TVshowsPopularVar]</label2>
+						</control>
 					</control>
 					<control type="grouplist" id="1081"> <!-- Easy/SC+ Stories -->
 						<onleft>1000</onleft>
