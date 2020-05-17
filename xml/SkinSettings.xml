@@ -111,7 +111,7 @@
 						<item id="1090"> <!-- SC History -->
 							<label>$LOCALIZE[31381]</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
-							<onclick>Skin.ToggleSetting(History)</onclick>
+							<onclick>Skin.ToggleSetting(SCHistory)</onclick>
 						</item>
 						<!-- <item id="1160"> -->  <!-- SC Trakt -->
 							<!-- <label>Moje seznamy</label>

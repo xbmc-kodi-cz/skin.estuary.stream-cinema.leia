@@ -41,7 +41,7 @@
 			<property name="menu_id">$NUMBER[42000]</property>
 			<thumb>icons/sidemenu/tv.png</thumb>
 			<property name="id">streamcinematvshows</property>
-			<visible>!Skin.HasSetting(TVshow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
+			<visible>Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema History -->
 			<label>$LOCALIZE[31381]</label>
