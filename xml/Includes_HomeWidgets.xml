@@ -1273,6 +1273,32 @@
 			</control>
 			<include>WidgetTitle</include>
 		</control>
+		<control type="group" id="42521"> <!-- Easy/SC+ SC TVShows -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaHistory)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="streamcinemaHistory"/>
+			</include>
+			<control type="grouplist" id="42522">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCHistorylist) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+					<param name="widget_header" value=$LOCALIZE[31381]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42155"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCHistorywall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+					<param name="widget_header" value=$LOCALIZE[31381]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="42156"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
 		<control type="group" id="43000"> <!-- Easy/SC+ SC Koncerty -->
 			<include>ShiftWidgets</include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="43100"/><param name="year" value="false"/></include>

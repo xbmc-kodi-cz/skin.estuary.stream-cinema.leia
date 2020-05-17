@@ -108,7 +108,7 @@
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
-						<item id="1060"> <!-- SC History -->
+						<item id="1090"> <!-- SC History -->
 							<label>$LOCALIZE[31381]</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(History)</onclick>
@@ -528,22 +528,16 @@
 						<onright>1000</onright>
 						<onup>1091</onup>
 						<ondown>1091</ondown>
-						<visible>Container(1000).HasFocus(1060)</visible>
-						<control type="radiobutton" id="1092"> <!-- History Menu enable/disable -->
+						<visible>Container(1000).HasFocus(1090)</visible>
+						<control type="button" id="1092"> <!-- History Menu enable/disable -->
 							<label>$LOCALIZE[31382]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCHistory)</selected>
-							<onclick>Skin.ToggleSetting(SCHistory)</onclick>
+							<onclick>Skin.SelectBool(31382, 31378|SCHistorylist, 31379|SCHistorywall , 31380|nichistory)</onclick>
+							<label2>$VAR[SCHistoryVar]</label2>
 						</control>
 						<control type="image" id="1093">
 							<height>3</height>
 							<texture>dialogs/separator-grey.png</texture>
-						</control>
-						<control type="button" id="1097"> <!-- TVShows New Added Widget -->
-							<label>$LOCALIZE[31300]</label>
-							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetlist, 31379|SCTVShowsPopularWidgetwall , 31380|nic)</onclick>
-							<label2>$VAR[TVshowsPopularVar]</label2>
 						</control>
 					</control>
 					<control type="grouplist" id="1081"> <!-- Easy/SC+ Stories -->
@@ -551,7 +545,7 @@
 						<onright>1000</onright>
 						<onup>1081</onup>
 						<ondown>1081</ondown>
-						<visible>Container(1000).HasFocus(1080)</visible>
+						<visible>SCMainMoviesPopularWidget(1080)</visible>
 						<control type="radiobutton" id="1082"> <!-- Stories Menu enable/disable -->
 							<label>Povolit Pohádky stream-cinema-2</label>
 							<include>DefaultSettingButton</include>
