@@ -1001,5 +1001,9 @@ msgid "History"
 msgstr "Historie"
 
 msgctxt "#31382"
-msgid "Widget istory"
+msgid "Widget History"
 msgstr "Widget Historie"
+
+msgctxt "#31383"
+msgid "Enable"
+msgstr "Povolit"
