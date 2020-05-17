@@ -21,8 +21,6 @@
 		<param name="SCMainMenu_submenu">false</param>
 		<param name="SCMoviesMenu_submenu">false</param>
 		<param name="SCTVShowsMenu_submenu">false</param>
-		<param name="SCStoriesMenu_submenu">false</param>
-		<param name="SCConcertsMenu_submenu">false</param>
 		<param name="SCAnimeMenu_submenu">false</param>
 		<param name="SCTVMenu_submenu">false</param>
 		<param name="SCTraktMenu_submenu">false</param>
@@ -127,8 +125,6 @@
 				<include condition="$PARAM[SCMainMenu_submenu]">SCMainMenuContent</include>
 				<include condition="$PARAM[SCMoviesMenu_submenu]">SCMoviesMenuContent</include>
 				<include condition="$PARAM[SCTVShowsMenu_submenu]">SCTVShowsMenuContent</include>
-				<!-- <include condition="$PARAM[SCStoriesMenu_submenu]">SCStoriesMenuContent</include> -->
-				<!-- <include condition="$PARAM[SCConcertsMenu_submenu]">SCConcertsMenuContent</include> -->
 				<!-- <include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include> -->
 				<!-- <include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include> -->
 				<!-- <include condition="$PARAM[SCTraktMenu_submenu]">SCTraktMenuContent</include> -->
@@ -348,44 +344,6 @@
 			</item>
 		</content>
 	</include>
-<!-- 	<include name="SCStoriesMenuContent">
-		<content>
-			<item>
-				<label>Pohádky</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6765744c6973742f36&amp;title=526f7a707261766b79&amp;url=2f5365617263682f6765744c6973742f36&amp;id=36&amp;,return)</onclick>
-				<thumb>defaultaddonsrecentlyupdated.png</thumb>
-			</item>
-			<item>
-				<label>Filmové pohádky</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f67656e72652f706f6861646b61&amp;title=243332383230&amp;url=2f464d6f766965732f67656e72652f706f6861646b61&amp;,return)</onclick>
-				<thumb>defaultmovies.png</thumb>
-			</item>
-			<item>
-				<label>Animované pohádky</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f67656e72652f616e696d6f76616e79&amp;title=243331313238&amp;url=2f464d6f766965732f67656e72652f616e696d6f76616e79,return)</onclick>
-				<thumb>defaultmovies.png</thumb>
-			</item>
-			<item>
-				<label>Disney</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6765744c6973742f3836&amp;title=4469736e6579&amp;url=2f5365617263682f6765744c6973742f3836&amp;id=3836&amp;,return)</onclick>
-				<thumb>special://skin/extras/icons/studios/disneycompany.png</thumb>
-			</item>
-		</content>
-	</include> -->
-<!-- 	<include name="SCConcertsMenuContent">
-		<content>
-			<item>
-				<label>Koncerty I. část</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
-				<thumb>defaultmusicvideos.png</thumb>
-			</item>
-			<item>
-				<label>Koncerty II. část</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6b6f6e636572743f703d32&amp;title=6e657874&amp;url=2f464d6f766965732f6b6f6e636572743f703d32,return)</onclick>
-				<thumb>defaultmusicvideos.png</thumb>
-			</item>
-		</content>
-	</include> -->
 <!-- 	<include name="SCAnimeMenuContent">
 		<content>
 			<item>
