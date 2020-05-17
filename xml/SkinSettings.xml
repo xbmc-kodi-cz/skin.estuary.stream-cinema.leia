@@ -113,11 +113,6 @@
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(History)</onclick>
 						</item>
-						<!-- <item id="1140"> --> <!-- SC TV -->
-							<!-- <label>Televize</label>
-							<label2>[CR][CR]stream-cinema-2</label2>
-							<onclick>Skin.ToggleSetting(SCTV)</onclick>
-						</item> -->
 						<!-- <item id="1160"> -->  <!-- SC Trakt -->
 							<!-- <label>Moje seznamy</label>
 							<label2>[CR][CR]stream-cinema-2</label2>

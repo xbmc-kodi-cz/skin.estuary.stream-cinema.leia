@@ -1299,46 +1299,6 @@
 			</control>
 			<include>WidgetTitle</include>
 		</control>
-		<control type="group" id="45000"> <!-- Easy/SC+ SC TV -->
-			<include>ShiftWidgets</include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="45100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
-			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinematv)</visible>
-			<include content="Visible_Right_Delayed">
-				<param name="id" value="streamcinematv"/>
-			</include>
-			<control type="grouplist" id="45001">
-				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVMenuWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="SCTVMenu_submenu" value="true"/>
-					<param name="widget_header" value="TV Menu"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="45050"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVTodayWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f465476&amp;title=243330393130&amp;url=2f465476"/>
-					<param name="widget_header" value="TV program dnes"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="45100"/>
-					<param name="item_limit" value="$INFO[Container(45100).NumItems]"/>
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
-					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
-				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVTwoWeakWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976"/>
-					<param name="widget_header" value="TV program na 14 dní"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="45150"/>
-					<param name="icon" value="defaultyear.png"/>
-				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVMainWidget) + Skin.HasSetting(SCTV) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="SCMainMenu_submenu" value="true"/>
-					<param name="widget_header" value="Stream-Cinema Menu"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="45950"/>
-				</include>
-			</control>
-			<include>WidgetTitle</include>
-		</control>
 		<control type="group" id="46000"> <!-- Easy/SC+ SC Moje seznamy (Trakt.tv) -->
 			<include>ShiftWidgets</include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="46100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
