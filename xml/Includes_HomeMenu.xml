@@ -50,7 +50,7 @@
 			<property name="menu_id">$NUMBER[42500]</property>
 			<thumb>icons/sidemenu/tv.png</thumb>
 			<property name="id">streamcinemahistory</property>
-			<visible>Skin.HasSetting(SCHistorylist | SCHistorywall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
+			<visible>Skin.HasSetting(SCHistorylist) | Skin.HasSetting(SCHistorywall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)</visible>
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema Trakt -->
 			<label>Moje seznamy</label>
