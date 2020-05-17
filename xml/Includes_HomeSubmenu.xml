@@ -21,7 +21,6 @@
 		<param name="SCMainMenu_submenu">false</param>
 		<param name="SCMoviesMenu_submenu">false</param>
 		<param name="SCTVShowsMenu_submenu">false</param>
-		<param name="SCAnimeMenu_submenu">false</param>
 		<param name="SCTVMenu_submenu">false</param>
 		<param name="SCTraktMenu_submenu">false</param>
 		<param name="iVysilaniMenu_submenu">false</param>
@@ -125,7 +124,6 @@
 				<include condition="$PARAM[SCMainMenu_submenu]">SCMainMenuContent</include>
 				<include condition="$PARAM[SCMoviesMenu_submenu]">SCMoviesMenuContent</include>
 				<include condition="$PARAM[SCTVShowsMenu_submenu]">SCTVShowsMenuContent</include>
-				<!-- <include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include> -->
 				<!-- <include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include> -->
 				<!-- <include condition="$PARAM[SCTraktMenu_submenu]">SCTraktMenuContent</include> -->
 				<include condition="$PARAM[iVysilaniMenu_submenu]">iVysilaniMenuContent</include>
@@ -344,21 +342,8 @@
 			</item>
 		</content>
 	</include>
-<!-- 	<include name="SCAnimeMenuContent">
-		<content>
-			<item>
-				<label>Filmy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=616d6f76696573&amp;list=2f416e696d652f4d6f76696573&amp;title=243330393031&amp;url=2f416e696d652f4d6f76696573,return)</onclick>
-				<thumb>defaultmovies.png</thumb>
-			</item>
-			<item>
-				<label>Seriály</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=61736572696573&amp;list=2f416e696d652f536572696573&amp;title=243330393032&amp;url=2f416e696d652f536572696573,return)</onclick>
-				<thumb>defaulttvshows.png</thumb>
-			</item>
-		</content>
-	</include>
-	<include name="SCTVMenuContent">
+
+<!--	<include name="SCTVMenuContent">
 		<content>
 			<item>
 				<label>TV program dnes</label>

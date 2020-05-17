@@ -1003,5 +1003,5 @@ msgid "History"
 msgstr "History"
 
 msgctxt "#31382"
-msgid "Widget istory"
+msgid "Widget History"
 msgstr "Widget History"

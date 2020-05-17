@@ -490,7 +490,6 @@
 		<param name="SCMainMenu_submenu">false</param>	<!-- Easy/SC+ SC Main Menu -->
 		<param name="SCMoviesMenu_submenu">false</param>	<!-- Easy/SC+ SC Movies Menu -->
 		<param name="SCTVShowsMenu_submenu">false</param>	<!-- Easy/SC+ SC TVShows Menu -->
-		<param name="SCAnimeMenu_submenu">false</param>	<!-- Easy/SC+ SC Anime Menu -->
 		<param name="SCTVMenu_submenu">false</param>	<!-- Easy/SC+ SC TV Menu -->
 		<param name="SCTraktMenu_submenu">false</param>	<!-- Easy/SC+ SC Trakt Menu -->
 		<param name="iVysilaniMenu_submenu">false</param>	<!-- Easy/SC+ SC iVysílání -->
@@ -591,7 +590,7 @@
 					</control>
 				</focusedlayout>
 				<!-- Easy/SC* -->
-				<include condition="!$PARAM[pvr_submenu] + !$PARAM[addon_submenu] + !$PARAM[rec_submenu] + !$PARAM[SCMainMenu_submenu] + !$PARAM[SCMoviesMenu_submenu] + !$PARAM[SCTVShowsMenu_submenu] + !$PARAM[SCAnimeMenu_submenu] + !$PARAM[SCTVMenu_submenu] + !$PARAM[SCTraktMenu_submenu] + !$PARAM[iVysilaniMenu_submenu]" content="SubmenuContent">
+				<include condition="!$PARAM[pvr_submenu] + !$PARAM[addon_submenu] + !$PARAM[rec_submenu] + !$PARAM[SCMainMenu_submenu] + !$PARAM[SCMoviesMenu_submenu] + !$PARAM[SCTVShowsMenu_submenu] + !$PARAM[SCTVMenu_submenu] + !$PARAM[SCTraktMenu_submenu] + !$PARAM[iVysilaniMenu_submenu]" content="SubmenuContent">
 					<param name="widget_target" value="$PARAM[widget_target]"/>
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -610,8 +609,6 @@
 				<include condition="$PARAM[SCMoviesMenu_submenu]">SCMoviesMenuContent</include>
 				<!-- Easy/SC+ SC TVShows Menu -->
 				<include condition="$PARAM[SCTVShowsMenu_submenu]">SCTVShowsMenuContent</include>
-				<!-- Easy/SC+ SC Anime Menu -->
-				<include condition="$PARAM[SCAnimeMenu_submenu]">SCAnimeMenuContent</include>
 				<!-- Easy/SC+ SC TV Menu -->
 				<include condition="$PARAM[SCTVMenu_submenu]">SCTVMenuContent</include>
 				<!-- Easy/SC+ SC Trakt Menu -->

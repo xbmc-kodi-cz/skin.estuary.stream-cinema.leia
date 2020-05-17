@@ -1273,43 +1273,28 @@
 			</control>
 			<include>WidgetTitle</include>
 		</control>
-		<control type="group" id="44000"> <!-- Easy/SC+ SC Anime -->
+		<control type="group" id="42521"> <!-- Easy/SC+ SC History -->
 			<include>ShiftWidgets</include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="44100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="44150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
-			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaanime)</visible>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaHistory)</visible>
 			<include content="Visible_Right_Delayed">
-				<param name="id" value="streamcinemaanime"/>
+				<param name="id" value="streamcinemaHistory"/>
 			</include>
-			<control type="grouplist" id="44001">
+			<control type="grouplist" id="42522">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCAnimeMenuWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="SCAnimeMenu_submenu" value="true"/>
-					<param name="widget_header" value="Menu Anime"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCHistorylist) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+					<param name="widget_header" value=$LOCALIZE[31381]/>
 					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="44050"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCAnimeMoviessWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?id=616d6f76696573&amp;list=2f416e696d652f4d6f76696573&amp;title=243330393031&amp;url=2f416e696d652f4d6f76696573"/>
-					<param name="sortby" value="random"/>
-					<param name="widget_header" value="Náhodně vybrané filmy"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="44100"/>
+					<param name="list_id" value="42155"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCAnimeTVShowsWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?id=61736572696573&amp;list=2f416e696d652f536572696573&amp;title=243330393032&amp;url=2f416e696d652f536572696573"/>
-					<param name="sortby" value="random"/>
-					<param name="widget_header" value="Náhodně vybrané seriály"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCHistorywall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+					<param name="widget_header" value=$LOCALIZE[31381]/>
 					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="44150"/>
+					<param name="list_id" value="42156"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
-				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCAnimeMainWidget) + Skin.HasSetting(SCAnime) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="SCMainMenu_submenu" value="true"/>
-					<param name="widget_header" value="Stream-Cinema Menu"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="44950"/>
 				</include>
 			</control>
 			<include>WidgetTitle</include>

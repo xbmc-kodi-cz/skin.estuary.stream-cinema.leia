@@ -108,16 +108,11 @@
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
-						<item id="1060"> <!-- SC History -->
+						<item id="1090"> <!-- SC History -->
 							<label>$LOCALIZE[31381]</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
 							<onclick>Skin.ToggleSetting(History)</onclick>
 						</item>
-						<!-- <item id="1120"> --> <!-- SC Anime -->
-							<!-- <label>Anime</label>
-							<label2>[CR][CR]stream-cinema-2</label2>
-							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
-						</item> -->
 						<!-- <item id="1140"> --> <!-- SC TV -->
 							<!-- <label>Televize</label>
 							<label2>[CR][CR]stream-cinema-2</label2>
@@ -518,63 +513,16 @@
 						<onright>1000</onright>
 						<onup>1091</onup>
 						<ondown>1091</ondown>
-						<visible>Container(1000).HasFocus(1060)</visible>
-						<control type="radiobutton" id="1092"> <!-- History Menu enable/disable -->
+						<visible>Container(1000).HasFocus(1090)</visible>
+						<control type="button" id="1092"> <!-- History Menu enable/disable -->
 							<label>$LOCALIZE[31382]</label>
 							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCHistory)</selected>
-							<onclick>Skin.ToggleSetting(SCHistory)</onclick>
+							<onclick>Skin.SelectBool(31382, 31378|SCHistorylist, 31379|SCHistorywall , 31380|nichistory)</onclick>
+							<label2>$VAR[SCHistoryVar]</label2>
 						</control>
 						<control type="image" id="1093">
 							<height>3</height>
 							<texture>dialogs/separator-grey.png</texture>
-						</control>
-						<control type="button" id="1097"> <!-- TVShows New Added Widget -->
-							<label>$LOCALIZE[31300]</label>
-							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetlist, 31379|SCTVShowsPopularWidgetwall , 31380|nic)</onclick>
-							<label2>$VAR[TVshowsPopularVar]</label2>
-						</control>
-					</control>
-					<control type="grouplist" id="1121"> <!-- Easy/SC+ Anime -->
-						<onleft>1000</onleft>
-						<onright>1000</onright>
-						<onup>1121</onup>
-						<ondown>1121</ondown>
-						<visible>Container(1000).HasFocus(1120)</visible>
-						<control type="radiobutton" id="1122"> <!-- Anime Menu enable/disable -->
-							<label>Povolit Anime stream-cinema-2</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCAnime)</selected>
-							<onclick>Skin.ToggleSetting(SCAnime)</onclick>
-						</control>
-						<control type="image" id="1123">
-							<height>3</height>
-							<texture>dialogs/separator-grey.png</texture>
-						</control>
-						<control type="radiobutton" id="1124"> <!-- Anime Menu Widget -->
-							<label>Widget Menu Anime</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCAnimeMenuWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCAnimeMenuWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1125"> <!-- Anime Movies Widget -->
-							<label>Widget Náhodně vybrané filmy</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCAnimeMoviessWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCAnimeMoviessWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1126"> <!-- Anime TVShows Widget -->
-							<label>Widget Náhodně vybrané seriály</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCAnimeTVShowsWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCAnimeTVShowsWidget)</onclick>
-						</control>
-						<control type="radiobutton" id="1127"> <!-- Anime Main Menu Widget -->
-							<label>Widget stream-cinema-2 Menu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCAnimeMainWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCAnimeMainWidget)</onclick>
 						</control>
 					</control>
 					<control type="grouplist" id="1141"> <!-- Easy/SC+ TV -->
