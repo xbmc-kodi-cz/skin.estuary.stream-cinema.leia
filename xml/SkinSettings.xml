@@ -254,13 +254,13 @@
 						<control type="button" id="1026"> <!-- Main Popular Movies Widget -->
 							<label>$LOCALIZE[31174]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31174, 31378|SCMainMoviesPopularWidgetlist, 31379|SCMainMoviesPopularWidgetwall , 31380|nic)</onclick>
+							<onclick>Skin.SelectBool(31174, 31378|SCMainMoviesPopularWidgetList, 31379|SCMainMoviesPopularWidgetWall , 31380|SCMainMoviesPopularWidgetNone)</onclick>
 							<label2>$VAR[MainMoviesPopularVar]</label2>
 						</control>
 						<control type="button" id="1027"> <!-- Main Popular serials Widget -->
 							<label>$LOCALIZE[31175]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31175, 31378|SCMainTVShowsPopularWidgetlist, 31379|SCMainTVShowsPopularWidgetwall , 31380|nic)</onclick>
+							<onclick>Skin.SelectBool(31175, 31378|SCMainTVShowsPopularWidgetList, 31379|SCMainTVShowsPopularWidgetWall , 31380|SCMainTVShowsPopularWidgetNone)</onclick>
 							<label2>$VAR[MainTVshowPopularVar]</label2>
 						</control>
 						<control type="radiobutton" id="1028"> <!-- Main TV tips of the day Widget -->
@@ -324,7 +324,7 @@
 						<control type="button" id="1050">  <!-- Popular Movies Widget -->
 							<label>$LOCALIZE[31208]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31208, 31378|SCMoviesPopularWidgetlist, 31379|SCMoviesPopularWidgetwall , 31380|nic)</onclick>
+							<onclick>Skin.SelectBool(31208, 31378|SCMoviesPopularWidgetList, 31379|SCMoviesPopularWidgetWall , 31380|SCMoviesPopularWidgetNone)</onclick>
 							<label2>$VAR[MoviesPopularVar]</label2>
 						</control>
 						<control type="radiobutton" id="1045"> <!-- Last Played Movies Widget -->
@@ -333,78 +333,6 @@
 							<selected>Skin.HasSetting(SCMoviesLastPlayedWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidget)</onclick>
 						</control>
-						<!-- <control type="radiobutton" id="1046">  --><!-- Switch to Trakt Watched Movies Widget -->
-							<!-- <label>- Použít seznam z Trakt?</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidgetTrakt)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1047">  --><!-- New Movies Widget -->
-							<!-- <label>Widget Filmové novinky</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesNewWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesNewWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1048">  --><!-- New Movies Dubed Widget -->
-							<!-- <label>Widget Filmové novinky dabované</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesNewDubWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesNewDubWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1049">  --><!-- Just Played Movies Widget -->
-							<!-- <label>Widget Právě sledované filmy</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesJustPlayedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesJustPlayedWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1051">  --><!-- Last Added Movies Widget -->
-							<!-- <label>Widget Nově Přidané filmy</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesNewAddedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesNewAddedWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1052">  --><!-- Movies by Name (Letter) Widget -->
-							<!-- <label>Widget Název filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesNameWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesNameWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1053">  --><!-- Movies by Quality Widget -->
-							<!-- <label>Widget Kvalita filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesQualityWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesQualityWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1054">  --><!-- Movies by Country Widget -->
-							<!-- <label>Widget Země filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesCountryWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesCountryWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1055">  --><!-- Movies by Genre Widget -->
-							<!-- <label>Widget Žánry filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesGenreWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesGenreWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1056">  --><!-- Movies by Year Widget -->
-							<!-- <label>Widget Rok filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesYearWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesYearWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1057">  --><!-- Movies Sets Widget -->
-							<!-- <label>Widget Sady filmu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesSetsWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesSetsWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1058">  --><!-- Movies Main Menu Widget -->
-							<!-- <label>Widget stream-cinema-2 Menu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesMainWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesMainWidget)</onclick>
-						</control>  -->
 					</control>
 					<control type="scrollbar" id="1059">
 						<right>0</right>
@@ -436,48 +364,12 @@
 							<height>3</height>
 							<texture>dialogs/separator-grey.png</texture>
 						</control>
-						<!-- <control type="radiobutton" id="1064"> --> <!-- Popular Series Menu Widget -->
-							<!-- <label>$LOCALIZE[31300]</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsMenuWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsMenuWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1065"> --> <!-- TVshows Last Played Widget -->
-							<!-- <label>$LOCALIZE[31300]</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1066"> --> <!-- Switch to Trakt Watched TVShows Widget -->
-							<!-- <label>- Použít seznam z Trakt?</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsLastPlayedWidgetTrakt)</onclick>
-						</control> -->
 						<control type="button" id="1067"> <!-- TVShows New Added Widget -->
 							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetlist, 31379|SCTVShowsPopularWidgetwall , 31380|nic)</onclick>
+							<onclick>Skin.SelectBool(31300, 31378|SCTVShowsPopularWidgetList, 31379|SCTVShowsPopularWidgetWall , 31380|SCTVShowsPopularWidgetNone)</onclick>
 							<label2>$VAR[TVshowsPopularVar]</label2>
 						</control>
-						<!-- <control type="radiobutton" id="1068"> --> <!-- TVShows New Added Episodes Widget -->
-							<!-- <label>Widget Poslední přidané části</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsNewAddedEpisodesWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsNewAddedEpisodesWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1069"> --> <!-- TVShows Favorites Widget -->
-							<!-- <label>Widget Nejsledovanější seriály</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVshowsFavoritesWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVshowsFavoritesWidget)</onclick>
-						</control> -->
-						<!-- <control type="radiobutton" id="1070"> --> <!-- TVShows Just Played Widget -->
-							<!-- <label>Widget Právě hrané seriály</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsJustPlayedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsJustPlayedWidget)</onclick>
-						</control> -->
 						<control type="radiobutton" id="1071"> <!-- TVShows by Name (Letter) Widget -->
 							<label>$LOCALIZE[31302]</label>
 							<include>DefaultSettingButton</include>
@@ -496,12 +388,6 @@
 							<selected>Skin.HasSetting(SCTVShowsGenreWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsGenreWidget)</onclick>
 						</control>
-						<!-- <control type="radiobutton" id="1074"> --> <!-- TVShows Main Menu Widget -->
-							<!-- <label>Widget stream-cinema-2 Menu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsMainWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsMainWidget)</onclick>
-						</control> -->
 					</control>
 					<control type="grouplist" id="1091"> <!-- Easy/SC+ History -->
 						<onleft>1000</onleft>
@@ -512,7 +398,7 @@
 						<control type="button" id="1092"> <!-- History Menu enable/disable -->
 							<label>$LOCALIZE[31382]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31382, 31378|SCHistorylist, 31379|SCHistorywall , 31380|nichistory)</onclick>
+							<onclick>Skin.SelectBool(31382, 31378|SCHistoryWidgetList, 31379|SCHistoryWidgetWall , 31380|SCHistoryWidgetNone)</onclick>
 							<label2>$VAR[SCHistoryVar]</label2>
 						</control>
 						<control type="image" id="1093">
@@ -1413,6 +1299,11 @@
 						<onclick>Skin.ToggleSetting(menu_postfix)</onclick>
 						<selected>Skin.HasSetting(menu_postfix)</selected>
 					</control>
+					<control type="radiobutton" id="740"> <!-- Easy/SC+ -->
+						<label>Debug Skin</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleDebug</onclick>
+					</control>
 				</control>
 				<control type="grouplist" id="600">
 					<top>160</top>
@@ -1858,5 +1749,6 @@
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
+
 	</controls>
 </window>
