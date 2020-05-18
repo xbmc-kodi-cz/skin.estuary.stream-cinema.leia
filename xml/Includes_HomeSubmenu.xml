@@ -139,22 +139,17 @@
 				<thumb>defaultaddonsrepo.png</thumb>
 			</item> -->
 			<item>
-				<label>Vyhledávání Filmů</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/movies,return)</onclick>
+				<label>$LOCALIZE[31400]</label>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/tvshows,movies,return)</onclick>
 				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
-				<label>Vyhledávání Seriálů</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/tvshows,return)</onclick>
-				<thumb>defaultaddonssearch.png</thumb>
-			</item>
-			<item>
-				<label>Filmy</label>
+				<label>$LOCALIZE[31401]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/movies,return)</onclick>
 				<thumb>defaultmovies.png</thumb>
 			</item>
 			<item>
-				<label>Seriály</label>
+				<label>$LOCALIZE[31402]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/tvshows,return)</onclick>
 				<thumb>defaulttvshows.png</thumb>
 			</item>
@@ -174,7 +169,7 @@
 				<thumb>defaultplaylist.png</thumb>
 			</item> -->
 			<item>
-				<label>TV dnes (Filmy)</label>
+				<label>$LOCALIZE[31403]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/csfd_tips/movies,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>

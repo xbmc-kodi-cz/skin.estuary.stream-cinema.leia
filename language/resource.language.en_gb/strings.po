@@ -1068,3 +1068,24 @@ msgstr "Widget New"
 
 msgctxt "#31398"
 msgid "Widget Last addet"
+msgstr "Widget Last addet"
+
+msgctxt "#31399"
+msgid "Find on stream-cinema-2"
+msgstr "Find on stream-cinema-2"
+
+msgctxt "#31400"
+msgid "Search"
+msgstr "Search"
+
+msgctxt "#31401"
+msgid "Films"
+msgstr "Films"
+
+msgctxt "#31402"
+msgid "Series"
+msgstr "Series"
+
+msgctxt "#31403"
+msgid "TV today (Films)"
+msgstr "TV today (Films)"
