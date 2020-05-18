@@ -7,6 +7,12 @@ Tento skin pochazi kompletne z puvodniho skinu *** Estuary Stream-Cinema pro Kod
 Verze 3.0.0.a2
 * dalsi cisteni stavu s 3.0.0.a1
 * doplneni moznosti zobrazovat na hlavni strance nejenom listy ale in "ZDI" pro lepsi prehlednost
+* Pridani novych seznamu s nejnovejsiho doplnku SC2 jako Nove a Posledni pridane
+* Otestovany SC2 2.0.0 Beta
+* Pridana podpora Nova Plus Doplnku
+* Otestovany AutoCompletation doplnek
+* Pridany Vychozi nastaveni Skinu aby se ukazaly moznosti skinu s SC2
+* Opraveny drobne bugy
 
 Verze 3.0.0.a1
 - prvni pokus o portaci na SC2
