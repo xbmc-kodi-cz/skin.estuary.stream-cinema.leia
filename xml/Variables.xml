@@ -176,6 +176,26 @@
 		<value condition="Skin.HasSetting(SCMainLastaddetWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
+	<variable name="SCMovieNewWidgetvar">
+		<value condition="Skin.HasSetting(SCMovieNewWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMovieNewWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="SCMovieLastaddetWidgetvar">
+		<value condition="Skin.HasSetting(SCMovieLastaddetWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMovieLastaddetWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="SCSeriesNewWidgetvar">
+		<value condition="Skin.HasSetting(SCSeriesNewWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCSeriesNewWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="SCSeriesLastaddetWidgetvar">
+		<value condition="Skin.HasSetting(SCSeriesLastaddetWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCSeriesLastaddetWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
 	<variable name="SCHistoryVar">
 		<value condition="Skin.HasSetting(schistorywidgetwall)">$LOCALIZE[31379]</value>
 		<value condition="Skin.HasSetting(schistorywidgetlist)">$LOCALIZE[31378]</value>
