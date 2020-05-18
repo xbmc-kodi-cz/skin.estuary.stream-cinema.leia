@@ -109,10 +109,10 @@
 		<item> <!-- Nova Plus -->
 			<label>Nova Plus</label>
 			<onclick>ActivateWindow(Videos,plugin://plugin.video.novaplus.cz)</onclick>
-			<property name="menu_id">$NUMBER[41000]</property>
+			<property name="menu_id">$NUMBER[41500]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">Nova</property>
-			<visible>!Skin.HasSetting(Nova) + System.HasAddon(plugin.video.novaplus.cz)</visible>
+			<visible>Skin.HasSetting(Nova) + Skin.HasSetting(NovaAllWidgetList) | Skin.HasSetting(NovaTopWidgetList) | Skin.HasSetting(NovaLastWidgetList) | Skin.HasSetting(NovaShowWidgetList) | Skin.HasSetting(NovaBonusWidgetList) | Skin.HasSetting(NovaCriminalWidgetList) | Skin.HasSetting(NovaForeignWidgetList) | Skin.HasSetting(NovaChildWidgetList) | Skin.HasSetting(NovaFunWidgetList) | Skin.HasSetting(NovaMagazineWidgetList) | Skin.HasSetting(NovaAllWidgetWall) | Skin.HasSetting(NovaTopWidgetWall) | Skin.HasSetting(NovaLastWidgetWall) | Skin.HasSetting(NovaShowWidgetWall) | Skin.HasSetting(NovaBonusWidgetWall) | Skin.HasSetting(NovaCriminalWidgetWall) | Skin.HasSetting(NovaForeignWidgetWall) | Skin.HasSetting(NovaChildWidgetWall) | Skin.HasSetting(NovaFunWidgetWall) | Skin.HasSetting(NovaMagazineWidgetWall) + System.HasAddon(plugin.video.novaplus.cz)</visible>
 		</item>
 		<item> <!-- Movies -->
 			<label>$LOCALIZE[342]</label>

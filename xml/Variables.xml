@@ -171,6 +171,56 @@
 		<value condition="Skin.HasSetting(SCHistorylist)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
+	<variable name="NovaAllWidgetVar">
+		<value condition="Skin.HasSetting(NovaAllWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaAllWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaTopWidgetVar">
+		<value condition="Skin.HasSetting(NovaTopWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaTopWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaLastWidgetVar">
+		<value condition="Skin.HasSetting(NovaLastWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaLastWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaShowWidgetVar">
+		<value condition="Skin.HasSetting(NovaShowWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaShowWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaBonusWidgetVar">
+		<value condition="Skin.HasSetting(NovaBonusWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaBonusWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaCriminalWidgetVar">
+		<value condition="Skin.HasSetting(NovaCriminalWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaCriminalWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaForeignWidgetVar">
+		<value condition="Skin.HasSetting(NovaForeignWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaForeignWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaChildWidgetVar">
+		<value condition="Skin.HasSetting(NovaChildWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaChildWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaFunWidgetVar">
+		<value condition="Skin.HasSetting(NovaFunWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaFunWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="NovaMagazineWidgetVar">
+		<value condition="Skin.HasSetting(NovaMagazineWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(NovaMagazineWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
 	<variable name="AddonsListIconVar">
 		<value condition="!String.IsEmpty(ListItem.AddonBroken)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.orphaned)">icons/addonstatus/orphan.png</value>

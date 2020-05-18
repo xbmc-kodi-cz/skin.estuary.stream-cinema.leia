@@ -1273,7 +1273,7 @@
 			</control>
 			<include>WidgetTitle</include>
 		</control>
-		<control type="group" id="42521"> <!-- Easy/SC+ SC History -->
+		<control type="group" id="42500"> <!-- Easy/SC+ SC History -->
 			<include>ShiftWidgets</include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="42150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemaHistory)</visible>
@@ -1342,6 +1342,168 @@
 					<param name="widget_header" value="Stream-Cinema Menu"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="46950"/>
+				</include>
+			</control>
+			<include>WidgetTitle</include>
+		</control>
+		<control type="group" id="41500"> <!-- Easy/SC+ Nova Plus -->
+			<include>ShiftWidgets</include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52100"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52150"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52200"/><param name="year" value="false"/></include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52250"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52300"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52105"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52155"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52205"/><param name="year" value="false"/></include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52255"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="52305"/><param name="year" value="false"/></include> <!-- Easy/SC+ -->
+
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),Nova)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="Nova"/>
+			</include>
+			<control type="grouplist" id="52001">
+				<include>WidgetGroupListCommon</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaAllWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=4&amp;title=All%20shows&amp;url=https%3a%2f%2fnovaplus.nova.cz%2fporady"/>
+					<param name="widget_header" value=$LOCALIZE[31385]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaAllWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=4&amp;title=All%20shows&amp;url=https%3a%2f%2fnovaplus.nova.cz%2fporady"/>
+					<param name="widget_header" value=$LOCALIZE[31385]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52100"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaTopWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=8&amp;title=TOP%20PO%c5%98ADY&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31386]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaTopWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=8&amp;title=TOP%20PO%c5%98ADY&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31386]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52150"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaLastWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPOSLEDN%c3%8d%20D%c3%8dLY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31387]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaLastWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPOSLEDN%c3%8d%20D%c3%8dLY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31387]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52200"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaShowWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aUk%c3%a1zky%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31388]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52250"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaShowWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aUk%c3%a1zky%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31388]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52250"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaBonusWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aBONUSY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31389]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52300"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaBonusWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aBONUSY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31389]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52300"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaCriminalWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aKRIMIN%c3%81LN%c3%8d%20SERI%c3%81LY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31390]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52105"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaCriminalWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aKRIMIN%c3%81LN%c3%8d%20SERI%c3%81LY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31390]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52105"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaForeignWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZAHRANI%c4%8cN%c3%8d%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31391]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52155"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaForeignWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZAHRANI%c4%8cN%c3%8d%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31391]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52155"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaChildWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPO%c5%98ADY%20PRO%20D%c4%9aTI%0a&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31392]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52205"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaChildWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPO%c5%98ADY%20PRO%20D%c4%9aTI%0a&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31392]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52205"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaFunWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZ%c3%81BAVN%c3%89%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31393]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52255"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaFunWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZ%c3%81BAVN%c3%89%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31393]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52255"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaMagazineWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aMAGAZ%c3%8dNY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31394]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52305"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+				</include>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaMagazineWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aMAGAZ%c3%8dNY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
+					<param name="widget_header" value=$LOCALIZE[31394]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="52305"/>
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
 			</control>
 			<include>WidgetTitle</include>
