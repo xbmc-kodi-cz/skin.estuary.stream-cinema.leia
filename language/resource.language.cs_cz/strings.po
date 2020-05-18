@@ -643,7 +643,7 @@ msgid "Skin settings"
 msgstr "Nastavení skinu"
 
 msgctxt "#31202"
-msgid "Reload skins"
+msgid "Reload skin"
 msgstr "Obnovení skinu"
 
 msgctxt "#31203"
