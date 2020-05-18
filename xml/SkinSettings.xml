@@ -838,7 +838,7 @@
 						<control type="radiobutton" id="1352"> <!-- Nova Menu enable/disable -->
 							<label>$LOCALIZE[31384]</label>
 							<include>DefaultSettingButton</include>
-							<selected>!Skin.HasSetting(Nova)</selected>
+							<selected>Skin.HasSetting(Nova)</selected>
 							<onclick>Skin.ToggleSetting(Nova)</onclick>
 						</control>
 						<control type="image" id="1353">
@@ -854,7 +854,7 @@
 						<control type="button" id="1355"> <!-- Nova top porady Widget -->
 							<label>$LOCALIZE[31386]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31385, 31378|NovaTopWidgetList, 31379|NovaTopWidgetWall , 31380|NoneNovaTop)</onclick>
+							<onclick>Skin.SelectBool(31386, 31378|NovaTopWidgetList, 31379|NovaTopWidgetWall , 31380|NoneNovaTop)</onclick>
 							<label2>$VAR[NovaTopWidgetVar]</label2>
 						</control>
 						<control type="button" id="1356"> <!-- Nova posledni dily Widget -->
@@ -884,7 +884,7 @@
 						<control type="button" id="1360"> <!-- Nova zahranicni porady Widget -->
 							<label>$LOCALIZE[31391]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31391, 31391|NovaForeignWidgetList, 31379|NovaForeignWidgetWall , 31380|NoneNovaForeign)</onclick>
+							<onclick>Skin.SelectBool(31391, 31378|NovaForeignWidgetList, 31379|NovaForeignWidgetWall , 31380|NoneNovaForeign)</onclick>
 							<label2>$VAR[NovaForeignWidgetVar]</label2>
 						</control>
 						<control type="button" id="1361"> <!-- Nova porad pro deti Widget -->
