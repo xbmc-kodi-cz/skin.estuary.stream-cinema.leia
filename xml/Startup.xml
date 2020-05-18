@@ -15,11 +15,17 @@
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainMoviesPopularWidgetList)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVShowsPopularWidgetList)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVTodayWidget)</onload>
-    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMoviesPopularWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMoviesPopularWidgetList)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShow)</onload>
-    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsPopularWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsPopularWidgetList)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCHistoryWidgetWall)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scsearch)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmainlastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmainnewwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovienewwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovielastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scserieslastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scseriesnewwidgetlist)</onload>
     
     <!-- Force to apply changed settings -->
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">ActivateWindow(programs)</onload>
