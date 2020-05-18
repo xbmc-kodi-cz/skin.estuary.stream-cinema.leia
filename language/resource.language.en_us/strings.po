@@ -1053,3 +1053,19 @@ msgstr "Fan shows"
 msgctxt "#31394"
 msgid "Magazines"
 msgstr "Magazines"
+
+msgctxt "#31395"
+msgid "New"
+msgstr "New"
+
+msgctxt "#31396"
+msgid "Last addet"
+msgstr "Last addet"
+
+msgctxt "#31397"
+msgid "Widget New"
+msgstr "Widget New"
+
+msgctxt "#31398"
+msgid "Widget Last addet"
+msgstr "Widget Last addet"

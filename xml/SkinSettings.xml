@@ -267,6 +267,18 @@
 							<onclick>Skin.SelectBool(31175, 31378|SCMainTVShowsPopularWidgetList, 31379|SCMainTVShowsPopularWidgetWall , 31380|SCMainTVShowsPopularWidgetNone)</onclick>
 							<label2>$VAR[MainTVshowPopularVar]</label2>
 						</control>
+						<control type="button" id="1027"> <!-- Main Popular serials Widget -->
+							<label>$LOCALIZE[31397]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31397, 31378|SCMainNewWidgetList, 31379|SCMainNewWidgetWall , 31380|SCMainNewWidgetNone)</onclick>
+							<label2>$VAR[SCMainNewWidgetvar]</label2>
+						</control>
+						<control type="button" id="1027"> <!-- Main Popular serials Widget -->
+							<label>$LOCALIZE[31398]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31398, 31378|SCMainLastaddetWidgetList, 31379|SCMainLastaddetWidgetWall , 31380|SCMainLastaddetWidgetNone)</onclick>
+							<label2>$VAR[SCMainLastaddetWidgetvar]</label2>
+						</control>
 						<control type="radiobutton" id="1028"> <!-- Main TV tips of the day Widget -->
 							<label>$LOCALIZE[31176]</label>
 							<include>DefaultSettingButton</include>

@@ -1051,3 +1051,19 @@ msgstr "Zábavné pořady"
 msgctxt "#31394"
 msgid "Magazines"
 msgstr "Magazíny"
+
+msgctxt "#31395"
+msgid "New"
+msgstr "Nové"
+
+msgctxt "#31396"
+msgid "Last addet"
+msgstr "Poslední přidané"
+
+msgctxt "#31397"
+msgid "Widget New"
+msgstr "Widget Nové"
+
+msgctxt "#31398"
+msgid "Widget Last addet"
+msgstr "Widget Poslední přidané"

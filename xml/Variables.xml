@@ -166,6 +166,16 @@
 		<value condition="Skin.HasSetting(SCMainTVShowsPopularWidgetlist)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
+	<variable name="SCMainNewWidgetvar">
+		<value condition="Skin.HasSetting(SCMainNewWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMainNewWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="SCMainLastaddetWidgetvar">
+		<value condition="Skin.HasSetting(SCMainLastaddetWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMainLastaddetWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
 	<variable name="SCHistoryVar">
 		<value condition="Skin.HasSetting(schistorywidgetwall)">$LOCALIZE[31379]</value>
 		<value condition="Skin.HasSetting(schistorywidgetlist)">$LOCALIZE[31378]</value>
