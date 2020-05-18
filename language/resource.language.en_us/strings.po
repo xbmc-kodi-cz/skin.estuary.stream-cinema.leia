@@ -1071,8 +1071,8 @@ msgid "Widget Last addet"
 msgstr "Widget Last addet"
 
 msgctxt "#31399"
-msgid "Find on stream-cinema-2"
-msgstr "Find on stream-cinema-2"
+msgid "Search stream-cinema-2"
+msgstr "Search stream-cinema-2"
 
 msgctxt "#31400"
 msgid "Search"

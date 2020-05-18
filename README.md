@@ -4,6 +4,10 @@
 Tento skin pochazi kompletne z puvodniho skinu *** Estuary Stream-Cinema pro Kodi Leia *** Ktery je upraven aby fungoval s pluginem 
  Estuary Stream-Cinema-2 pro Kodi Leia
 
+Verze 3.0.0.b1
+ * Opraveny odkazy na vyhledavani
+ * Pecliveji pretestovana verze Alpha 2 - vypada ze je funkcni tim padem se posunulo do Bety
+
 Verze 3.0.0.a2
 * dalsi cisteni stavu s 3.0.0.a1
 * doplneni moznosti zobrazovat na hlavni strance nejenom listy ale in "ZDI" pro lepsi prehlednost

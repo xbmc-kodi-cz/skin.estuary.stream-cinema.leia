@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.0.a2" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargu/Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
+<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.0.b1" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargu/Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
@@ -15,6 +15,10 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
+
+[B]Verze 3.0.0.b1
+- Opraveny odkazy na vyhledavani
+- Pecliveji pretestovana verze Alpha 2 - vypada ze je funkcni tim padem se posunulo do Bety
 [B]Verze 3.0.0.a2[/B]
 - dalsi cisteni stavu s 3.0.0.a1
 - doplneni moznosti zobrazovat na hlavni strance nejenom listy ale in "ZDI" pro lepsi prehlednost
