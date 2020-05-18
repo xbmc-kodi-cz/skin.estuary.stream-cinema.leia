@@ -167,8 +167,8 @@
 		<value>$LOCALIZE[31380]</value>
 	</variable>
 	<variable name="SCHistoryVar">
-		<value condition="Skin.HasSetting(SCHistorywall)">$LOCALIZE[31379]</value>
-		<value condition="Skin.HasSetting(SCHistorylist)">$LOCALIZE[31378]</value>
+		<value condition="Skin.HasSetting(schistorywidgetwall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(schistorywidgetlist)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
 	<variable name="NovaAllWidgetVar">

@@ -4,6 +4,22 @@
     <!-- Set the default setting values -->
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmain)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovie)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(show_date)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(circle_rating)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(menu_postfix)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoiVysilaniButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoTrailerButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoRadiodeButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMain)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainMenuWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainMoviesPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVShowsPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVTodayWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMoviesPopularWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShow)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsPopularWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCHistoryWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scsearch)</onload>
 
     <!-- Lock the default settings to not be applied anymore -->
     <onload condition="String.IsEmpty(Skin.String(DefaultLoaded))">Skin.SetString(DefaultLoaded, 3.0.0.a2)</onload>
