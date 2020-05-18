@@ -20,6 +20,9 @@
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsPopularWidgetWall)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCHistoryWidgetWall)</onload>
     <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scsearch)</onload>
+    
+    <!-- Force to apply changed settings -->
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">RestartApp</onload>
 
     <!-- Lock the default settings to not be applied anymore -->
     <onload condition="String.IsEmpty(Skin.String(DefaultLoaded))">Skin.SetString(DefaultLoaded, 3.0.0.a2)</onload>
