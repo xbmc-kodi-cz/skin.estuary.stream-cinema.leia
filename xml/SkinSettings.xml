@@ -147,6 +147,10 @@
 							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
 							<visible>Skin.HasSetting(RadiodeWallWidget)</visible>
 						</item>
+						<item id="1350">  <!-- Nova Plus -->
+							<label>Nova Plus</label>
+							<onclick>Skin.ToggleSetting(Nova)</onclick>
+						</item>
 						<item id="1400"> <!-- Movies -->
 							<label>$LOCALIZE[342]</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
@@ -710,6 +714,84 @@
 							<enable>!Skin.HasSetting(RadiodeWallWidget)</enable>
 						</control>
 					</control>
+					<control type="grouplist" id="1351"> <!-- Nova -->
+						<pagecontrol>1319</pagecontrol>
+						<onleft>1000</onleft>
+						<onright>1319</onright>
+						<onup>1301</onup>
+						<ondown>1301</ondown>
+						<visible>Container(1000).HasFocus(1350)</visible>
+						<control type="radiobutton" id="1352"> <!-- Nova Menu enable/disable -->
+							<label>$LOCALIZE[31384]</label>
+							<include>DefaultSettingButton</include>
+							<selected>!Skin.HasSetting(Nova)</selected>
+							<onclick>Skin.ToggleSetting(Nova)</onclick>
+						</control>
+						<control type="image" id="1353">
+							<height>3</height>
+							<texture>dialogs/separator-grey.png</texture>
+						</control>
+						<control type="button" id="1354"> <!-- Nova vsechny sou Widget -->
+							<label>$LOCALIZE[31385]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31385, 31378|NovaAllWidgetList, 31379|NovaAllWidgetWall , 31380|NoneNovaAll)</onclick>
+							<label2>$VAR[NovaAllWidgetVar]</label2>
+						</control>
+						<control type="button" id="1355"> <!-- Nova top porady Widget -->
+							<label>$LOCALIZE[31386]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31385, 31378|NovaTopWidgetList, 31379|NovaTopWidgetWall , 31380|NoneNovaTop)</onclick>
+							<label2>$VAR[NovaTopWidgetVar]</label2>
+						</control>
+						<control type="button" id="1356"> <!-- Nova posledni dily Widget -->
+							<label>$LOCALIZE[31387]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31387, 31378|NovaLastWidgetList, 31379|NovaLastWidgetWall , 31380|NoneNovaLast)</onclick>
+							<label2>$VAR[NovaLastWidgetVar]</label2>
+						</control>
+						<control type="button" id="1357"> <!-- Nova ukazky Widget -->
+							<label>$LOCALIZE[31388]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31388, 31378|NovaShowWidgetList, 31379|NovaShowWidgetWall , 31380|NoneNovaShow)</onclick>
+							<label2>$VAR[NovaShowWidgetVar]</label2>
+						</control>
+						<control type="button" id="1358"> <!-- Nova bonusy Widget -->
+							<label>$LOCALIZE[31389]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31389, 31378|NovaBonusWidgetList, 31379|NovaBonusWidgetWall , 31380|NoneNovaBonus)</onclick>
+							<label2>$VAR[NovaBonusWidgetVar]</label2>
+						</control>
+						<control type="button" id="1359"> <!-- Nova kriminalni serialy Widget -->
+							<label>$LOCALIZE[31390]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31390, 31378|NovaCriminalWidgetList, 31379|NovaCriminalWidgetWall , 31380|NoneNovaCriminal)</onclick>
+							<label2>$VAR[NovaCriminalWidgetVar]</label2>
+						</control>
+						<control type="button" id="1360"> <!-- Nova zahranicni porady Widget -->
+							<label>$LOCALIZE[31391]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31391, 31391|NovaForeignWidgetList, 31379|NovaForeignWidgetWall , 31380|NoneNovaForeign)</onclick>
+							<label2>$VAR[NovaForeignWidgetVar]</label2>
+						</control>
+						<control type="button" id="1361"> <!-- Nova porad pro deti Widget -->
+							<label>$LOCALIZE[31392]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31392, 31378|NovaChildWidgetList, 31379|NovaChildWidgetWall , 31380|NoneNovaChild)</onclick>
+							<label2>$VAR[NovaChildWidgetVar]</label2>
+						</control>
+						<control type="button" id="1362"> <!-- Nova zabavne porady Widget -->
+							<label>$LOCALIZE[31393]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31393, 31378|NovaFunWidgetList, 31379|NovaFunWidgetWall , 31380|NoneNovaFun)</onclick>
+							<label2>$VAR[NovaFunWidgetVar]</label2>
+						</control>
+						<control type="button" id="1363"> <!-- Nova magaziny Widget -->
+							<label>$LOCALIZE[31394]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31394, 31378|NovaMagazineWidgetList, 31379|NovaMagazineWidgetWall , 31380|NoneNovaMagazine)</onclick>
+							<label2>$VAR[NovaMagazineWidgetVar]</label2>
+						</control>
+					</control>
 					<control type="scrollbar" id="1319">
 						<right>0</right>
 						<width>12</width>
@@ -878,7 +960,7 @@
 						<ondown>1401</ondown>
 						<visible>Container(1000).HasFocus(1400)</visible>
 						<control type="radiobutton" id="1402">
-							<label>Povolit $LOCALIZE[342]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[342]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoMovieButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
@@ -901,7 +983,7 @@
 						<ondown>1421</ondown>
 						<visible>Container(1000).HasFocus(1420)</visible>
 						<control type="radiobutton" id="1422">
-							<label>Povolit $LOCALIZE[20343]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[20343]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
@@ -924,7 +1006,7 @@
 						<ondown>1461</ondown>
 						<visible>Container(1000).HasFocus(1460)</visible>
 						<control type="radiobutton" id="1462">
-							<label>Povolit $LOCALIZE[19020]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[19020]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoTVButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
@@ -947,7 +1029,7 @@
 						<ondown>1481</ondown>
 						<visible>Container(1000).HasFocus(1480)</visible>
 						<control type="radiobutton" id="1482">
-							<label>Povolit $LOCALIZE[19021]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[19021]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoRadioButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
@@ -970,7 +1052,7 @@
 						<ondown>1501</ondown>
 						<visible>Container(1000).HasFocus(1500)</visible>
 						<control type="radiobutton" id="1502">
-							<label>Povolit $LOCALIZE[2]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[2]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
@@ -993,7 +1075,7 @@
 						<ondown>1521</ondown>
 						<visible>Container(1000).HasFocus(1520)</visible>
 						<control type="radiobutton" id="1522">
-							<label>Povolit $LOCALIZE[20389]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[20389]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
@@ -1010,7 +1092,7 @@
 						<ondown>1541</ondown>
 						<visible>Container(1000).HasFocus(1540)</visible>
 						<control type="radiobutton" id="1542">
-							<label>Povolit $LOCALIZE[24001]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[24001]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
@@ -1027,7 +1109,7 @@
 						<ondown>1561</ondown>
 						<visible>Container(1000).HasFocus(1560)</visible>
 						<control type="radiobutton" id="1562">
-							<label>Povolit $LOCALIZE[1]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[1]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
@@ -1044,7 +1126,7 @@
 						<ondown>1581</ondown>
 						<visible>Container(1000).HasFocus(1580)</visible>
 						<control type="radiobutton" id="1582">
-							<label>Povolit $LOCALIZE[3]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[3]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoVideosButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
@@ -1061,7 +1143,7 @@
 						<ondown>1601</ondown>
 						<visible>Container(1000).HasFocus(1600)</visible>
 						<control type="radiobutton" id="1602">
-							<label>Povolit $LOCALIZE[10134]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[10134]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoFavButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
@@ -1078,7 +1160,7 @@
 						<ondown>1621</ondown>
 						<visible>Container(1000).HasFocus(1620)</visible>
 						<control type="radiobutton" id="1622">
-							<label>Povolit $LOCALIZE[8]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[8]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
@@ -1095,7 +1177,7 @@
 						<ondown>1641</ondown>
 						<visible>Container(1000).HasFocus(1640)</visible>
 						<control type="radiobutton" id="1642">
-							<label>Povolit $LOCALIZE[15016]</label>
+							<label>$LOCALIZE[31383] $LOCALIZE[15016]</label>
 							<include>DefaultSettingButton</include>
 							<selected>!Skin.HasSetting(HomeMenuNoGamesButton)</selected>
 							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
