@@ -158,7 +158,7 @@ msgstr "Stránky"
 
 msgctxt "#31036"
 msgid "items"
-msgstr "položky"
+msgstr "Položky"
 
 msgctxt "#31038"
 msgid "Rewind"
@@ -322,7 +322,7 @@ msgstr "Zvoľte si profil používateľa Kodi[CR]pre prihlásenie a pokračovani
 
 msgctxt "#31099"
 msgid "IconWall"
-msgstr "Stena ikôn"
+msgstr "Stena ikon"
 
 msgctxt "#31100"
 msgid "Shift"
@@ -338,7 +338,7 @@ msgstr "Nástenka"
 
 msgctxt "#31103"
 msgid "Enter text here..."
-msgstr "Sem zadajte text..."
+msgstr "Tu zadajte text..."
 
 msgctxt "#31104"
 msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
@@ -486,7 +486,7 @@ msgstr "Rýchlosť prehrávania"
 
 msgctxt "#31143"
 msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Nanadstavili ste PVR. Pokiaľ chcete používať PVR, vyberte si doplnok pre PVR klienta a nakonfigurujte ho. Navštívte http://kodi.wiki/view/PVR pre viac informácií."
+msgstr "Nenadstavili ste PVR. Pokiaľ chcete používať PVR, vyberte si doplnok pre PVR klienta a nakonfigurujte ho. Navštívte http://kodi.wiki/view/PVR pre viac informácií."
 
 msgctxt "#31144"
 msgid "Enter add-on browser"
@@ -518,7 +518,7 @@ msgstr "Náhodné hudobné videá"
 
 msgctxt "#31153"
 msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
-msgstr "Nemáte nainštalované žiadne doplnky tohoto typu. Vstúpte do prehliadača doplnkov a nainštalujte si doplnky vytvorené našou komunitou."
+msgstr "Nemáte nainštalované žiadne doplnky tohto typu. Vstúpte do prehliadača doplnkov a nainštalujte si doplnky vytvorené našou komunitou."
 
 msgctxt "#31154"
 msgid "Press OK to switch between locations"
@@ -546,7 +546,7 @@ msgstr "Artwork"
 
 msgctxt "#31160"
 msgid "Show media flags"
-msgstr "Zobraziť indikátory medií"
+msgstr "Zobraziť indikátory médií"
 
 msgctxt "#31161"
 msgid "Numeric pad"
@@ -606,7 +606,7 @@ msgstr "Widget Populárne filmy"
 
 msgctxt "#31175"
 msgid "Widget Popular series"
-msgstr "Widget Populárny seriály"
+msgstr "Widget Populárne seriály"
 
 msgctxt "#31176"
 msgid "Widget TV tips of the day"
@@ -622,7 +622,7 @@ msgstr "Populárne filmy"
 
 msgctxt "#31180"
 msgid "Popular series"
-msgstr "Populárny seriály"
+msgstr "Populárne seriály"
 
 msgctxt "#31181"
 msgid "TV tips of the day"
@@ -630,14 +630,14 @@ msgstr "Najlepšie TV tipy dňa"
 
 msgctxt "#31182"
 msgid "Watch history"
-msgstr "história zhliadnutí"
+msgstr "História zhliadnutí"
 
 
 
 
 msgctxt "#31200"
 msgid "Specific settings"
-msgstr "Specifická nastavenie"
+msgstr "Špecifické nastavenia"
 
 msgctxt "#31201"
 msgid "Skin settings"
@@ -649,15 +649,15 @@ msgstr "Znovu načítať skin"
 
 msgctxt "#31203"
 msgid "SC2 Movies"
-msgstr "SC2 Filmečky"
+msgstr "SC2 Filmy"
 
 msgctxt "#31204"
 msgid "Genre"
-msgstr "Žánr"
+msgstr "Žánre"
 
 msgctxt "#31205"
 msgid "Enable Strem Cinema 2 Movies"
-msgstr "Povolit Strem Cinema 2 Filmy"
+msgstr "Povoliť Stream Cinema 2 Filmy"
 
 msgctxt "#31206"
 msgid "Widget Menu Movies"
@@ -665,7 +665,7 @@ msgstr "Widget Menu Filmy"
 
 msgctxt "#31207"
 msgid "Widget Watched Movies"
-msgstr "Widget posledné sledované"
+msgstr "Widget Posledné sledované"
 
 msgctxt "#31208"
 msgid "Widget Popular Movies"
@@ -676,11 +676,11 @@ msgstr "Widget Populárné filmy"
 
 msgctxt "#31300"
 msgid "Widget Popular series"
-msgstr "Widget Populárny seriály"
+msgstr "Widget Populárne seriály"
 
 msgctxt "#31301"
 msgid "Popular series"
-msgstr "Populárny seriály"
+msgstr "Populárne seriály"
 
 msgctxt "#31302"
 msgid "Widget name series"
@@ -720,7 +720,7 @@ msgstr "Maximálny počet položiek widgetu"
 
 msgctxt "#31311"
 msgid "Show location weather in top"
-msgstr "Zobraziť miesto počasie v hornom paneli"
+msgstr "Zobraziť miesto počasia v hornom paneli"
 
 msgctxt "#31312"
 msgid "Show date in top"
@@ -744,7 +744,7 @@ msgstr "Zobraziť teplotu GPU v hornom paneli"
 
 msgctxt "#31317"
 msgid "Show flag of future recording"
-msgstr "Zobraziť príznak budúceho nahrávanie"
+msgstr "Zobraziť príznak budúceho nahrávania"
 
 msgctxt "#31318"
 msgid "Show flag of recording in progress"
@@ -752,7 +752,7 @@ msgstr "Zobraziť príznak prebiehajúceho nahrávania"
 
 msgctxt "#31319"
 msgid "Show usage memory for recording"
-msgstr "Zobraziť využitie pamäťou pre nahrávanie"
+msgstr "Zobraziť využitie pamäte pre nahrávanie"
 
 msgctxt "#31320"
 msgid "Show a comparison of skin versions in the top panel"
@@ -760,7 +760,7 @@ msgstr "Zobraziť porovnanie verzií skinu v hornom paneli"
 
 msgctxt "#31321"
 msgid "Show user rating"
-msgstr "Zobraziť užívateľský rating"
+msgstr "Zobraziť užívateľské hodnotenie"
 
 msgctxt "#31322"
 msgid "Show scraper rating"
@@ -780,31 +780,31 @@ msgstr "Rozšírenie vyhľadávania Kodi o stream-cinema-2"
 
 msgctxt "#31326"
 msgid "Download directory"
-msgstr "Download adresár"
+msgstr "Stiahnuť adresár"
 
 msgctxt "#31327"
 msgid "Enable iVysilani"
-msgstr "povoliť iVysílání"
+msgstr "Povoliť iVysielanie"
 
 msgctxt "#31328"
 msgid "Enable trailer"
-msgstr "povoliť Trailer"
+msgstr "Povoliť Trailer"
 
 msgctxt "#31329"
 msgid "Enable Radio internet"
-msgstr "Povolit Radio Internet"
+msgstr "Povoliť Rádio Internet"
 
 msgctxt "#31330"
 msgid "Expand search Kodi of Radio"
-msgstr "Rozšírenie vyhľadávania Kodi o Radio"
+msgstr "Rozšírenie vyhľadávania Kodi o Rádio"
 
 msgctxt "#31331"
 msgid "Enable reboot from internal memory"
-msgstr "Povoliť reboot z vnútornej pamäte"
+msgstr "Povoliť reštart z vnútornej pamäte"
 
 msgctxt "#31332"
 msgid "Command for reboot"
-msgstr "Povel pre reboot"
+msgstr "Príkaz pre reboot"
 
 msgctxt "#31333"
 msgid "For ... LEC installed from external memory"
@@ -818,35 +818,35 @@ msgstr "Pre ... ELEC inštalovaný z externej pamäte"
 
 msgctxt "#31334"
 msgid "Enable"
-msgstr "Povolit"
+msgstr "Povoliť"
 
 msgctxt "#31335"
 msgid "Enable series stream-cinema-2"
-msgstr "Povolit Seriály stream-cinema-2"
+msgstr "Povoliť Seriály stream-cinema-2"
 
 msgctxt "#31336"
 msgid "Enable iVysílání"
-msgstr "Povolit iVysílání"
+msgstr "Povoliť iVysielanie"
 
 msgctxt "#31337"
 msgid "Widget menu iVysílání"
-msgstr "Widget Menu iVysílání"
+msgstr "Widget Menu iVysielanie"
 
 msgctxt "#31338"
 msgid "Winget live stream"
-msgstr "Widget Živé vysílání"
+msgstr "Widget Živé vysielanie"
 
 msgctxt "#31339"
 msgid "Widget by date"
-msgstr "Widget Podle data"
+msgstr "Widget Podľa dátumu"
 
 msgctxt "#31340"
 msgid "Widget by alphabet"
-msgstr "Widget Podle abecedy"
+msgstr "Widget Podľa abecedy"
 
 msgctxt "#31341"
 msgid "Widget by genre"
-msgstr "Widget Podle žánru"
+msgstr "Widget Podľa žánru"
 
 msgctxt "#31342"
 msgid "Widget tips"
@@ -854,15 +854,15 @@ msgstr "Widget Tipy"
 
 msgctxt "#31343"
 msgid "Widget most watching per day"
-msgstr "Widget Nejsledovanější dne"
+msgstr "Widget Najsledovanejšie dňa"
 
 msgctxt "#31344"
 msgid "Widget most watching per week"
-msgstr "Widget Nejsledovanější týdne"
+msgstr "Widget Najsledovanejšie týždňa"
 
 msgctxt "#31345"
 msgid "Widget don't miss"
-msgstr "Widget Nepřehlédněte"
+msgstr "Widget Neprehliadnite"
 
 msgctxt "#31346"
 msgid "Widget from our archive"
@@ -870,15 +870,15 @@ msgstr "Widget Z našeho archivu"
 
 msgctxt "#31347"
 msgid "Widget others now watching"
-msgstr "Widget Ostatní právě sledují"
+msgstr "Widget Ostatný práve sleduju"
 
 msgctxt "#31348"
 msgid "Enable Trailer"
-msgstr "Povolit Trailer"
+msgstr "Povoliť Trailer"
 
 msgctxt "#31349"
 msgid "Widget week news Wall"
-msgstr "Widget Týdenní novinky Wall"
+msgstr "Widget Týždenné novinky"
 
 msgctxt "#31350"
 msgid "Widget Menu"
@@ -886,7 +886,7 @@ msgstr "Widget Menu"
 
 msgctxt "#31351"
 msgid "Widget week news"
-msgstr "Widget Týdenní novinky"
+msgstr "Widget Týždenné novinky"
 
 msgctxt "#31352"
 msgid "Widget Total film"
@@ -910,7 +910,7 @@ msgstr "Fim Select Trailer"
 
 msgctxt "#31357"
 msgid "Widget Movie Clips Comming Soon"
-msgstr "Widget Filmové záběry (nevydané)"
+msgstr "Widget Filmové ukážky (nevydané)"
 
 msgctxt "#31358"
 msgid "Widget Movie Clips Trailers"
@@ -934,7 +934,7 @@ msgstr "Widget CinemArt SK"
 
 msgctxt "#31363"
 msgid "Widget Svět Filmu"
-msgstr "Widget Svět Filmu"
+msgstr "Widget Svet Filmu"
 
 msgctxt "#31364"
 msgid "Widget Film Europe"
@@ -942,11 +942,11 @@ msgstr "Widget Film Europe"
 
 msgctxt "#31365"
 msgid "Enable Radio.de
-msgstr "Povolit Radio.de"
+msgstr "Povoliť Radio.de"
 
 msgctxt "#31366"
 msgid "Widget My Stations Wall"
-msgstr "Widget moje stanice Wall"
+msgstr "Widget Moje stanice"
 
 msgctxt "#31367"
 msgid "Widget Menu"
@@ -954,43 +954,43 @@ msgstr "Widget Menu"
 
 msgctxt "#31368"
 msgid "Widget Local Stations"
-msgstr "Fim místní stanice"
+msgstr "Film miestne stanice"
 
 msgctxt "#31369"
 msgid "Widget Editorials Recommendations"
-msgstr "Widget správcovo doporučení"
+msgstr "Widget Redakčné odporúčania"
 
 msgctxt "#31370"
 msgid "Widget Top 100 Stations"
-msgstr "Widget top 100 stanic"
+msgstr "Widget Top 100 staníc"
 
 msgctxt "#31371"
 msgid "Widget Browse by genre"
-msgstr "Widget Procházet podle žánru"
+msgstr "Widget Prechádzať podľa žánru"
 
 msgctxt "#31372"
 msgid "Widget Browse by topic"
-msgstr "Widget procházet podle témat"
+msgstr "Widget Prechádzať podľa témy"
 
 msgctxt "#31373"
 msgid "Widget Browse by country"
-msgstr "Widget procházet podle země"
+msgstr "Widget Prechádzať podľa zeme"
 
 msgctxt "#31374"
 msgid "Widget Browse by city"
-msgstr "Widget procházet podle města"
+msgstr "Widget Prechádzať podľa mesta"
 
 msgctxt "#31375"
 msgid "Widget Browse by language"
-msgstr "Widget procházet podle jazyků"
+msgstr "Widget Prechádzať podľa jazyka"
 
 msgctxt "#31376"
 msgid "Widget Search for station"
-msgstr "Widget hledat stanici"
+msgstr "Widget Hľadať stanicu"
 
 msgctxt "#31377"
 msgid "Widget My Stations"
-msgstr "Widget moje stanice"
+msgstr "Widget Moje stanice"
 
 msgctxt "#31378"
 msgid "List"
@@ -998,43 +998,43 @@ msgstr "List"
 
 msgctxt "#31379"
 msgid "Wall"
-msgstr "Zeď"
+msgstr "Nástenka"
 
 msgctxt "#31380"
 msgid "none"
-msgstr "nic"
+msgstr "nič"
 
 msgctxt "#31381"
 msgid "History"
-msgstr "Historie"
+msgstr "História"
 
 msgctxt "#31382"
-msgid "Widget istory"
-msgstr "Widget Historie"
+msgid "Widget History"
+msgstr "Widget História"
 
 msgctxt "#31383"
 msgid "Enable"
-msgstr "Povolit"
+msgstr "Povoliť"
 
 msgctxt "#31384"
 msgid "Enable Nova Plus"
-msgstr "Povolit Nova Plus"
+msgstr "Povoliť Nova Plus"
 
 msgctxt "#31385"
 msgid "All show"
-msgstr "Vsěchny šou"
+msgstr "Všetky seriály"
 
 msgctxt "#31386"
 msgid "Top shows"
-msgstr "Top pořady"
+msgstr "Top seriály"
 
 msgctxt "#31387"
 msgid "Last parts"
-msgstr "Poslední díly"
+msgstr "Posledné diely"
 
 msgctxt "#31388"
 msgid "Shows"
-msgstr "Ukázky"
+msgstr "Ukážky"
 
 msgctxt "#31389"
 msgid "Bonus"
@@ -1042,19 +1042,19 @@ msgstr "Bonusy"
 
 msgctxt "#31390"
 msgid "Criminal series"
-msgstr "Kriminální seriály"
+msgstr "Kriminálne seriály"
 
 msgctxt "#31391"
 msgid "Foreign shows"
-msgstr "Zahraniční pořady"
+msgstr "Zahraničné seriály"
 
 msgctxt "#31392"
 msgid "Show for children"
-msgstr "Pořad pro děti"
+msgstr "Seriály pre deti"
 
 msgctxt "#31393"
 msgid "Fan shows"
-msgstr "Zábavné pořady"
+msgstr "Zábavné seriály"
 
 msgctxt "#31394"
 msgid "Magazines"
@@ -1066,7 +1066,7 @@ msgstr "Nové"
 
 msgctxt "#31396"
 msgid "Last addet"
-msgstr "Poslední přidané"
+msgstr "Posledné pridané"
 
 msgctxt "#31397"
 msgid "Widget New"
@@ -1074,15 +1074,15 @@ msgstr "Widget Nové"
 
 msgctxt "#31398"
 msgid "Widget Last addet"
-msgstr "Widget Poslední přidané"
+msgstr "Widget Posledné pridané"
 
 msgctxt "#31399"
 msgid "Search stream-cinema-2"
-msgstr "Hledat na stream-cinema-2"
+msgstr "Hľadať na stream-cinema-2"
 
 msgctxt "#31400"
 msgid "Search"
-msgstr "Vyhledávání"
+msgstr "Vyhľadávané"
 
 msgctxt "#31401"
 msgid "Films"
