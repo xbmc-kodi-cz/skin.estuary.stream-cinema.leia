@@ -648,8 +648,8 @@ msgid "Reload skin"
 msgstr "Reload skin"
 
 msgctxt "#31203"
-msgid "SC2 Movies"
-msgstr "SC2 Movies"
+msgid "Movies"
+msgstr "Movies"
 
 msgctxt "#31204"
 msgid "Genre"
@@ -699,8 +699,8 @@ msgid "Genre series"
 msgstr "Genre series"
 
 msgctxt "#31306"
-msgid "SC2 series"
-msgstr "SC2 series"
+msgid "Series"
+msgstr "Series"
 
 msgctxt "#31307"
 msgid "Show widgets on fullscreen"
