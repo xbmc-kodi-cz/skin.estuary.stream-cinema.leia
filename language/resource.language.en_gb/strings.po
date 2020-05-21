@@ -577,8 +577,8 @@ msgid "Skylink Archive"
 msgstr "Skylink Archive"
 
 msgctxt "#31168"
-msgid "Stream-Cinema-2"
-msgstr "Stream-Cinema-2"
+msgid "Stream Cinema 2"
+msgstr "Stream Cinema 2"
 
 msgctxt "#31169"
 msgid "Fairytale"
