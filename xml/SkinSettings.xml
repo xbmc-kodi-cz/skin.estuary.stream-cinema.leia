@@ -338,9 +338,9 @@
 							<onclick>Skin.ToggleSetting(SCMoviesMenuWidget)</onclick>
 						</control>
 						<control type="button" id="1050">  <!-- Popular Movies Widget -->
-							<label>$LOCALIZE[31208]</label>
+							<label>$LOCALIZE[31300]</label>
 							<include>DefaultSettingButton</include>
-							<onclick>Skin.SelectBool(31208, 31378|SCMoviesPopularWidgetList, 31379|SCMoviesPopularWidgetWall , 31380|SCMoviesPopularWidgetNone)</onclick>
+							<onclick>Skin.SelectBool(31300, 31378|SCMoviesPopularWidgetList, 31379|SCMoviesPopularWidgetWall , 31380|SCMoviesPopularWidgetNone)</onclick>
 							<label2>$VAR[MoviesPopularVar]</label2>
 						</control>
 						<control type="button" id="1046"> <!-- Movie New Widget -->
@@ -354,6 +354,18 @@
 							<include>DefaultSettingButton</include>
 							<onclick>Skin.SelectBool(31398, 31378|SCMovieLastaddetWidgetList, 31379|SCMovieLastaddetWidgetWall , 31380|SCMovieLastaddetWidgetNone)</onclick>
 							<label2>$VAR[SCMovieLastaddetWidgetvar]</label2>
+						</control>
+						<control type="radiobutton" id="1048"> <!-- Movies by Name (Letter) Widget -->
+							<label>$LOCALIZE[31302]</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMovieNameWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMovieNameWidget)</onclick>
+						</control>
+						<control type="radiobutton" id="1049"> <!-- Movies Genres Widget -->
+							<label>$LOCALIZE[31304]</label>
+							<include>DefaultSettingButton</include>
+							<selected>Skin.HasSetting(SCMovieGenreWidget)</selected>
+							<onclick>Skin.ToggleSetting(SCMovieGenreWidget)</onclick>
 						</control>
 					</control>
 					<control type="scrollbar" id="1059">
@@ -410,12 +422,6 @@
 							<selected>Skin.HasSetting(SCTVShowsNameWidget)</selected>
 							<onclick>Skin.ToggleSetting(SCTVShowsNameWidget)</onclick>
 						</control>
-						<!-- <control type="radiobutton" id="1072"> --> <!-- TVShows Country Widget -->
-							<!-- <label>Widget Země seriálu</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCTVShowsCountryWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCTVShowsCountryWidget)</onclick>
-						</control> -->
 						<control type="radiobutton" id="1073"> <!-- TVShows Genres Widget -->
 							<label>$LOCALIZE[31304]</label>
 							<include>DefaultSettingButton</include>

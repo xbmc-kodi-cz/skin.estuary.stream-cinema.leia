@@ -601,7 +601,7 @@ msgid "Widget Stream Cinema 2"
 msgstr "Widget Stream Cinema 2"
 
 msgctxt "#31174"
-msgid "Widget Popular films"
+msgid "Widget Popular movies"
 msgstr "Widget Populární filmy"
 
 msgctxt "#31175"
@@ -617,7 +617,7 @@ msgid "Widget Watch history"
 msgstr "Widget historie shlédnutí"
 
 msgctxt "#31179"
-msgid "Popular films"
+msgid "Popular movies"
 msgstr "Populární filmy"
 
 msgctxt "#31180"
@@ -663,38 +663,34 @@ msgid "Widget Menu Movies"
 msgstr "Widget Menu Filmy"
 
 msgctxt "#31207"
-msgid "Widget Watched Movies"
-msgstr "Widget naposledy sledované filmy"
-
-msgctxt "#31208"
-msgid "Widget Popular Movies"
-msgstr "Widget Populární filmy"
+msgid "Movies menu"
+msgstr "Menu filmy"
 
 
 
 msgctxt "#31300"
-msgid "Widget Popular series"
-msgstr "Widget Populární seriály"
+msgid "Widget Popular"
+msgstr "Widget Populární"
 
 msgctxt "#31301"
 msgid "Popular series"
 msgstr "Populární seriály"
 
 msgctxt "#31302"
-msgid "Widget name series"
-msgstr "Widget Název seriálu"
+msgid "Widget Alphabet"
+msgstr "Widget Podle Názvu"
 
 msgctxt "#31303"
-msgid "Name series"
-msgstr "Název seriálu"
+msgid "Alphabet"
+msgstr "Abeceda"
 
 msgctxt "#31304"
-msgid "Widget genre series"
+msgid "Widget Genre"
 msgstr "Widget Žánry seriálu"
 
 msgctxt "#31305"
-msgid "Genre series"
-msgstr "Žánry seriálu"
+msgid "Genre"
+msgstr "Žánr"
 
 msgctxt "#31307"
 msgid "Show widgets on fullscreen"
@@ -809,7 +805,7 @@ msgid "Enable"
 msgstr "Povolit"
 
 msgctxt "#31335"
-msgid "Enable series Stream Cinema 2"
+msgid "Enable Stream Cinema 2 Series"
 msgstr "Povolit Seriály Stream Cinema 2"
 
 msgctxt "#31336"
@@ -829,8 +825,8 @@ msgid "Widget by date"
 msgstr "Widget Podle data"
 
 msgctxt "#31340"
-msgid "Widget by alphabet"
-msgstr "Widget Podle abecedy"
+msgid "Widget Alphabet"
+msgstr "Widget Abeceda"
 
 msgctxt "#31341"
 msgid "Widget by genre"
@@ -1053,7 +1049,7 @@ msgid "New"
 msgstr "Nové"
 
 msgctxt "#31396"
-msgid "Last addet"
+msgid "Last added"
 msgstr "Poslední přidané"
 
 msgctxt "#31397"
@@ -1061,7 +1057,7 @@ msgid "Widget New"
 msgstr "Widget Nové"
 
 msgctxt "#31398"
-msgid "Widget Last addet"
+msgid "Widget Last added"
 msgstr "Widget Poslední přidané"
 
 msgctxt "#31399"

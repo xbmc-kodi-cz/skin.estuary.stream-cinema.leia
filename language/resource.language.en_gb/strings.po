@@ -601,8 +601,8 @@ msgid "Widget Stream Cinema 2"
 msgstr "Widget Stream Cinema 2"
 
 msgctxt "#31174"
-msgid "Widget Popular films"
-msgstr "Widget Popular films"
+msgid "Widget Popular movies"
+msgstr "Widget Popular movies"
 
 msgctxt "#31175"
 msgid "Widget Popular series"
@@ -617,8 +617,8 @@ msgid "Widget Watch history"
 msgstr "Widget Watch history"
 
 msgctxt "#31179"
-msgid "Popular films"
-msgstr "Popular films"
+msgid "Popular movies"
+msgstr "Popular movies"
 
 msgctxt "#31180"
 msgid "Popular series"
@@ -664,39 +664,34 @@ msgid "Widget Menu Movies"
 msgstr "Widget Menu Movies"
 
 msgctxt "#31207"
-msgid "Widget Watched Movies"
-msgstr "Widget Watched Movies"
-
-msgctxt "#31208"
-msgid "Widget Popular Movies"
-msgstr "Widget Popular Movies"
-
+msgid "Movies menu"
+msgstr "Movies menu"
 
 
 
 msgctxt "#31300"
-msgid "Widget Popular series"
-msgstr "Widget Popular series"
+msgid "Widget Popular"
+msgstr "Widget Popular"
 
 msgctxt "#31301"
 msgid "Popular series"
 msgstr "Popular series"
 
 msgctxt "#31302"
-msgid "Widget name series"
-msgstr "Widget name series"
+msgid "Widget Alphabet"
+msgstr "Widget Alphabet"
 
 msgctxt "#31303"
-msgid "Name series"
-msgstr "Name series"
+msgid "Alphabet"
+msgstr "Alphabet"
 
 msgctxt "#31304"
-msgid "Widget genre series"
-msgstr "Widget genre series"
+msgid "Widget Genre"
+msgstr "Widget Genre"
 
 msgctxt "#31305"
-msgid "Genre series"
-msgstr "Genre series"
+msgid "Genre"
+msgstr "Genre"
 
 msgctxt "#31307"
 msgid "Show widgets on fullscreen"
@@ -811,8 +806,8 @@ msgid "Enable"
 msgstr "Enable"
 
 msgctxt "#31335"
-msgid "Enable series Stream Cinema 2"
-msgstr "Enable series Stream Cinema 2"
+msgid "Enable Stream Cinema 2 Series"
+msgstr "Enable Stream Cinema 2 Series"
 
 msgctxt "#31336"
 msgid "Enable iVysílání"
@@ -831,8 +826,8 @@ msgid "Widget by date"
 msgstr "Widget by date"
 
 msgctxt "#31340"
-msgid "Widget by alphabet"
-msgstr "Widget by alphabet"
+msgid "Widget Alphabet"
+msgstr "Widget Alphabet"
 
 msgctxt "#31341"
 msgid "Widget by genre"
@@ -1055,16 +1050,16 @@ msgid "New"
 msgstr "New"
 
 msgctxt "#31396"
-msgid "Last addet"
-msgstr "Last addet"
+msgid "Last added"
+msgstr "Last added"
 
 msgctxt "#31397"
 msgid "Widget New"
 msgstr "Widget New"
 
 msgctxt "#31398"
-msgid "Widget Last addet"
-msgstr "Widget Last addet"
+msgid "Widget Last added"
+msgstr "Widget Last added"
 
 msgctxt "#31399"
 msgid "Search Stream Cinema 2"
