@@ -355,12 +355,6 @@
 							<onclick>Skin.SelectBool(31398, 31378|SCMovieLastaddetWidgetList, 31379|SCMovieLastaddetWidgetWall , 31380|SCMovieLastaddetWidgetNone)</onclick>
 							<label2>$VAR[SCMovieLastaddetWidgetvar]</label2>
 						</control>
-						<control type="radiobutton" id="1045"> <!-- Last Played Movies Widget -->
-							<label>$LOCALIZE[31207]</label>
-							<include>DefaultSettingButton</include>
-							<selected>Skin.HasSetting(SCMoviesLastPlayedWidget)</selected>
-							<onclick>Skin.ToggleSetting(SCMoviesLastPlayedWidget)</onclick>
-						</control>
 					</control>
 					<control type="scrollbar" id="1059">
 						<right>0</right>

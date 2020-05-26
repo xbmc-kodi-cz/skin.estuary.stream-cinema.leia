@@ -1071,13 +1071,6 @@
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41300"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41400"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41500"/><param name="year" value="false"/></include>
-			
-<!-- 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41110"/><param name="year" value="false"/></include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41150"/><param name="year" value="false"/></include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41200"/><param name="year" value="false"/></include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41250"/><param name="year" value="false"/></include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41300"/><param name="year" value="false"/></include>
-			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41350"/><param name="year" value="false"/></include> -->
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemamovies)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="streamcinemamovies"/>
@@ -1135,102 +1128,6 @@
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 					<param name="episode" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesLastPlayedWidget) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
-					<param name="widget_header" value=$LOCALIZE[31182]/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41500"/>
-					<param name="item_limit" value="$INFO[Container(41300).NumItems]"/> <!-- Easy/SC* -->
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
-					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
-				</include>
-<!-- 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesLastPlayedWidget) + Skin.HasSetting(SCMoviesLastPlayedWidgetTrakt) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65"/>
-					<param name="widget_header" value="Poslední sledované filmy (T)"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41110"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6c6174657374&amp;title=243330393530&amp;url=2f464d6f766965732f6c6174657374"/>
-					<param name="widget_header" value="Filmové novinky"/>
-					<param name="widget_target" value="movies"/>
-					<param name="list_id" value="41150"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewDubWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6c617465737464&amp;title=24333039353020647562&amp;url=2f464d6f766965732f6c617465737464"/>
-					<param name="widget_header" value="Filmové novinky dabované"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41200"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesJustPlayedWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f7761746368696e67&amp;title=243330393536&amp;url=2f464d6f766965732f7761746368696e67"/>
-					<param name="widget_header" value="Právě sledované filmy"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41250"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesPopularWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f706f70756c6172&amp;title=243330393035&amp;url=2f464d6f766965732f706f70756c6172"/>
-					<param name="widget_header" value="Nejsledovanější filmy"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41300"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesNewAddedWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f6e657773747265616d&amp;title=243330393239&amp;url=2f464d6f766965732f6e657773747265616d"/>
-					<param name="widget_header" value="Nově přidané filmy"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41350"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListLetters" condition="Skin.HasSetting(SCMoviesNameWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f617a&amp;title=243330393033&amp;url=2f464d6f766965732f617a"/>
-					<param name="widget_header" value="Název"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41400"/>
-				</include>
-				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesCountryWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f636f756e747279&amp;title=243330393036&amp;url=2f464d6f766965732f636f756e747279"/>
-					<param name="widget_header" value="Země"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41450"/>
-				</include>
-				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesQualityWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f7175616c697479&amp;title=243330393037&amp;url=2f464d6f766965732f7175616c697479"/>
-					<param name="widget_header" value="Kvalita"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41500"/>
-				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesGenreWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f67656e7265&amp;title=243330393038&amp;url=2f464d6f766965732f67656e7265"/>
-					<param name="widget_header" value="Žánry filmů"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41550"/>
-					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
-				</include>
-				<include content="WidgetListLabel" condition="Skin.HasSetting(SCMoviesYearWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f79656172&amp;title=243330393039&amp;url=2f464d6f766965732f79656172"/>
-					<param name="widget_header" value="Rok"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41600"/>
-				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesSetsWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?list=2f464d6f766965732f636f6c6c656374696f6e&amp;title=4b6f6c656b636965&amp;url=2f464d6f766965732f636f6c6c656374696f6e"/>
-					<param name="widget_header" value="Kolekce"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41650"/>
-					<param name="icon" value="defaultsets.png"/>
-					<param name="stream-cinema" value="true"/>
-				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesMainWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="SCMainMenu_submenu" value="true"/>
-					<param name="widget_header" value="Stream-Cinema Menu"/>
-					<param name="widget_target" value="videos"/>
-					<param name="list_id" value="41950"/>
-				</include> -->
 			</control>
 			<include>WidgetTitle</include>
 		</control>
