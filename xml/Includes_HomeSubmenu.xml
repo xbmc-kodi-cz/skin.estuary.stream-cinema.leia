@@ -144,12 +144,12 @@
 				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
-				<label>$LOCALIZE[31401]</label>
+				<label>$LOCALIZE[31203]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/movies,return)</onclick>
 				<thumb>defaultmovies.png</thumb>
 			</item>
 			<item>
-				<label>$LOCALIZE[31402]</label>
+				<label>$LOCALIZE[31172]</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/tvshows,return)</onclick>
 				<thumb>defaulttvshows.png</thumb>
 			</item>

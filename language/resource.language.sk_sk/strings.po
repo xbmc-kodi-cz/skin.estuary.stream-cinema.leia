@@ -597,8 +597,8 @@ msgid "series"
 msgstr "Seriály"
 
 msgctxt "#31173"
-msgid "Widget stream-cinema-2"
-msgstr "Widget stream-cinema-2"
+msgid "Widget Stream Cinema 2"
+msgstr "Widget Stream Cinema 2"
 
 msgctxt "#31174"
 msgid "Widget Popular films"
@@ -656,7 +656,7 @@ msgid "Genre"
 msgstr "Žánre"
 
 msgctxt "#31205"
-msgid "Enable Strem Cinema 2 Movies"
+msgid "Enable Stream Cinema 2 Movies"
 msgstr "Povoliť Stream Cinema 2 Filmy"
 
 msgctxt "#31206"
@@ -697,10 +697,6 @@ msgstr "Widget Žánre seriálu"
 msgctxt "#31305"
 msgid "Genre series"
 msgstr "Žánre seriálu"
-
-msgctxt "#31306"
-msgid "Series"
-msgstr "Seriály"
 
 msgctxt "#31307"
 msgid "Show widgets on fullscreen"
@@ -771,12 +767,12 @@ msgid "Additional text of the main menu item"
 msgstr "Doplňujúci text položky hlavného menu"
 
 msgctxt "#31324"
-msgid "Enable stream-cinema-2"
-msgstr "Povoliť stream-cinema-2"
+msgid "Enable Stream Cinema 2"
+msgstr "Povoliť Stream Cinema 2"
 
 msgctxt "#31325"
-msgid "Expand search Kodi of stream-cinema-2"
-msgstr "Rozšírenie vyhľadávania Kodi o stream-cinema-2"
+msgid "Expand search Kodi of Stream Cinema 2"
+msgstr "Rozšírenie vyhľadávania Kodi o Stream Cinema 2"
 
 msgctxt "#31326"
 msgid "Download directory"
@@ -821,8 +817,8 @@ msgid "Enable"
 msgstr "Povoliť"
 
 msgctxt "#31335"
-msgid "Enable series stream-cinema-2"
-msgstr "Povoliť Seriály stream-cinema-2"
+msgid "Enable series Stream Cinema 2"
+msgstr "Povoliť Seriály Stream Cinema 2"
 
 msgctxt "#31336"
 msgid "Enable iVysílání"
@@ -1001,8 +997,8 @@ msgid "Wall"
 msgstr "Nástenka"
 
 msgctxt "#31380"
-msgid "none"
-msgstr "nič"
+msgid "None"
+msgstr "Nič"
 
 msgctxt "#31381"
 msgid "History"
@@ -1077,20 +1073,12 @@ msgid "Widget Last addet"
 msgstr "Widget Posledné pridané"
 
 msgctxt "#31399"
-msgid "Search stream-cinema-2"
-msgstr "Hľadať na stream-cinema-2"
+msgid "Search Stream Cinema 2"
+msgstr "Hľadať na Stream Cinema 2"
 
 msgctxt "#31400"
 msgid "Search"
 msgstr "Vyhľadávané"
-
-msgctxt "#31401"
-msgid "Films"
-msgstr "Filmy"
-
-msgctxt "#31402"
-msgid "Series"
-msgstr "Seriály"
 
 msgctxt "#31403"
 msgid "TV today (Films)"
