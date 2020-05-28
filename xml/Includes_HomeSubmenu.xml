@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	</include>
 		<include name="">
 		<content>
 			<item>
@@ -140,7 +139,7 @@
 			</item> -->
 			<item>
 				<label>$LOCALIZE[31400]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/search/tvshows,movies,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2/search/tvshows,movies&quot;,return)</onclick>
 				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
@@ -153,17 +152,7 @@
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/tvshows,return)</onclick>
 				<thumb>defaulttvshows.png</thumb>
 			</item>
-<!-- 			<item>
-				<label>Koncerty</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=6b6f6e63657274&amp;list=2f464d6f766965732f6b6f6e63657274&amp;title=4b6f6e6365727479&amp;url=2f464d6f766965732f6b6f6e63657274,return)</onclick>
-				<thumb>defaultmusicvideos.png</thumb>
-			</item>
-			<item>
-				<label>Anime</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?id=616e696d65&amp;list=2f416e696d65&amp;title=416e696d65&amp;url=2f416e696d65,return)</onclick>
-				<thumb>defaultaddonvideo.png</thumb>
-			</item>
-			<item>
+<!--			<item>
 				<label>Moje seznamy (trakt.tv)</label>
 				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
 				<thumb>defaultplaylist.png</thumb>
