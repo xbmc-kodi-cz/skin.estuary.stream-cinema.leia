@@ -692,7 +692,7 @@ msgstr "Widget Žánre seriálu"
 
 msgctxt "#31305"
 msgid "Genre"
-msgstr "Žánr"
+msgstr "Žáner"
 
 msgctxt "#31307"
 msgid "Show widgets on fullscreen"
@@ -910,7 +910,7 @@ msgstr "Widget Filmové trailery"
 
 msgctxt "#31359"
 msgid "Widget New on Netflix"
-msgstr ">Widget nové na Netflix"
+msgstr "Widget nové na Netflix"
 
 msgctxt "#31360"
 msgid "Widget Films news"
@@ -950,7 +950,7 @@ msgstr "Film miestne stanice"
 
 msgctxt "#31369"
 msgid "Widget Editorials Recommendations"
-msgstr "Widget Redakčné odporúčania"
+msgstr "Widget Odporúčané redakciou"
 
 msgctxt "#31370"
 msgid "Widget Top 100 Stations"
@@ -994,7 +994,7 @@ msgstr "Nástenka"
 
 msgctxt "#31380"
 msgid "None"
-msgstr "Nič"
+msgstr "Žiadny"
 
 msgctxt "#31381"
 msgid "History"
