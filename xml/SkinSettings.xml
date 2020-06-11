@@ -267,18 +267,18 @@
 							<onclick>Skin.SelectBool(31175, 31378|SCMainTVShowsPopularWidgetList, 31379|SCMainTVShowsPopularWidgetWall , 31380|SCMainTVShowsPopularWidgetNone)</onclick>
 							<label2>$VAR[MainTVshowPopularVar]</label2>
 						</control>
-						<control type="button" id="1029"> <!-- Main New Widget -->
-							<label>$LOCALIZE[31397]</label>
+						<!-- <control type="button" id="1029"> --> <!-- Main New Widget -->
+							<!-- <label>$LOCALIZE[31397]</label>
 							<include>DefaultSettingButton</include>
 							<onclick>Skin.SelectBool(31397, 31378|SCMainNewWidgetList, 31379|SCMainNewWidgetWall , 31380|SCMainNewWidgetNone)</onclick>
 							<label2>$VAR[SCMainNewWidgetvar]</label2>
-						</control>
-						<control type="button" id="1030"> <!-- Main Last added Widget -->
-							<label>$LOCALIZE[31398]</label>
+						</control> -->
+						<!-- <control type="button" id="1030"> --> <!-- Main Last added Widget -->
+							<!-- <label>$LOCALIZE[31398]</label>
 							<include>DefaultSettingButton</include>
 							<onclick>Skin.SelectBool(31398, 31378|SCMainLastaddetWidgetList, 31379|SCMainLastaddetWidgetWall , 31380|SCMainLastaddetWidgetNone)</onclick>
 							<label2>$VAR[SCMainLastaddetWidgetvar]</label2>
-						</control>
+						</control> -->
 						<control type="radiobutton" id="1028"> <!-- Main TV tips of the day Widget -->
 							<label>$LOCALIZE[31176]</label>
 							<include>DefaultSettingButton</include>
@@ -1641,7 +1641,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoStreamCinemaButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoStreamCinemaButton)</onclick>
-						<enable>System.HasAddon(plugin.video.stream-cinema-2)</enable>
+						<enable>System.HasAddon(plugin.video.stream-cinema-2-release)</enable>
 					</control>
 					<control type="radiobutton" id="812"> <!-- Easy/SC+ -->
 						<label>$LOCALIZE[31325]</label>
