@@ -601,8 +601,8 @@ msgid "Widget Stream Cinema 2"
 msgstr "Widget Stream Cinema 2"
 
 msgctxt "#31174"
-msgid "Widget Popular movies"
-msgstr "Widget Populárne filmy"
+msgid "Widget Popular"
+msgstr "Widget Populárne"
 
 msgctxt "#31175"
 msgid "Widget Popular series"
@@ -631,6 +631,10 @@ msgstr "Najlepšie TV tipy dňa"
 msgctxt "#31182"
 msgid "Watch history"
 msgstr "História zhliadnutí"
+
+msgctxt "#31183"
+msgid "Popular"
+msgstr "Populárne"
 
 
 
@@ -663,6 +667,13 @@ msgctxt "#31207"
 msgid "Movies menu"
 msgstr "Menu filmy"
 
+msgctxt "#31208"
+msgid "Widget Menu Series"
+msgstr "Widget Menu Seriály"
+
+msgctxt "#31209"
+msgid "Series menu"
+msgstr "Menu seriály"
 
 
 

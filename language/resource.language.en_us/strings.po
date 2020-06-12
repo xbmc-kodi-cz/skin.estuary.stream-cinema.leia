@@ -632,6 +632,9 @@ msgctxt "#31182"
 msgid "Watch history"
 msgstr "Watch history"
 
+msgctxt "#31183"
+msgid "Popular"
+msgstr ""
 
 
 
@@ -663,6 +666,13 @@ msgctxt "#31207"
 msgid "Movies menu"
 msgstr "Movies menu"
 
+msgctxt "#31208"
+msgid "Widget Menu Series"
+msgstr ""
+
+msgctxt "#31209"
+msgid "Series menu"
+msgstr ""
 
 
 msgctxt "#31300"
