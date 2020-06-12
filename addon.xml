@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.0.b1" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargu/Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
+<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.1" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargu/Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
@@ -16,6 +16,12 @@
 	<extension point="xbmc.addon.metadata">
 		<news>
 
+[B]Verze 3.0.1
+- Kompletne prevedeno na podporu noveho SC2 pluginu
+- Fixnuty vsechny zname bugy
+- Odstraneny A-Z a Zanr z Widgetu Filmy a Serialy (duvod vzhled a spatna implementace)
+- testovano s SC2 1.0.6
+- Nahrany nove ikonky: Zdroj SC2 plugin a Zbynek
 [B]Verze 3.0.0.b1
 - Opraveny odkazy na vyhledavani
 - Pecliveji pretestovana verze Alpha 2 - vypada ze je funkcni tim padem se posunulo do Bety
