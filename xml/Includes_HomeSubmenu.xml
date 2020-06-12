@@ -139,74 +139,79 @@
 			</item> -->
 			<item>
 				<label>$LOCALIZE[31400]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2/search/tvshows,movies&quot;,return)</onclick>
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/search&quot;,return)</onclick>
 				<thumb>defaultaddonssearch.png</thumb>
 			</item>
 			<item>
-				<label>$LOCALIZE[31203]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/movies,return)</onclick>
+				<label>$LOCALIZE[31171]</label>
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/movies&quot;,return)</onclick>
 				<thumb>defaultmovies.png</thumb>
 			</item>
 			<item>
 				<label>$LOCALIZE[31172]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2//media/tvshows,return)</onclick>
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/tv_shows&quot;,return)</onclick>
 				<thumb>defaulttvshows.png</thumb>
 			</item>
-<!--			<item>
+<!-- 		<item>
 				<label>Moje seznamy (trakt.tv)</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
 				<thumb>defaultplaylist.png</thumb>
 			</item> -->
 			<item>
 				<label>$LOCALIZE[31403]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/csfd_tips/movies,return)</onclick>
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/csfd_tips&quot;,return)</onclick>
 				<thumb>defaultaddonpvrclient.png</thumb>
 			</item>
-<!-- 			<item>
-				<label>TV program na 14 dni</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f4654762f617263686976&amp;title=243330393238&amp;url=2f4654762f617263686976,return)</onclick>
-				<thumb>defaultyear.png</thumb>
-			</item>
-			<item>
-				<label>HDR</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f484452&amp;title=484452&amp;url=2f484452,return)</onclick>
-				<thumb>special://skin/extras/icons/hdr.png</thumb>
-			</item>
-			<item>
-				<label>Zoznamy/Rebricky</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?list=2f5365617263682f6765744c697374&amp;title=5a6f7a6e616d792f5265627269636b79&amp;url=2f5365617263682f6765744c697374,return)</onclick>
-				<thumb>defaultmusictop100.png</thumb>
-			</item> -->
-<!-- 			<item>
-				<label>Nastavení</label>
-				<onclick>Addon.OpenSettings(plugin.video.stream-cinema-2/command/open-settings)</onclick>
-				<thumb>defaultaddonservice.png</thumb>
-			</item> -->
 			<item>
 				<label>Plugin</label>
-				<onclick>RunAddon(plugin.video.stream-cinema-2)</onclick>
+				<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
 				<thumb>defaultaddon.png</thumb>
 			</item>
 		</content>
 	</include>
 	<include name="SCMoviesMenuContent">
 		<content>
-			<item>
+			<item> <!-- Popular -->
 				<label>$LOCALIZE[31179]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/media/movies/popular,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
 				<thumb>defaultaddonsrecentlyupdated.png</thumb>
 			</item>
-			<item>
-				<label>A-Z</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/a_to_z/movies,return)</onclick>
-				<thumb>DefaultMovieTitle.png</thumb>
+			<item> <!-- New Releases -->
+				<label>$LOCALIZE[31395]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- New Dubbed releases -->
+				<label>$LOCALIZE[31401]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fdubbed%3flang%3den%26lang%3dcs%26sort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- Recently added -->
+				<label>$LOCALIZE[31398]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- Alphabetically -->
+				<label>$LOCALIZE[31303]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/a_to_z?letter&amp;media_type=movie&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- By genre -->
+				<label>$LOCALIZE[31305]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/genre_menu?media_type=movie&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- By studio -->
+				<label>$LOCALIZE[31402]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/studio_menu?media_type=movie&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
+			</item>
+			<item>  <!-- TV Picks of the day (CSFD.cz) -->
+				<label>$LOCALIZE[31403]</label>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/csfd_tips&quot;,return)</onclick>
+				<thumb>defaultaddonsrecentlyupdated.png</thumb>
 			</item>
 
-			<item>
-				<label>$LOCALIZE[31204]</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/genre_menu/movies,return)</onclick>
-				<thumb>DefaultGenre.png</thumb>
-			</item>
 		</content>
 	</include>
 
@@ -216,32 +221,32 @@
 		<content>
 			<item>
 				<label>Seznam ke shlédnutí</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65,return)</onclick>
 				<thumb>defaultplaylist.png</thumb>
 			</item>
 			<item>
 				<label>Historie</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b74486973746f7279&amp;id=686973746f7279&amp;title=5b425d2433303935385b2f425d&amp;tu=6d65,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b74486973746f7279&amp;id=686973746f7279&amp;title=5b425d2433303935385b2f425d&amp;tu=6d65,return)</onclick>
 				<thumb></thumb>
 			</item>
 			<item>
 				<label>Přátelé</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b74466f6c6c6f77696e67&amp;id=666f6c6c6f77696e67&amp;title=5b425d2433303936335b2f425d,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b74466f6c6c6f77696e67&amp;id=666f6c6c6f77696e67&amp;title=5b425d2433303936335b2f425d,return)</onclick>
 				<thumb>defaultmusicroles.png</thumb>
 			</item>
 			<item>
 				<label>Oblíbené seznamy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b745370656369616c4c69737473&amp;id=6c696b65645f6c69737473&amp;title=5b425d2433303936345b2f425d,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b745370656369616c4c69737473&amp;id=6c696b65645f6c69737473&amp;title=5b425d2433303936345b2f425d,return)</onclick>
 				<thumb>defaultmusictop100.png</thumb>
 			</item>
 			<item>
 				<label>Populární seznamy</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b745370656369616c4c69737473&amp;id=706f70756c61725f6c69737473&amp;page=31&amp;title=5b425d2433303936355b2f425d,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b745370656369616c4c69737473&amp;id=706f70756c61725f6c69737473&amp;page=31&amp;title=5b425d2433303936355b2f425d,return)</onclick>
 				<thumb>defaultfavourites.png</thumb>
 			</item>
 			<item>
 				<label>Populární seznamy za týden</label>
-				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2/?action=7472616b745370656369616c4c69737473&amp;id=7472656e64696e675f6c69737473&amp;page=31&amp;title=5b425d2433303936365b2f425d,return)</onclick>
+				<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b745370656369616c4c69737473&amp;id=7472656e64696e675f6c69737473&amp;page=31&amp;title=5b425d2433303936365b2f425d,return)</onclick>
 				<thumb>defaultfavourites.png</thumb>
 			</item>
 		</content>

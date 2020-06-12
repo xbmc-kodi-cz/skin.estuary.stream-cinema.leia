@@ -968,93 +968,100 @@
 			</include>
 			<control type="grouplist" id="40001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMainMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMainMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="SCMainMenu_submenu" value="true"/>
 					<param name="widget_header" value="Stream Cinema 2 Menu"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40050"/>
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesNewWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release"/>
 					<param name="widget_header" value=$LOCALIZE[31168]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40100"/>
 					<param name="stream-cinema" value="true"/> 
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesPopularWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainMoviesPopularWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31179]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40200"/>
 					<param name="stream-cinema-2" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMainMoviesPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMainMoviesPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31179]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40250"/>
 					<param name="stream-cinema-2" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31180]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31180]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsPopularWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31180]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMainNewWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows,movies/aired/desc"/>
-					<param name="widget_header" value=$LOCALIZE[31395]/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVShowsNewAddedEpisodesWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/csfd_tips"/>
+					<param name="widget_header" value=$LOCALIZE[31181]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40500"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainNewWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows,movies/aired/desc"/>
+				<!-- <include content="WidgetWallPoster" condition="Skin.HasSetting(SCMainNewWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/sort/tvshows,movies/aired/desc"/>
 					<param name="widget_header" value=$LOCALIZE[31395]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40500"/>
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="stream-cinema" value="true"/> 
 				</include>
-				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCMainLastaddetWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows,movies/dateAdded/desc"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainNewWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/sort/tvshows,movies/aired/desc"/>
+					<param name="widget_header" value=$LOCALIZE[31395]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="40500"/>
+					<param name="stream-cinema" value="true"/> 
+				</include>
+				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCMainLastaddetWidgetWall) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/sort/tvshows,movies/dateAdded/desc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40600"/>
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
-					<param name="episode" value="true"/> <!-- Easy/SC+ -->
+					<param name="stream-cinema" value="true"/> 
+					<param name="episode" value="true"/> 
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMainLastaddetWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows,movies/dateAdded/desc"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMainLastaddetWidgetList) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/sort/tvshows,movies/dateAdded/desc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40600"/>
-					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
-					<param name="episode" value="true"/> <!-- Easy/SC+ -->
-				</include>
-<!-- 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTraktWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
+					<param name="stream-cinema" value="true"/> 
+					<param name="episode" value="true"/> 
+				</include> -->
+<!-- 				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTraktWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
 					<param name="widget_header" value="Seznam ke shlédnutí (trakt.tv)"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40500"/>
 					<param name="stream-cinema" value="true"/>
 				</include> -->
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVTodayWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMainTVTodayWidget) + Skin.HasSetting(SCMain) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/watched"/>
 					<param name="widget_header" value=$LOCALIZE[31182]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="40700"/>
@@ -1067,78 +1074,89 @@
 		</control>
 		<control type="group" id="41000"> <!-- Easy/SC+ SC Movies -->
 			<include>ShiftWidgets</include> <!-- Easy/SC+ -->
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41050"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41100"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41300"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41400"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41500"/><param name="year" value="false"/></include>
 			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41600"/><param name="year" value="false"/></include>
+			<include content="WidgetInfo" condition="Skin.HasSetting(show_info) + !Skin.HasSetting(show_fullwidget)"><param name="list_id" value="41700"/><param name="year" value="false"/></include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),streamcinemamovies)</visible>
 			<include content="Visible_Right_Delayed">
 				<param name="id" value="streamcinemamovies"/>
 			</include>
 			<control type="grouplist" id="41001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMoviesMenuWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="SCMoviesMenu_submenu" value="true"/>
 					<param name="widget_header" value=$LOCALIZE[31207]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41050"/>
 				</include>
-					<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesPopularWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
+					<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesPopularWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31179]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41100"/>
 					<param name="stream-cinema" value="true"/>
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMoviesPopularWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/movies/popular"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMoviesPopularWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31179]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41100"/>
 					<param name="stream-cinema" value="true"/>
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMovieNewWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/movies/aired/desc"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCMovieNewWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31395]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMovieNewWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/movies/aired/desc"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMovieNewWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31395]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCMovieLastaddetWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/movies/dateAdded/desc"/>
+				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCMovieLastaddetWidgetWall) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41400"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 					<param name="episode" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMovieLastaddetWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/movies/dateAdded/desc"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCMovieLastaddetWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dmovie%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41400"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 					<param name="episode" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListLetters" condition="Skin.HasSetting(SCMovieNameWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/a_to_z/movies"/>
-					<param name="widget_header" value=$LOCALIZE[31303]/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMoviesLastPlayedWidget) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/watched"/>
+					<param name="widget_header" value=$LOCALIZE[31182]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41500"/>
+					<param name="item_limit" value="$INFO[Container(41300).NumItems]"/> <!-- Easy/SC* -->
+					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
+					<param name="nobold" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMovieGenreWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/genre_menu/movies"/>
-					<param name="widget_header" value=$LOCALIZE[31305]/>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(SCMovieNameWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/a_to_z?letter&amp;media_type=movie"/>
+					<param name="widget_header" value=$LOCALIZE[31303]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="41600"/>
+				</include>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCMovieGenreWidget) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/genre_menu?media_type=movie"/>
+					<param name="widget_header" value=$LOCALIZE[31305]/>
+					<param name="widget_target" value="videos"/>
+					<param name="list_id" value="41700"/>
 					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
 				</include>
 			</control>
@@ -1155,86 +1173,86 @@
 			</include>
 			<control type="grouplist" id="42001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMenuWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2) + 0">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMenuWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release) + 0">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="SCTVShowsMenu_submenu" value="true"/>
 					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42050"/>
 				</include>
 				<!-- <include content="WidgetListPoster" condition="Skin.HasSettin
-					.g(SCTVShowsLastPlayedWidget) + !Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+					.g(SCTVShowsLastPlayedWidget) + !Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/media/tvshows/popular"/>
 					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42100"/>
 					<param name="stream-cinema" value="true"/> 
 				</include> -->
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> <!-- Saxel -->
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsLastPlayedWidget) + Skin.HasSetting(SCTVShowsLastPlayedWidgetTrakt) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> <!-- Saxel -->
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
 					<param name="widget_header" value="Poslední sledované seriály (T)"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42110"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsPopularWidgetList) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTVShowsPopularWidgetList) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCTVShowsPopularWidgetWall) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/media/tvshows/popular"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCTVShowsPopularWidgetWall) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31301]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCSeriesNewWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows/aired/desc"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCSeriesNewWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31395]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42200"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCSeriesNewWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows/aired/desc"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCSeriesNewWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31395]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42200"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCSeriesLastaddetWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows/dateAdded/desc"/>
+				<include content="WidgetWallEpisodes" condition="Skin.HasSetting(SCSeriesLastaddetWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 					<param name="episode" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCSeriesLastaddetWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/sort/tvshows/dateAdded/desc"/>
+				<include content="WidgetListEpisodes" condition="Skin.HasSetting(SCSeriesLastaddetWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/get_media?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dtvshow%26order%3ddesc"/>
 					<param name="widget_header" value=$LOCALIZE[31396]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 					<param name="episode" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListLetters" condition="Skin.HasSetting(SCTVShowsNameWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/a_to_z/tvshows"/>
+				<include content="WidgetListLetters" condition="Skin.HasSetting(SCTVShowsNameWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/a_to_z?letter&amp;media_type=tvshow"/>
 					<param name="widget_header" value=$LOCALIZE[31303]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42400"/>
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsGenreWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/genre_menu/tvshows"/>
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsGenreWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/genre_menu?media_type=tvshow"/>
 					<param name="widget_header" value=$LOCALIZE[31305]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42500"/>
 					<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMainWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTVShowsMainWidget) + Skin.HasSetting(SCTVShow) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="SCMainMenu_submenu" value="true"/>
 					<param name="widget_header" value="Stream Cinema 2 Menu"/>
 					<param name="widget_target" value="videos"/>
@@ -1252,15 +1270,15 @@
 			</include>
 			<control type="grouplist" id="42522">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCHistoryWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCHistoryWidgetList) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/watched"/>
 					<param name="widget_header" value=$LOCALIZE[31381]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42155"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCHistoryWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/watched"/>
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(SCHistoryWidgetWall) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/watched"/>
 					<param name="widget_header" value=$LOCALIZE[31381]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="42156"/>
@@ -1280,34 +1298,34 @@
 			</include>
 			<control type="grouplist" id="46001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMenuWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMenuWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="SCTraktMenu_submenu" value="true"/>
 					<param name="widget_header" value="Menu Moje seznamy (Trakt.tv)"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="46050"/>
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktToWatchWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktToWatchWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=77617463686c697374&amp;title=5b425d2433303934345b2f425d&amp;tl=77617463686c697374&amp;tu=6d65"/>
 					<param name="widget_header" value="Seznam ke shlédnutí"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="46100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedMoviesWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedMoviesWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=776174636865645f6d6f76696573&amp;title=243330393631&amp;tl=776174636865645f6d6f76696573&amp;tu=6d65"/>
 					<param name="widget_header" value="Historie - Shlédnuté filmy"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="46150"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedTVShowsWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
-					<param name="content_path" value="plugin://plugin.video.stream-cinema-2/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCTraktHistoryWatchedTVShowsWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+					<param name="content_path" value="plugin://plugin.video.stream-cinema-2-release/?action=7472616b7453686f774c697374&amp;id=776174636865645f73686f7773&amp;title=243330393632&amp;tl=776174636865645f73686f7773&amp;tu=6d65"/>
 					<param name="widget_header" value="Historie - Shlédnuté seriály"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="46200"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMainWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)">
+				<include content="WidgetListCategories" condition="Skin.HasSetting(SCTraktMainWidget) + Skin.HasSetting(SCTrakt) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="SCMainMenu_submenu" value="true"/>
 					<param name="widget_header" value="Stream Cinema 2 Menu"/>
 					<param name="widget_target" value="videos"/>
@@ -1335,140 +1353,140 @@
 			</include>
 			<control type="grouplist" id="52001">
 				<include>WidgetGroupListCommon</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaAllWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaAllWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=4&amp;title=All%20shows&amp;url=https%3a%2f%2fnovaplus.nova.cz%2fporady"/>
 					<param name="widget_header" value=$LOCALIZE[31385]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaAllWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaAllWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=4&amp;title=All%20shows&amp;url=https%3a%2f%2fnovaplus.nova.cz%2fporady"/>
 					<param name="widget_header" value=$LOCALIZE[31385]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52100"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaTopWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaTopWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=8&amp;title=TOP%20PO%c5%98ADY&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31386]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52150"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaTopWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaTopWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=8&amp;title=TOP%20PO%c5%98ADY&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31386]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52150"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaLastWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaLastWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPOSLEDN%c3%8d%20D%c3%8dLY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31387]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52200"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaLastWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaLastWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPOSLEDN%c3%8d%20D%c3%8dLY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31387]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52200"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaShowWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaShowWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aUk%c3%a1zky%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31388]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52250"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaShowWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaShowWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aUk%c3%a1zky%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31388]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52250"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaBonusWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaBonusWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aBONUSY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31389]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaBonusWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaBonusWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aBONUSY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31389]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52300"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaCriminalWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaCriminalWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aKRIMIN%c3%81LN%c3%8d%20SERI%c3%81LY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31390]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52105"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaCriminalWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaCriminalWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aKRIMIN%c3%81LN%c3%8d%20SERI%c3%81LY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31390]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52105"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaForeignWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaForeignWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZAHRANI%c4%8cN%c3%8d%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31391]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52155"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaForeignWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaForeignWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZAHRANI%c4%8cN%c3%8d%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31391]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52155"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaChildWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaChildWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPO%c5%98ADY%20PRO%20D%c4%9aTI%0a&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31392]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52205"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaChildWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaChildWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aPO%c5%98ADY%20PRO%20D%c4%9aTI%0a&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31392]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52205"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaFunWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaFunWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZ%c3%81BAVN%c3%89%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31393]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52255"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaFunWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaFunWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aZ%c3%81BAVN%c3%89%20PO%c5%98ADY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31393]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52255"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaMagazineWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetListPoster" condition="Skin.HasSetting(NovaMagazineWidgetList) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aMAGAZ%c3%8dNY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31394]/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="52305"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaMagazineWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2)"> 
+				<include content="WidgetWallPoster" condition="Skin.HasSetting(NovaMagazineWidgetWall) + Skin.HasSetting(Nova) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)"> 
 					<param name="content_path" value="plugin://plugin.video.novaplus.cz/?mode=7&amp;title=%0aMAGAZ%c3%8dNY%20%20%20%20&amp;url=https%3a%2f%2fnovaplus.nova.cz%2f"/>
 					<param name="widget_header" value=$LOCALIZE[31394]/>
 					<param name="widget_target" value="videos"/>

@@ -20,7 +20,7 @@
 					<item> <!-- Easy/SC+ Search Movies -->
 						<label>$LOCALIZE[31399]</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2/search/tvshows,movies&quot;,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2-release)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/search&quot;,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
 					</item>
 					<item>
