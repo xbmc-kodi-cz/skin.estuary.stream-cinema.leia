@@ -28,7 +28,7 @@
 		<item> <!-- Easy/SC Stream-Cinema Movies -->
 			<label>$LOCALIZE[31203]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/movies,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/movies/,return)</onclick>
 			<property name="menu_id">$NUMBER[41000]</property>
 			<thumb>icons/sidemenu/sc2_movies.png</thumb>
 			<property name="id">streamcinemamovies</property>
@@ -37,7 +37,7 @@
 		<item> <!-- Easy/SC Stream-Cinema TVShows -->
 			<label>$LOCALIZE[31172]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/tv_shows,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/tv_shows/,return)</onclick>
 			<property name="menu_id">$NUMBER[42000]</property>
 			<thumb>icons/sidemenu/sc2_tvshows.png</thumb>
 			<property name="id">streamcinematvshows</property>
@@ -46,7 +46,7 @@
 		<item> <!-- Easy/SC Stream-Cinema History -->
 			<label>$LOCALIZE[31381]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/watched,return)</onclick>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/watched/,return)</onclick>
 			<property name="menu_id">$NUMBER[42500]</property>
 			<thumb>icons/sidemenu/sc2_history.png</thumb>
 			<property name="id">streamcinemahistory</property>
