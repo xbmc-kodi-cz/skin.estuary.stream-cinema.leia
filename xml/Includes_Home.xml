@@ -1583,7 +1583,7 @@
 							<width>150</width>
 							<height>150</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>font52_title</font>
+							<font>font30_title</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -1620,7 +1620,7 @@
 							<width>150</width>
 							<height>150</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>font52_title</font>
+							<font>font45_title</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
