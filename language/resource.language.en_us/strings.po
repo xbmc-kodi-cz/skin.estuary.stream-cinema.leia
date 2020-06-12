@@ -1091,9 +1091,9 @@ msgid "TV today (Films)"
 msgstr "TV today (Films)"
 
 msgctxt "#31404"
-msgid "Widget new dubbet releases"
-msgstr "Widget new dubbet releases"
+msgid "Widget new dubbed releases"
+msgstr "Widget new dubbed releases"
 
 msgctxt "#31405"
-msgid "Wew dubbet releases"
-msgstr "Wew dubbet releases"
+msgid "New dubbed releases"
+msgstr ""

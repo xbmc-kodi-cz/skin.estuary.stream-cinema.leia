@@ -1099,9 +1099,9 @@ msgid "TV today (Films)"
 msgstr "TV dnes (Filmy)"
 
 msgctxt "#31404"
-msgid "Widget new dubbet releases"
+msgid "Widget new dubbed releases"
 msgstr "Widget novo pridané dabované"
 
 msgctxt "#31405"
-msgid "Wew dubbet releases"
+msgid "New dubbed releases"
 msgstr "Novo pridané dabované"

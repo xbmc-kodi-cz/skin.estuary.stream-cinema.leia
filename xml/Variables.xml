@@ -181,9 +181,9 @@
 		<value condition="Skin.HasSetting(SCMovieNewWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
-	<variable name="SCMovieNewDubbetWidgetvar">
-		<value condition="Skin.HasSetting(SCMovieNewDubbetWidgetWall)">$LOCALIZE[31379]</value>
-		<value condition="Skin.HasSetting(SCMovieNewDubbetWidgetList)">$LOCALIZE[31378]</value>
+	<variable name="SCMovieNewDubbedWidgetvar">
+		<value condition="Skin.HasSetting(SCMovieNewDubbedWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMovieNewDubbedWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
 	<variable name="SCMovieLastaddetWidgetvar">
@@ -196,9 +196,9 @@
 		<value condition="Skin.HasSetting(SCSeriesNewWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
-	<variable name="SCSeriesNewDubbetWidgetvar">
-		<value condition="Skin.HasSetting(SCSeriesNewDubbetWidgetWall)">$LOCALIZE[31379]</value>
-		<value condition="Skin.HasSetting(SCSeriesNewDubbetWidgetList)">$LOCALIZE[31378]</value>
+	<variable name="SCSeriesNewDubbedWidgetvar">
+		<value condition="Skin.HasSetting(SCSeriesNewDubbedWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCSeriesNewDubbedWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
 	<variable name="SCSeriesLastaddetWidgetvar">
