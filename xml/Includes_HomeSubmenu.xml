@@ -163,6 +163,11 @@
 				<thumb>icons/sidemenu/sc2_history.png</thumb>
 			</item>
 			<item>
+				<label>$LOCALIZE[31184]</label>
+				<onclick>PlayMedia(&quot;plugin://plugin.video.stream-cinema-2-release/command/?command=open-settings&quot;,return)</onclick>
+				<thumb>icons/settings/addons.png</thumb>
+			</item>
+			<item>
 				<label>Plugin</label>
 				<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
 				<thumb>icons/sidemenu/sc2.png</thumb>
