@@ -636,6 +636,9 @@ msgctxt "#31183"
 msgid "Popular"
 msgstr "Populárne"
 
+msgctxt "#31184"
+msgid "Settings"
+msgstr "Nastavenia"
 
 
 

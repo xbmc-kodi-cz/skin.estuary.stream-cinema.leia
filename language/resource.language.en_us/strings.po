@@ -636,6 +636,9 @@ msgctxt "#31183"
 msgid "Popular"
 msgstr ""
 
+msgctxt "#31184"
+msgid "Settings"
+msgstr 
 
 
 msgctxt "#31200"

@@ -145,12 +145,12 @@
 			<item>
 				<label>$LOCALIZE[31171]</label>
 				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/movies&quot;,return)</onclick>
-				<thumb>defaultmovies.png</thumb>
+				<thumb>icons/sidemenu/sc2_movies.png</thumb>
 			</item>
 			<item>
 				<label>$LOCALIZE[31172]</label>
 				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/tv_shows&quot;,return)</onclick>
-				<thumb>defaulttvshows.png</thumb>
+				<thumb>icons/sidemenu/sc2_tvshows.png</thumb>
 			</item>
 <!-- 		<item>
 				<label>Moje seznamy (trakt.tv)</label>
@@ -158,14 +158,19 @@
 				<thumb>defaultplaylist.png</thumb>
 			</item> -->
 			<item>
-				<label>$LOCALIZE[31403]</label>
-				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/csfd_tips&quot;,return)</onclick>
-				<thumb>defaultaddonpvrclient.png</thumb>
+				<label>$LOCALIZE[31381]</label>
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/watched&quot;,return)</onclick>
+				<thumb>icons/sidemenu/sc2_history.png</thumb>
+			</item>
+			<item>
+				<label>$LOCALIZE[31184]</label>
+				<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
+				<thumb>icons/settings/addons.png</thumb>
 			</item>
 			<item>
 				<label>Plugin</label>
 				<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
-				<thumb>defaultaddon.png</thumb>
+				<thumb>icons/sidemenu/sc2.png</thumb>
 			</item>
 		</content>
 	</include>
