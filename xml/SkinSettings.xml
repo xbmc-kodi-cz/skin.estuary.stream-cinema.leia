@@ -349,7 +349,13 @@
 							<onclick>Skin.SelectBool(31397, 31378|SCMovieNewWidgetList, 31379|SCMovieNewWidgetWall , 31380|SCMovieNewWidgetNone)</onclick>
 							<label2>$VAR[SCMovieNewWidgetvar]</label2>
 						</control>
-						<control type="button" id="1047"> <!-- Movie Last added Widget -->
+						<control type="button" id="31404"> <!-- Movie New dubbet Widget -->
+							<label>$LOCALIZE[31404]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31404, 31378|SCMovieNewDubbetWidgetList, 31379|SCMovieNewDubbetWidgetWall , 31380|SCMovieNewDubbetWidgetNone)</onclick>
+							<label2>$VAR[SCMovieNewDubbetWidgetvar]</label2>
+						</control>
+						<control type="button" id="1048"> <!-- Movie Last added Widget -->
 							<label>$LOCALIZE[31398]</label>
 							<include>DefaultSettingButton</include>
 							<onclick>Skin.SelectBool(31398, 31378|SCMovieLastaddetWidgetList, 31379|SCMovieLastaddetWidgetWall , 31380|SCMovieLastaddetWidgetNone)</onclick>
@@ -403,6 +409,12 @@
 							<include>DefaultSettingButton</include>
 							<onclick>Skin.SelectBool(31397, 31378|SCSeriesNewWidgetList, 31379|SCSeriesNewWidgetWall , 31380|SCSeriesNewWidgetNone)</onclick>
 							<label2>$VAR[SCSeriesNewWidgetvar]</label2>
+						</control>
+						<control type="button" id="1073"> <!-- TV shows New Widget -->
+							<label>$LOCALIZE[31404]</label>
+							<include>DefaultSettingButton</include>
+							<onclick>Skin.SelectBool(31404, 31378|SCSeriesNewDubbetWidgetList, 31379|SCSeriesNewDubbetWidgetWall , 31380|SCSeriesNewDubbetWidgetNone)</onclick>
+							<label2>$VAR[SCSeriesNewDubbetWidgetvar]</label2>
 						</control>
 						<control type="button" id="1074"> <!-- TV shows Last added Widget -->
 							<label>$LOCALIZE[31398]</label>

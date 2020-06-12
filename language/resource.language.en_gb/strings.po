@@ -1091,3 +1091,11 @@ msgstr "By studio"
 msgctxt "#31403"
 msgid "TV today (Films)"
 msgstr "TV today (Films)"
+
+msgctxt "#31404"
+msgid "Widget new dubbet releases"
+msgstr "Widget new dubbet releases"
+
+msgctxt "#31405"
+msgid "Wew dubbet releases"
+msgstr "Wew dubbet releases"

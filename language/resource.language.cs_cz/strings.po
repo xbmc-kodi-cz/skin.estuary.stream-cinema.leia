@@ -1091,3 +1091,11 @@ msgstr "Podle studia"
 msgctxt "#31403"
 msgid "TV today (Films)"
 msgstr "TV dnes (Filmy)"
+
+msgctxt "#31404"
+msgid "Widget new dubbet releases"
+msgstr "Widget nově přidané dabované"
+
+msgctxt "#31405"
+msgid "Wew dubbet releases"
+msgstr "Nově přidané dabované"

@@ -181,6 +181,11 @@
 		<value condition="Skin.HasSetting(SCMovieNewWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
+	<variable name="SCMovieNewDubbetWidgetvar">
+		<value condition="Skin.HasSetting(SCMovieNewDubbetWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCMovieNewDubbetWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
 	<variable name="SCMovieLastaddetWidgetvar">
 		<value condition="Skin.HasSetting(SCMovieLastaddetWidgetWall)">$LOCALIZE[31379]</value>
 		<value condition="Skin.HasSetting(SCMovieLastaddetWidgetList)">$LOCALIZE[31378]</value>
@@ -189,6 +194,11 @@
 	<variable name="SCSeriesNewWidgetvar">
 		<value condition="Skin.HasSetting(SCSeriesNewWidgetWall)">$LOCALIZE[31379]</value>
 		<value condition="Skin.HasSetting(SCSeriesNewWidgetList)">$LOCALIZE[31378]</value>
+		<value>$LOCALIZE[31380]</value>
+	</variable>
+	<variable name="SCSeriesNewDubbetWidgetvar">
+		<value condition="Skin.HasSetting(SCSeriesNewDubbetWidgetWall)">$LOCALIZE[31379]</value>
+		<value condition="Skin.HasSetting(SCSeriesNewDubbetWidgetList)">$LOCALIZE[31378]</value>
 		<value>$LOCALIZE[31380]</value>
 	</variable>
 	<variable name="SCSeriesLastaddetWidgetvar">
