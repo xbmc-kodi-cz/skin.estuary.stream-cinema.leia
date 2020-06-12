@@ -593,7 +593,7 @@ msgid "Films"
 msgstr "Filmy"
 
 msgctxt "#31172"
-msgid "series"
+msgid "Series"
 msgstr "Seriály"
 
 msgctxt "#31173"
