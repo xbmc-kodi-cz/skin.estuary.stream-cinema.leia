@@ -1099,3 +1099,20 @@ msgstr ""
 msgctxt "#31405"
 msgid "New dubbed releases"
 msgstr ""
+
+msgctxt "#31406"
+msgid "Widget my own link"
+msgstr ""
+
+msgctxt "#31407"
+msgid "My own link"
+msgstr ""
+
+msgctxt "#31408"
+msgid "Wall with text"
+msgstr ""
+
+msgctxt "#31409"
+msgid "List with text"
+msgstr ""
+

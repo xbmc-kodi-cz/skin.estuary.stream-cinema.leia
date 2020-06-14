@@ -1099,3 +1099,20 @@ msgstr "Widget nově přidané dabované"
 msgctxt "#31405"
 msgid "New dubbed releases"
 msgstr "Nově přidané dabované"
+
+msgctxt "#31406"
+msgid "Widget my own link"
+msgstr "Widget vlastní link"
+
+msgctxt "#31407"
+msgid "My own link"
+msgstr "Vlastní link"
+
+msgctxt "#31408"
+msgid "Wall with text"
+msgstr "Zeď s textem"
+
+msgctxt "#31409"
+msgid "List with text"
+msgstr "List s textem"
+
