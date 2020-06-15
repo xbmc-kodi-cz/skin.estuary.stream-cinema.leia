@@ -3,7 +3,7 @@
 	<include name="HomeMenuContent">
 		<item> <!-- Movies Wall -->
 			<label>$LOCALIZE[342] Wall</label>
-			<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
 			<property name="menu_id">$NUMBER[82000]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">movieswall</property>
@@ -11,7 +11,7 @@
 		</item>
 		<item> <!-- Episodes Wall -->
 			<label>$LOCALIZE[20343] Wall</label>
-			<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="menu_id">$NUMBER[83000]</property>
 			<thumb>icons/sidemenu/tv.png</thumb>
 			<property name="id">episodeswall</property>
@@ -19,7 +19,7 @@
 		</item>
 		<item> <!-- Easy/SC Stream-Cinema -->
 			<label>Stream Cinema 2</label>
-			<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">RunAddon(plugin.video.stream-cinema-2-release)</onclick>
 			<property name="menu_id">$NUMBER[40000]</property>
 			<thumb>icons/sidemenu/sc2.png</thumb>
 			<property name="id">streamcinema</property>
@@ -28,7 +28,7 @@
 		<item> <!-- Easy/SC Stream-Cinema Movies -->
 			<label>$LOCALIZE[31203]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/movies/,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/movies/,return)</onclick>
 			<property name="menu_id">$NUMBER[41000]</property>
 			<thumb>icons/sidemenu/sc2_movies.png</thumb>
 			<property name="id">streamcinemamovies</property>
@@ -37,7 +37,7 @@
 		<item> <!-- Easy/SC Stream-Cinema TVShows -->
 			<label>$LOCALIZE[31172]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/tv_shows/,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/tv_shows/,return)</onclick>
 			<property name="menu_id">$NUMBER[42000]</property>
 			<thumb>icons/sidemenu/sc2_tvshows.png</thumb>
 			<property name="id">streamcinematvshows</property>
@@ -46,7 +46,7 @@
 		<item> <!-- Easy/SC Stream-Cinema History -->
 			<label>$LOCALIZE[31381]</label>
 			<label2>[CR][CR]$LOCALIZE[31168]</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/watched/,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/watched/,return)</onclick>
 			<property name="menu_id">$NUMBER[42500]</property>
 			<thumb>icons/sidemenu/sc2_history.png</thumb>
 			<property name="id">streamcinemahistory</property>
@@ -55,7 +55,7 @@
 		<item> <!-- Easy/SC Stream-Cinema Trakt -->
 			<label>Moje seznamy</label>
 			<label2>[CR][CR]Stream-Cinema</label2>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema-2-release/?action=7472616b7457617463686c697374&amp;title=24333039343320287472616b742e747629,return)</onclick>
 			<property name="menu_id">$NUMBER[46000]</property>
 			<thumb>defaultplaylist.png</thumb>
 			<property name="id">streamcinematrakt</property>
@@ -65,7 +65,7 @@
 			<label>iVysílání</label>
 			<label2>[CR][CR]Česká televize</label2>
 			<property name="menu_id">$NUMBER[62000]</property>
-			<onclick>ActivateWindow(videos,plugin://plugin.video.ivysilani.cz,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(videos,plugin://plugin.video.ivysilani.cz,return)</onclick>
 			<thumb>icons/sidemenu/livetv.png</thumb>
 			<property name="id">ivysilani</property>
 			<visible>!Skin.HasSetting(HomeMenuNoiVysilaniButton) + System.HasAddon(plugin.video.ivysilani.cz)</visible>
@@ -74,7 +74,7 @@
 			<label>Trailer</label>
 			<label2>[CR][CR]</label2>
 			<property name="menu_id">$NUMBER[70000]</property>
-			<onclick>RunAddon(plugin.video.trailer)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">RunAddon(plugin.video.trailer)</onclick>
 			<thumb>icons/sidemenu/videos.png</thumb>
 			<property name="id">trailer</property>
 			<visible>!Skin.HasSetting(TrailerWallWidget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)</visible>
@@ -83,7 +83,7 @@
 			<label>Trailer</label>
 			<label2>[CR][CR]Týdenní novinky</label2>
 			<property name="menu_id">$NUMBER[71000]</property>
-			<onclick>RunAddon(plugin.video.trailer)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">RunAddon(plugin.video.trailer)</onclick>
 			<thumb>icons/sidemenu/videos.png</thumb>
 			<property name="id">trailerwall</property>
 			<visible>Skin.HasSetting(TrailerWallWidget) + !Skin.HasSetting(HomeMenuNoTrailerButton) + System.HasAddon(plugin.video.trailer) + System.HasAddon(plugin.video.youtube)</visible>
@@ -92,7 +92,7 @@
 			<label>Radio</label>
 			<label2>[CR][CR]Internet</label2>
 			<property name="menu_id">$NUMBER[80000]</property>
-			<onclick>RunAddon(plugin.audio.radio_de)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">RunAddon(plugin.audio.radio_de)</onclick>
 			<thumb>icons/sidemenu/radio.png</thumb>
 			<property name="id">radiode</property>
 			<visible>!Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)</visible>
@@ -101,14 +101,14 @@
 			<label>Radio</label>
 			<label2>[CR][CR]Internet: My Stations</label2>
 			<property name="menu_id">$NUMBER[81000]</property>
-			<onclick>RunAddon(plugin.audio.radio_de)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">RunAddon(plugin.audio.radio_de)</onclick>
 			<thumb>icons/sidemenu/radio.png</thumb>
 			<property name="id">radiodewall</property>
 			<visible>Skin.HasSetting(RadiodeWallWidget) + !Skin.HasSetting(HomeMenuNoRadiodeButton) + System.HasAddon(plugin.audio.radio_de)</visible>
 		</item>
 		<item> <!-- Nova Plus -->
 			<label>Nova Plus</label>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.novaplus.cz)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,plugin://plugin.video.novaplus.cz)</onclick>
 			<property name="menu_id">$NUMBER[41500]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">Nova</property>
@@ -116,8 +116,8 @@
 		</item>
 		<item> <!-- Movies -->
 			<label>$LOCALIZE[342]</label>
-			<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-			<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
+			<onclick condition="Library.HasContent(movies) + !Skin.HasSetting(touchmode)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+			<onclick condition="!Library.HasContent(movies) + !Skin.HasSetting(touchmode)">ActivateWindow(Videos,sources://video/,return)</onclick>
 			<property name="menu_id">$NUMBER[5000]</property>
 			<thumb>icons/sidemenu/movies.png</thumb>
 			<property name="id">movies</property>
@@ -125,8 +125,8 @@
 		</item>
 		<item> <!-- TVShows -->
 			<label>$LOCALIZE[20343]</label>
-			<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
-			<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+			<onclick condition="Library.HasContent(tvshows) + !Skin.HasSetting(touchmode)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+			<onclick condition="!Library.HasContent(tvshows) + !Skin.HasSetting(touchmode)">ActivateWindow(Videos,sources://video/,return)</onclick>
 			<property name="menu_id">$NUMBER[6000]</property>
 			<thumb>icons/sidemenu/tv.png</thumb>
 			<property name="id">tvshows</property>
@@ -134,7 +134,7 @@
 		</item>
 		<item> <!-- Disc -->
 			<label>$LOCALIZE[427]</label>
-			<onclick>PlayDisc</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">PlayDisc</onclick>
 			<property name="menu_id">$NUMBER[21000]</property>
 			<thumb>icons/sidemenu/disc.png</thumb>
 			<property name="id">disc</property>
@@ -143,8 +143,8 @@
 		<item> <!-- TV -->
 			<label>$LOCALIZE[19020]</label>
 			<property name="menu_id">$NUMBER[12000]</property>
-			<onclick condition="!Skin.HasSetting(play_tv)">ActivateWindow(TVChannels)</onclick>
-			<onclick condition="Skin.HasSetting(play_tv)">PlayPVRTV</onclick>
+			<onclick condition="!Skin.HasSetting(play_tv) + !Skin.HasSetting(touchmode)">ActivateWindow(TVChannels)</onclick>
+			<onclick condition="Skin.HasSetting(play_tv) + !Skin.HasSetting(touchmode)">PlayPVRTV</onclick>
 			<thumb>icons/sidemenu/livetv.png</thumb>
 			<property name="id">livetv</property>
 			<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
@@ -152,15 +152,15 @@
 		<item> <!-- Radio -->
 			<label>$LOCALIZE[19021]</label>
 			<property name="menu_id">$NUMBER[13000]</property>
-			<onclick condition="!Skin.HasSetting(play_radio)">ActivateWindow(RadioChannels)</onclick>
-			<onclick condition="Skin.HasSetting(play_radio)">PlayPVRRadio</onclick>
+			<onclick condition="!Skin.HasSetting(play_radio) + !Skin.HasSetting(touchmode)">ActivateWindow(RadioChannels)</onclick>
+			<onclick condition="Skin.HasSetting(play_radio) + !Skin.HasSetting(touchmode)">PlayPVRRadio</onclick>
 			<thumb>icons/sidemenu/radio.png</thumb>
 			<property name="id">radio</property>
 			<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 		</item>
 		<item> <!-- Music -->
 			<label>$LOCALIZE[2]</label>
-			<onclick>ActivateWindow(Music,root,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Music,root,return)</onclick>
 			<property name="menu_id">$NUMBER[7000]</property>
 			<thumb>icons/sidemenu/music.png</thumb>
 			<property name="id">music</property>
@@ -169,7 +169,7 @@
 		<item> <!-- Music Videos -->
 			<label>$LOCALIZE[20389]</label>
 			<property name="menu_id">$NUMBER[16000]</property>
-			<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,musicvideos,return)</onclick>
 			<thumb>icons/sidemenu/musicvideos.png</thumb>
 			<property name="id">musicvideos</property>
 			<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
@@ -177,7 +177,7 @@
 		<item> <!-- Games -->
 			<label>$LOCALIZE[15016]</label>
 			<property name="menu_id">$NUMBER[17000]</property>
-			<onclick>ActivateWindow(Games)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Games)</onclick>
 			<thumb>icons/sidemenu/games.png</thumb>
 			<property name="id">games</property>
 			<visible>System.GetBool(gamesgeneral.enable) + !Skin.HasSetting(HomeMenuNoGamesButton)</visible>
@@ -185,14 +185,14 @@
 		<item> <!-- Addons -->
 			<label>$LOCALIZE[24001]</label>
 			<property name="menu_id">$NUMBER[8000]</property>
-			<onclick>ActivateWindow(1100)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(1100)</onclick>
 			<thumb>icons/sidemenu/addons.png</thumb>
 			<property name="id">addons</property>
 			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 		</item>
 		<item> <!-- Pictures -->
 			<label>$LOCALIZE[1]</label>
-			<onclick>ActivateWindow(Pictures)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Pictures)</onclick>
 			<property name="menu_id">$NUMBER[4000]</property>
 			<thumb>icons/sidemenu/pictures.png</thumb>
 			<property name="id">pictures</property>
@@ -200,7 +200,7 @@
 		</item>
 		<item> <!-- Videos -->
 			<label>$LOCALIZE[3]</label>
-			<onclick>ActivateWindow(Videos,root)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(Videos,root)</onclick>
 			<property name="menu_id">$NUMBER[11000]</property>
 			<thumb>icons/sidemenu/videos.png</thumb>
 			<property name="id">video</property>
@@ -208,7 +208,7 @@
 		</item>
 		<item> <!-- Favorites -->
 			<label>$LOCALIZE[10134]</label>
-			<onclick>ActivateWindow(favourites)</onclick>
+			<onclick condition="!Skin.HasSetting(touchmode)">ActivateWindow(favourites)</onclick>
 			<property name="menu_id">$NUMBER[14000]</property>
 			<thumb>icons/sidemenu/favourites.png</thumb>
 			<property name="id">favorites</property>
@@ -216,8 +216,8 @@
 		</item>
 		<item> <!-- Weather -->
 			<label>$LOCALIZE[8]</label>
-			<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
-			<onclick condition="String.IsEmpty(Weather.Plugin)">ReplaceWindow(servicesettings,weather)</onclick>
+			<onclick condition="!String.IsEmpty(Weather.Plugin) + !Skin.HasSetting(touchmode)">ActivateWindow(Weather)</onclick>
+			<onclick condition="String.IsEmpty(Weather.Plugin) + !Skin.HasSetting(touchmode)">ReplaceWindow(servicesettings,weather)</onclick>
 			<property name="menu_id">$NUMBER[15000]</property>
 			<thumb>icons/sidemenu/weather.png</thumb>
 			<property name="id">weather</property>

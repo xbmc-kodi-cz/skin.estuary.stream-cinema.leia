@@ -96,22 +96,22 @@
 						<item id="1020"> <!-- SC Main Menu -->
 							<label>$LOCALIZE[31168]</label>
 							<label2></label2>
-							<onclick>Skin.ToggleSetting(SCMain)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(SCMain)</onclick>
 						</item>
 						<item id="1040"> <!-- SC Movies -->
 							<label>$LOCALIZE[31203]</label>
 							<label2>[CR][CR]Stream Cinema 2</label2>
-							<onclick>Skin.ToggleSetting(SCMovie)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(SCMovie)</onclick>
 						</item>
 						<item id="1060"> <!-- SC Serials -->
 							<label>$LOCALIZE[31172]</label>
 							<label2>[CR][CR]Stream Cinema 2</label2>
-							<onclick>Skin.ToggleSetting(SCTVShow)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(SCTVShow)</onclick>
 						</item>
 						<item id="1090"> <!-- SC History -->
 							<label>$LOCALIZE[31381]</label>
 							<label2>[CR][CR]Stream Cinema 2</label2>
-							<onclick>Skin.ToggleSetting(SCHistory)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(SCHistory)</onclick>
 						</item>
 						<!-- <item id="1160"> -->  <!-- SC Trakt -->
 							<!-- <label>Moje seznamy</label>
@@ -121,87 +121,87 @@
 						<item id="1280">  <!-- iVysilani Czech TV -->
 							<label>iVysílání</label>
 							<label2>[CR][CR]Česká televize</label2>
-							<onclick>Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onclick>
 						</item>
 						<item id="1320">  <!-- Trailer -->
 							<label>Trailer</label>
 							<label2></label2>
-							<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
 							<visible>!Skin.HasSetting(TrailerWallWidget)</visible>
 						</item>
 						<item id="1320">  <!-- Trailer -->
 							<label>Trailer</label>
 							<label2>[CR][CR]Týdenní přehled</label2>
-							<onclick>Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoTrailerButton)</onclick>
 							<visible>Skin.HasSetting(TrailerWallWidget)</visible>
 						</item>
 						<item id="1300">  <!-- Radio.de -->
 							<label>Radio</label>
 							<label2>[CR][CR]Internet</label2>
-							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
 							<visible>!Skin.HasSetting(RadiodeWallWidget)</visible>
 						</item>
 						<item id="1300">  <!-- Radio.de -->
 							<label>Radio</label>
 							<label2>[CR][CR]Internet: My Stations</label2>
-							<onclick>Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onclick>
 							<visible>Skin.HasSetting(RadiodeWallWidget)</visible>
 						</item>
 						<item id="1350">  <!-- Nova Plus -->
 							<label>Nova Plus</label>
-							<onclick>Skin.ToggleSetting(Nova)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(Nova)</onclick>
 						</item>
 						<item id="1400"> <!-- Movies -->
 							<label>$LOCALIZE[342]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
 						</item>
 						<item id="1420"> <!-- TVShows -->
 							<label>$LOCALIZE[20343]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
 						</item>
 						<item id="1440"> <!-- Disc -->
 							<label>$LOCALIZE[427]</label>
-							<onclick>noop</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">noop</onclick>
 						</item>
 						<item id="1460"> <!-- TV -->
 							<label>$LOCALIZE[19020]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
 						</item>
 						<item id="1480"> <!-- Radio -->
 							<label>$LOCALIZE[19021]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
 						</item>
 						<item id="1500"> <!-- Music -->
 							<label>$LOCALIZE[2]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
 						</item>
 						<item id="1520"> <!-- Music Videos -->
 							<label>$LOCALIZE[20389]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
 						</item>
 						<item id="1640"> <!-- Games -->
 							<label>$LOCALIZE[15016]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
 						</item>
 						<item id="1540"> <!-- Addons -->
 							<label>$LOCALIZE[24001]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoGamesButton)</onclick>
 						</item>
 						<item id="1560"> <!-- Pictures -->
 							<label>$LOCALIZE[1]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNopicturesButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNopicturesButton)</onclick>
 						</item>
 						<item id="1580"> <!-- Videos -->
 							<label>$LOCALIZE[3]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
 						</item>
 						<item id="1600"> <!-- Favorites -->
 							<label>$LOCALIZE[10134]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
 						</item>
 						<item id="1620"> <!-- Weather -->
 							<label>$LOCALIZE[8]</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+							<onclick condition="!Skin.HasSetting(touchmode)">Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 						</item>	
 					</content>
 				</control>
