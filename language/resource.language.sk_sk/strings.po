@@ -1122,3 +1122,6 @@ msgctxt "#31409"
 msgid "List with text"
 msgstr "List s textom"
 
+msgctxt "#31410"
+msgid "Quick search only on Stream Cinema 2"
+msgstr "Rýchle vyhľadávanie len na Stream Cinema 2"

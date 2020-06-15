@@ -1631,6 +1631,12 @@
 						<onclick>Skin.SelectBool(31164, 31165|VedlejsiCS, 31166|VedlejsiEN, 16018|VedlejsiSK)</onclick>
 						<label2>$VAR[VedlejsiJazyk]</label2>
 					</control>
+					<control type="radiobutton" id="831"> <!-- Easy/SC+ -->
+						<label>$LOCALIZE[31410]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(SCSearchOnly)</selected>
+						<onclick>Skin.ToggleSetting(SCSearchOnly)</onclick>
+					</control>
 					<!--
 					<control type="radiobutton" id="813">
 						<label>Vyhledávání Kodi bez historie</label>
