@@ -1619,17 +1619,10 @@
 						<selected>Skin.HasSetting(SCSearch)</selected>
 						<onclick>Skin.ToggleSetting(SCSearch)</onclick>
 					</control>
-					<control type="button" id="813">
-						<label>$LOCALIZE[31164]</label>
+					<control type="button" id="813"> <!-- Easy/SC+ -->
+						<label>$LOCALIZE[31325]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|HlavniCS, 31166|HlavniEN, 16018|HlavniSK)</onclick>
-						<label2>$VAR[HlavniJazyk]</label2>
-					</control>
-					<control type="button" id="830">
-						<label>$LOCALIZE[31164]</label>
-						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|VedlejsiCS, 31166|VedlejsiEN, 16018|VedlejsiSK)</onclick>
-						<label2>$VAR[VedlejsiJazyk]</label2>
+						<onclick>RunScript(c:\Users\marek\AppData\Roaming\Kodi\addons\skin.estuary.stream-cinema-2.leia\xml\ctecka.py)</onclick>
 					</control>
 					<control type="radiobutton" id="831"> <!-- Easy/SC+ -->
 						<label>$LOCALIZE[31410]</label>
