@@ -1141,7 +1141,7 @@
 					<param name="list_id" value="41350"/>
 					<param name="stream-cinema" value="true"/> <!-- Easy/SC+ -->
 				</include>
-				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
+				<include content="WidgetListPoster" condition="Skin.HasSetting(SCMovieNewDubbedWidgetList) + Skin.HasSetting(SCMovie) + !Skin.HasSetting(HomeMenuNoStreamCinemaButton) + System.HasAddon(plugin.video.stream-cinema-2-release)">
 					<param name="content_path" value=$VAR[CestaNoveDabovaneFilmyvar]/>
 					<param name="widget_header" value=$LOCALIZE[31405]/>
 					<param name="widget_target" value="videos"/>
