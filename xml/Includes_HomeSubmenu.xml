@@ -178,22 +178,22 @@
 		<content>
 			<item> <!-- Popular -->
 				<label>$LOCALIZE[31183]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/popular.png</thumb>
 			</item>
 			<item> <!-- New Releases -->
 				<label>$LOCALIZE[31395]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/new.png</thumb>
 			</item>
 			<item>  <!-- New Dubbed releases -->
 				<label>$LOCALIZE[31401]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fdubbed%3flang%3den%26lang%3dcs%26sort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fdubbed%3flang%3den%26lang%3dcs%26sort%3dpremiered%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/new_dub.png</thumb>
 			</item>
 			<item>  <!-- Recently added -->
 				<label>$LOCALIZE[31396]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dmovie%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/recent.png</thumb>
 			</item>
 			<item>  <!-- Alphabetically -->
@@ -223,22 +223,22 @@
 		<content>
 			<item> <!-- Popular -->
 				<label>$LOCALIZE[31183]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dplayCount%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/popular.png</thumb>
 			</item>
 			<item> <!-- New Releases -->
 				<label>$LOCALIZE[31395]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3dpremiered%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/new.png</thumb>
 			</item>
 			<item>  <!-- New Dubbed releases -->
 				<label>$LOCALIZE[31401]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fdubbed%3flang%3den%26lang%3den%26sort%3dpremiered%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fdubbed%3flang%3den%26lang%3den%26sort%3dpremiered%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/new_dub.png</thumb>
 			</item>
 			<item>  <!-- Recently added -->
 				<label>$LOCALIZE[31396]</label>
-				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
+				<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.stream-cinema-2-release/get_media/?url=%2fapi%2fmedia%2ffilter%2fall%3fsort%3ddateAdded%26type%3dtvshow%26order%3ddesc&quot;,return)</onclick>
 				<thumb>icons/sc2/recent.png</thumb>
 			</item>
 			<item>  <!-- Alphabetically -->
