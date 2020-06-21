@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls />
+    <!-- Set the default setting values -->
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmain)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovie)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(show_date)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(circle_rating)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(menu_postfix)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoiVysilaniButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoTrailerButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoRadiodeButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMain)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainMenuWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainMoviesPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVShowsPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMainTVTodayWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMoviesPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShow)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsPopularWidgetList)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCHistoryWidgetWall)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scsearch)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmainlastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmainnewwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovienewwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scmovielastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scserieslastaddetwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(scseriesnewwidgetlist)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(hide_mediaflags)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2) + System.Platform.Android | System.Platform.IOS">Skin.SetBool(touchmode)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCMoviesMenuWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(SCTVShowsMenuWidget)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoMovieButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoTVShowButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoTVButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoRadioButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoMusicButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoMusicVideoButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoGamesButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoPicturesButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoVideosButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoFavButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoWeatherButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoTrailerButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoiVysilaniButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(HomeMenuNoRadiodeButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.ToggleSetting(HomeMenuNoTrailerButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.ToggleSetting(HomeMenuNoiVysilaniButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.ToggleSetting(HomeMenuNoRadiodeButton)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetBool(RadiodeSearch)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded),3.0.0.a2)">Skin.SetString(widget_limit,40)</onload>
+    
+
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded1),3.0.3)">Skin.SetString(preferred_language,cs)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded1),3.0.3)">Skin.SetString(fallback_language,sk)</onload>
+    
+    <!-- Force to apply changed settings -->
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded1),3.0.3)">ActivateWindow(programs)</onload>
+    <onload condition="!String.IsEqual(Skin.String(DefaultLoaded1),3.0.3)">ActivateWindow(home)</onload>
+
+
+    <!-- Lock the default settings to not be applied anymore -->
+    <onload condition="String.IsEmpty(Skin.String(DefaultLoaded))">Skin.SetString(DefaultLoaded, 3.0.0.a2)</onload>
+    <onload condition="String.IsEmpty(Skin.String(DefaultLoaded1))">Skin.SetString(DefaultLoaded1, 3.0.3)</onload>
 </window>
+
+

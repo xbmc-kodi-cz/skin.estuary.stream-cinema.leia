@@ -577,8 +577,8 @@ msgid "Skylink Archive"
 msgstr "Skylink Archive"
 
 msgctxt "#31168"
-msgid "Stream-Cinema"
-msgstr "Stream-Cinema"
+msgid "Stream Cinema 2"
+msgstr "Stream Cinema 2"
 
 msgctxt "#31169"
 msgid "Fairytale"
@@ -587,3 +587,556 @@ msgstr "Fairytale"
 msgctxt "#31170"
 msgid "Concerts"
 msgstr "Concerts"
+
+msgctxt "#31171"
+msgid "Films"
+msgstr "Films"
+
+msgctxt "#31172"
+msgid "Series"
+msgstr "Series"
+
+msgctxt "#31173"
+msgid "Widget Stream Cinema 2"
+msgstr "Widget Stream Cinema 2"
+
+msgctxt "#31174"
+msgid "Widget Popular movies"
+msgstr "Widget Popular movies"
+
+msgctxt "#31175"
+msgid "Widget Popular series"
+msgstr "Widget Popular series"
+
+msgctxt "#31176"
+msgid "Widget TV tips of the day"
+msgstr "Widget TV tips of the day"
+
+msgctxt "#31177"
+msgid "Widget Watch history"
+msgstr "Widget Watch history"
+
+msgctxt "#31179"
+msgid "Popular movies"
+msgstr "Popular movies"
+
+msgctxt "#31180"
+msgid "Popular series"
+msgstr "Popular series"
+
+msgctxt "#31181"
+msgid "TV tips of the day"
+msgstr "TV tips of the day"
+
+msgctxt "#31182"
+msgid "Watch history"
+msgstr "Watch history"
+
+msgctxt "#31183"
+msgid "Popular"
+msgstr ""
+
+msgctxt "#31184"
+msgid "Settings"
+msgstr ""
+
+
+
+msgctxt "#31200"
+msgid "Specific settings"
+msgstr "Specific settings"
+
+msgctxt "#31201"
+msgid "Skin settings"
+msgstr "NSkin settings"
+
+msgctxt "#31202"
+msgid "Reload skin"
+msgstr "Reload skin"
+
+msgctxt "#31203"
+msgid "Movies"
+msgstr "Movies"
+
+
+msgctxt "#31205"
+msgid "Enable Stream Cinema 2 Movies"
+msgstr "Enable Stream Cinema 2 Movies"
+
+msgctxt "#31206"
+msgid "Widget Menu Movies"
+msgstr "Widget Menu Movies"
+
+msgctxt "#31207"
+msgid "Movies menu"
+msgstr "Movies menu"
+
+msgctxt "#31208"
+msgid "Widget Menu Series"
+msgstr ""
+
+msgctxt "#31209"
+msgid "Series menu"
+msgstr ""
+
+
+msgctxt "#31300"
+msgid "Widget Popular"
+msgstr "Widget Popular"
+
+msgctxt "#31301"
+msgid "Popular series"
+msgstr "Popular series"
+
+msgctxt "#31302"
+msgid "Widget Alphabetically"
+msgstr "Widget Alphabetically"
+
+msgctxt "#31303"
+msgid "Alphabetically"
+msgstr "Alphabetically"
+
+msgctxt "#31304"
+msgid "Widget By genre"
+msgstr "Widget By genre"
+
+msgctxt "#31305"
+msgid "By genre"
+msgstr "By genre"
+
+msgctxt "#31307"
+msgid "Show widgets on fullscreen"
+msgstr "Show widgets on fullscreen"
+
+msgctxt "#31308"
+msgid "Show info about widget"
+msgstr "Show info about widget"
+
+msgctxt "#31309"
+msgid "Show short info about widget everytime"
+msgstr "Show short info about widget everytime"
+
+msgctxt "#31310"
+msgid "Maximum number of widget items"
+msgstr "Maximum number of widget items"
+
+msgctxt "#31311"
+msgid "Show location weather in top"
+msgstr "Show location weather in top"
+
+msgctxt "#31312"
+msgid "Show date in top"
+msgstr "Show date in top"
+
+msgctxt "#31313"
+msgid "Show CPU usage in top"
+msgstr "Show CPU usage in top"
+
+msgctxt "#31314"
+msgid "Show MEM usage in top"
+msgstr "Show MEM usage in top"
+
+msgctxt "#31315"
+msgid "Show CPU temp in top"
+msgstr "Show CPU temp in top"
+
+msgctxt "#31316"
+msgid "Show GPU temp in top"
+msgstr "Show GPU temp in top"
+
+msgctxt "#31317"
+msgid "Show flag of future recording"
+msgstr "Show flag of future recording"
+
+msgctxt "#31318"
+msgid "Show flag of recording in progress"
+msgstr "Show flag of recording in progress"
+
+msgctxt "#31319"
+msgid "Show usage memory for recording"
+msgstr "Show usage memory for recording"
+
+msgctxt "#31320"
+msgid "Show a comparison of skin versions in the top panel"
+msgstr "Show a comparison of skin versions in the top panel"
+
+msgctxt "#31321"
+msgid "Show user rating"
+msgstr "Show user rating"
+
+msgctxt "#31322"
+msgid "Show scraper rating"
+msgstr "Show scraper rating"
+
+msgctxt "#31323"
+msgid "Additional text of the main menu item"
+msgstr "Additional text of the main menu item"
+
+msgctxt "#31324"
+msgid "Enable Stream Cinema 2"
+msgstr "Enable Stream Cinema 2"
+
+msgctxt "#31325"
+msgid "Expand search Kodi of Stream Cinema 2"
+msgstr "Expand search Kodi of Stream Cinema 2"
+
+msgctxt "#31326"
+msgid "Download directory"
+msgstr "Download directory"
+
+msgctxt "#31327"
+msgid "Enable iVysilani"
+msgstr "Enable iVysilani"
+
+msgctxt "#31328"
+msgid "Enable trailer"
+msgstr "Enable trailer"
+
+msgctxt "#31329"
+msgid "Enable Radio internet"
+msgstr "Enable Radio internet"
+
+msgctxt "#31330"
+msgid "Expand search Kodi of Radio"
+msgstr "Expand search Kodi of Radio"
+
+msgctxt "#31331"
+msgid "Enable reboot from internal memory"
+msgstr "Enable reboot from internal memory"
+
+msgctxt "#31332"
+msgid "Command for reboot"
+msgstr "Command for reboot"
+
+msgctxt "#31333"
+msgid "For ... LEC installed from external memory"
+msgstr "For ... LEC installed from external memory"
+
+msgctxt "#31334"
+msgid "Enable"
+msgstr "Enable"
+
+msgctxt "#31335"
+msgid "Enable Stream Cinema 2 Series"
+msgstr "Enable Stream Cinema 2 Series"
+
+msgctxt "#31336"
+msgid "Enable iVysílání"
+msgstr "Enable iVysílání"
+
+msgctxt "#31337"
+msgid "Widget menu iVysílání"
+msgstr "Widget menu iVysílání"
+
+msgctxt "#31338"
+msgid "Winget live stream"
+msgstr "Winget live stream"
+
+msgctxt "#31339"
+msgid "Widget by date"
+msgstr "Widget by date"
+
+msgctxt "#31340"
+msgid "Widget Alphabetically"
+msgstr "Widget Alphabetically"
+
+msgctxt "#31341"
+msgid "Widget by genre"
+msgstr "Widget by genre"
+
+msgctxt "#31342"
+msgid "Widget tips"
+msgstr "Widget tips"
+
+msgctxt "#31343"
+msgid "Widget most watching per day"
+msgstr "Widget most watching per day"
+
+msgctxt "#31344"
+msgid "Widget most watching per week"
+msgstr "Widget most watching per week"
+
+msgctxt "#31345"
+msgid "Widget don't miss"
+msgstr "Widget don't miss"
+
+msgctxt "#31346"
+msgid "Widget from our archive"
+msgstr "Widget from our archive"
+
+msgctxt "#31347"
+msgid "Widget others now watching"
+msgstr "Widget others now watching"
+
+msgctxt "#31348"
+msgid "Enable Trailer"
+msgstr "Enable Trailer"
+
+msgctxt "#31349"
+msgid "Widget week news Wall"
+msgstr "WWidget week news Wall"
+
+msgctxt "#31350"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31351"
+msgid "Widget week news"
+msgstr "Widget week news"
+
+msgctxt "#31352"
+msgid "Widget Total film"
+msgstr "Widget Total film"
+
+msgctxt "#31353"
+msgid "Widget Falcom"
+msgstr "Widget Falcom"
+
+msgctxt "#31354"
+msgid "Widget Freeman"
+msgstr "Widget Freeman"
+
+msgctxt "#31355"
+msgid "Widget Bonton film"
+msgstr "Widget Bonton film"
+
+msgctxt "#31356"
+msgid "Fim Select Trailer"
+msgstr "Fim Select Trailer"
+
+msgctxt "#31357"
+msgid "Widget Movie Clips Comming Soon"
+msgstr "Widget Movie Clips Comming Soon"
+
+msgctxt "#31358"
+msgid "Widget Movie Clips Trailers"
+msgstr "Widget Movie Clips Trailers"
+
+msgctxt "#31359"
+msgid "Widget New on Netflix"
+msgstr ">Widget nové na Netflix"
+
+msgctxt "#31360"
+msgid "Widget Films news"
+msgstr "Widget Filmové novinky"
+
+msgctxt "#31361"
+msgid "Widget High Five"
+msgstr "Widget High Five"
+
+msgctxt "#31362"
+msgid "Widget CinemArt SK"
+msgstr "Widget CinemArt SK"
+
+msgctxt "#31363"
+msgid "Widget Svět Filmu"
+msgstr "Widget Svět Filmu"
+
+msgctxt "#31364"
+msgid "Widget Film Europe"
+msgstr "Widget Film Europe"
+
+msgctxt "#31365"
+msgid "Enable Radio.de"
+msgstr "Enable Radio.de"
+
+msgctxt "#31366"
+msgid "Widget My Stations Wall"
+msgstr "Widget My Stations Wall"
+
+msgctxt "#31367"
+msgid "Widget Menu"
+msgstr "Widget Menu"
+
+msgctxt "#31368"
+msgid "Widget Local Stations"
+msgstr "Widget Local Stations"
+
+msgctxt "#31369"
+msgid "Widget Editorials Recommendations"
+msgstr "Widget Editorials Recommendations"
+
+msgctxt "#31370"
+msgid "Widget Top 100 Stations"
+msgstr "Widget Top 100 Stations"
+
+msgctxt "#31371"
+msgid "Widget Browse by genre"
+msgstr "Widget Browse by genre"
+
+msgctxt "#31372"
+msgid "Widget Browse by topic"
+msgstr "Widget Browse by topic"
+
+msgctxt "#31373"
+msgid "Widget Browse by country"
+msgstr "Widget Browse by country"
+
+msgctxt "#31374"
+msgid "Widget Browse by city"
+msgstr "Widget Browse by city"
+
+msgctxt "#31375"
+msgid "Widget Browse by language"
+msgstr "Widget Browse by language"
+
+msgctxt "#31376"
+msgid "Widget Search for station"
+msgstr "Widget Search for station"
+
+msgctxt "#31377"
+msgid "Widget My Stations"
+msgstr "Widget My Stations"
+
+msgctxt "#31378"
+msgid "List"
+msgstr "List"
+
+msgctxt "#31379"
+msgid "Wall"
+msgstr "Wall"
+
+msgctxt "#31380"
+msgid "None"
+msgstr "None"
+
+msgctxt "#31381"
+msgid "History"
+msgstr "History"
+
+msgctxt "#31382"
+msgid "Widget History"
+msgstr "Widget History"
+
+msgctxt "#31383"
+msgid "Enable"
+msgstr "Enable"
+
+msgctxt "#31384"
+msgid "Enable Nova Plus"
+msgstr "Enable Nova Plus"
+
+msgctxt "#31385"
+msgid "All show"
+msgstr "All show"
+
+msgctxt "#31386"
+msgid "Top shows"
+msgstr "Top shows"
+
+msgctxt "#31387"
+msgid "Last parts"
+msgstr "Last parts"
+
+msgctxt "#31388"
+msgid "Shows"
+msgstr "Shows"
+
+msgctxt "#31389"
+msgid "Bonus"
+msgstr "Bonus"
+
+msgctxt "#31390"
+msgid "Criminal series"
+msgstr "Criminal series"
+
+msgctxt "#31391"
+msgid "Foreign shows"
+msgstr "Foreign shows"
+
+msgctxt "#31392"
+msgid "Show for children"
+msgstr "Show for children"
+
+msgctxt "#31393"
+msgid "Fan shows"
+msgstr "Fan shows"
+
+msgctxt "#31394"
+msgid "Magazines"
+msgstr "Magazines"
+
+msgctxt "#31395"
+msgid "New Releases"
+msgstr "New Releases"
+
+msgctxt "#31396"
+msgid "Recently added"
+msgstr "Recently added"
+
+msgctxt "#31397"
+msgid "Widget New"
+msgstr "Widget New"
+
+msgctxt "#31398"
+msgid "Widget Recently added"
+msgstr "Widget Recently added"
+
+msgctxt "#31399"
+msgid "Search Stream Cinema 2"
+msgstr "Search Stream Cinema 2"
+
+msgctxt "#31400"
+msgid "Search"
+msgstr "Search"
+
+msgctxt "#31401"
+msgid "New dubbed releases"
+msgstr "New dubbed releases"
+
+msgctxt "#31402"
+msgid "By studio"
+msgstr "By studio"
+
+msgctxt "#31403"
+msgid "TV today (Films)"
+msgstr "TV today (Films)"
+
+msgctxt "#31404"
+msgid "Widget new dubbed releases"
+msgstr ""
+
+msgctxt "#31405"
+msgid "New dubbed releases"
+msgstr ""
+
+msgctxt "#31406"
+msgid "Widget my own link"
+msgstr ""
+
+msgctxt "#31407"
+msgid "My own link"
+msgstr ""
+
+msgctxt "#31408"
+msgid "Wall with text"
+msgstr ""
+
+msgctxt "#31409"
+msgid "List with text"
+msgstr ""
+
+msgctxt "#31410"
+msgid "Quick search only on Stream Cinema 2"
+msgstr ""
+
+msgctxt "#31411"
+msgid "Language (MUST be same as in SC2)"
+msgstr ""
+
+msgctxt "#31412"
+msgid "Language fallback (MUST be same as in SC2)"
+msgstr ""
+
+msgctxt "#31413"
+msgid "Czech"
+msgstr ""
+
+msgctxt "#31414"
+msgid "Slovak"
+msgstr ""
+
+msgctxt "#31415"
+msgid "English"
+msgstr ""
+

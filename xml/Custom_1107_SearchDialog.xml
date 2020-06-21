@@ -18,34 +18,10 @@
 				<include>ButtonMenuList</include>
 				<content>
 					<item> <!-- Easy/SC+ Search Movies -->
-						<label>[B]Filmy[/B] na Stream-Cinema</label>
+						<label>$LOCALIZE[31399]</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d6d6f766965&amp;title=243330393031,return)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2-release)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/search/&quot;,return)</onclick>
 						<visible>Skin.HasSetting(SCSearch)</visible>
-					</item>
-					<item> <!-- Easy/SC+ Search TVShows -->
-						<label>[B]Seriály[/B] na Stream-Cinema</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d736572696573&amp;title=243330393032,return)</onclick>
-						<visible>Skin.HasSetting(SCSearch)</visible>
-					</item>
-					<item> <!-- Easy/SC+ Search People (Movies) -->
-						<label>[B]Lidé (filmy)[/B] na Stream-Cinema</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d70656f706c652d6d6f766965&amp;title=243330393531,return)</onclick>
-						<visible>Skin.HasSetting(SCSearch)</visible>
-					</item>
-					<item> <!-- Easy/SC+ Search People (TVShows) -->
-						<label>[B]Lidé (seriály)[/B] na Stream-Cinema</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.video.stream-cinema)">ActivateWindow(Videos,plugin://plugin.video.stream-cinema/?action=63736561726368&amp;id=7365617263682d70656f706c652d736572696573&amp;title=243330393532,return)</onclick>
-						<visible>Skin.HasSetting(SCSearch)</visible>
-					</item>
-					<item> <!-- Easy/SC+ Search Stations -->
-						<label>[B]Stanice[/B] na Radio (Internet)</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.HasAddon(plugin.audio.radio_de)">ActivateWindow(Music,plugin://plugin.audio.radio_de/stations/search/,return)</onclick>
-						<visible>Skin.HasSetting(RadiodeSearch)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31113]</label>

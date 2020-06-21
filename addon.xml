@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stream-cinema.leia" version="2.0.27" name="Estuary Stream-Cinema (Leia)" provider-name="phil65, Ichabod Fletchman, mod by JiRo, Client">
+<addon id="skin.estuary.stream-cinema-2.leia" version="3.0.3" name="Estuary Stream-Cinema-2 (Leia)" provider-name="Gargu/Gargy007, phil65, Ichabod Fletchman, mod by JiRo, Client">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 	</requires>
@@ -15,6 +15,33 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
+
+[B]Verze 3.0.3
+- Sjednoceny vzhled
+- Odstranene zbytecne polozky z nastaveni
+- Vylepsene funkce na touchscreen
+- Opraveny Nove dabovane filmy/serialy
+[B]Verze 3.0.1
+- Kompletne prevedeno na podporu noveho SC2 pluginu
+- Fixnuty vsechny zname bugy
+- Odstraneny A-Z a Zanr z Widgetu Filmy a Serialy (duvod vzhled a spatna implementace)
+- testovano s SC2 1.0.6
+- Nahrany nove ikonky: Zdroj SC2 plugin a Zbynek
+[B]Verze 3.0.0.b1
+- Opraveny odkazy na vyhledavani
+- Pecliveji pretestovana verze Alpha 2 - vypada ze je funkcni tim padem se posunulo do Bety
+[B]Verze 3.0.0.a2[/B]
+- dalsi cisteni stavu s 3.0.0.a1
+- doplneni moznosti zobrazovat na hlavni strance nejenom listy ale in "ZDI" pro lepsi prehlednost
+- Pridani novych seznamu s nejnovejsiho doplnku SC2 jako Nove a Posledni pridane
+- Otestovany SC2 2.0.0 Beta
+- Pridana podpora Nova Plus Doplnku
+- Otestovany AutoCompletation doplnek
+- Pridany Vychozi nastaveni Skinu aby se ukazaly moznosti skinu s SC2
+- Opraveny drobne bugy
+[B]Verze 3.0.0.a1[/B]
+- prvni pokus o portaci na SC2
+- Prakticky vyhazeni kategorii co SC2 zatim nepodporuje a rozbehani zakladni funkcionality SC2 menicek
 [B]Verze 2.0.27[/B]
 - doplněna dlaždice CoreELEC do systémových nastavení
 - oprava cest k doplňku iVysíláni - Česká televize (doplněk instalujte z repozitáře XBMC-Kodi CZ/SK)
@@ -38,16 +65,16 @@
 - úprava výchozího vzhledu podle verze Estuary Stream-Cinema 1.9.16.h
 - verze je určena k testování nedočkavými uživateli výhradě na Kodi 18.x
 		</news>
-		<summary lang="cs">Vzhled Estuary Stream-Cinema od autora phil65 s modifikací pro addon Stream-Cinema od JiRo</summary>
-		<summary lang="sk">Vzhľad Estuary Stream-Cinema od autora phil65 s modifikáciou pre addon Stream-Cinema od Jiro</summary>
-		<description lang="cs">Estuary Stream-Cinema je odvozený od výchozího vzhledu pro Kodi 18.0 a vyšší. Snaží se být jednoduše pochopitelný a použitelný pro nové uživatele Kodi. Modifikace pro Stream-Cinema přidává do vzhledu funkce pro přímé využívání tohoto populárního českého a slovenského addon.</description>
-		<description lang="sk">Estuary Stream-Cinema je odvodený od východiskového vzhľadu pre Kodi 18.0 a vyššie. Pokúša sa byť pre prvotných používateľov Kodi jednoduchým na pochopenie a používanie. Modifikácia pre Stream-Cienema pridáva do vzhľadu funkcie pre priame využívanie tohto populárneho českého a slovenského addon.</description>
-		<disclaimer lang="cs">Estuary Stream-Cinema je amatérskou úpravou vzhledu Estuary. Používáte ho na vlastní nebezpečí.[CR]Případnou podporu najdete na https://www.xbmc-kodi.cz/prispevek.estuary.stream-cinema</disclaimer>
-		<disclaimer lang="sk">Estuary Stream-Cinema je amatérskou úpravou vhľadu Estuary. Používate ho na vlastné nebezpečenstvo.[CR]Prípadnú podporu nájdete na https://www.xbmc-kodi.cz/prispevek.estuary.stream-cinema</disclaimer>
+		<summary lang="cs">Vzhled Estuary Stream-Cinema-2 od Gargy007, Gargu a převzáno od phil65, který modifikoval původní verzi od JiRo(Estuary Stream-Cinema)</summary>
+		<summary lang="sk">Vzhľad Estuary Stream-Cinema-2 od Gargy007, Gargu ktorý to zobral od phil65 a ten od od JiRo, autora povodného skinu(Estuary Stream-Cinema)</summary>
+		<description lang="cs">Estuary Stream-Cinema-2 je odvozený od výchozího vzhledu pro Kodi 18.0 a vyšší. Snaží se být jednoduše pochopitelný a použitelný pro nové uživatele Kodi. Modifikace pro Stream-Cinema-2 přidává do vzhledu funkce pro přímé využívání tohoto populárního českého a slovenského addon.</description>
+		<description lang="sk">Estuary Stream-Cinema-2 je odvodený od východiskového vzhľadu pre Kodi 18.0 a vyššie. Pokúša sa byť pre prvotných používateľov Kodi jednoduchým na pochopenie a používanie. Modifikácia pre Stream-Cienema-2 pridáva do vzhľadu funkcie pre priame využívanie tohto populárneho českého a slovenského addon.</description>
+		<disclaimer lang="cs">Estuary Stream-Cinema je amatérskou úpravou vzhledu Estuary. Používáte ho na vlastní nebezpečí.[CR]Případnou podporu najdete na http://sc2.zone/</disclaimer>
+		<disclaimer lang="sk">Estuary Stream-Cinema je amatérskou úpravou vhľadu Estuary. Používate ho na vlastné nebezpečenstvo.[CR]Prípadnú podporu nájdete na http://sc2.zone/</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-		<forum>https://www.xbmc-kodi.cz/prispevek-estuary-stream-cinema</forum>
-		<source>https://github.com/xbmc-kodi-cz/skin.estuary.stream-cinema.leia</source>
+		<forum>http://sc2.zone/</forum>
+		<source>https://github.com/Gargy007/skin.estuary.stream-cinema-2.leia</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
