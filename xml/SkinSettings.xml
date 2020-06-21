@@ -1620,15 +1620,15 @@
 						<onclick>Skin.ToggleSetting(SCSearch)</onclick>
 					</control>
 					<control type="button" id="813">
-						<label>$LOCALIZE[31164]</label>
+						<label>$LOCALIZE[31411]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|LangDubMainCS, 31166|LangDubMainEN, 16018|LangDubMainSK)</onclick>
+						<onclick>Skin.SelectBool(31164, 31413|LangDubMainCS, 31414|LangDubMainSK, 31415|LangDubMainEN)</onclick>
 						<label2>$VAR[LangDubMain]</label2>
 					</control>
-					<control type="button" id="830">
-						<label>$LOCALIZE[31164]</label>
+					<control type="button" id="814">
+						<label>$LOCALIZE[31412]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|LangDubBckCS, 31166|LangDubBckEN, 16018|LangDubBckSK)</onclick>
+						<onclick>Skin.SelectBool(31164, 31413|LangDubBckCS, 31414|LangDubBckSK, 31415|LangDubBckEN)</onclick>
 						<label2>$VAR[LangDubBck]</label2>
 					</control>
 					<control type="radiobutton" id="831"> <!-- Easy/SC+ -->
