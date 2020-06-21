@@ -1622,14 +1622,14 @@
 					<control type="button" id="813">
 						<label>$LOCALIZE[31164]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|HlavniCS, 31166|HlavniEN, 16018|HlavniSK)</onclick>
-						<label2>$VAR[HlavniJazyk]</label2>
+						<onclick>Skin.SelectBool(31164, 31165|LangDubMainCS, 31166|LangDubMainEN, 16018|LangDubMainSK)</onclick>
+						<label2>$VAR[LangDubMain]</label2>
 					</control>
 					<control type="button" id="830">
 						<label>$LOCALIZE[31164]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.SelectBool(31164, 31165|VedlejsiCS, 31166|VedlejsiEN, 16018|VedlejsiSK)</onclick>
-						<label2>$VAR[VedlejsiJazyk]</label2>
+						<onclick>Skin.SelectBool(31164, 31165|LangDubBckCS, 31166|LangDubBckEN, 16018|LangDubBckSK)</onclick>
+						<label2>$VAR[LangDubBck]</label2>
 					</control>
 					<control type="radiobutton" id="831"> <!-- Easy/SC+ -->
 						<label>$LOCALIZE[31410]</label>
