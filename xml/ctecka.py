@@ -1,5 +1,4 @@
 import getpass
-import sys
 
 user = getpass.getuser()
 
@@ -32,46 +31,68 @@ def vycitani(soubor):
         radek = soubor[x]
         delka_radku = len(radek)
         if radek.startswith('    <setting id="preferred_language"'):
-            HLjazyk_int = radek[delka_radku-11]
-            if HLjazyk_int == "0":
-                HLjazyk = "cs"
-
-            if HLjazyk_int == "2":
-                HLjazyk = "sk"
-
-            if HLjazyk_int == "3":
-                HLjazyk = "en"
-
+            HLjazyk = radek[delka_radku-11]
         if radek.startswith('    <setting id="fallback_language"'):
-            VEjazyk_int = radek[delka_radku-11]
-            if VEjazyk_int == "0":
-                VEjazyk = "cs"
-
-            if VEjazyk_int == "2":
-                VEjazyk = "sk"
-
-            if VEjazyk_int == "3":
-                VEjazyk = "en"
-
+            VEjazyk = radek[delka_radku-11]
     return HLjazyk, VEjazyk
 
-vstup = str(sys.argv)
+def zmena(radek , jazyk, jazyk2):
+    delka = len(radek)
+    nov_radek = [0]*delka
+    for x in range(0, delka):
+        nov_radek[x] = radek[x]
+    nov_radek[delka-12] = jazyk
+    nov_radek[delka-11] = jazyk2
+    str1 = ""    
+    for ele in nov_radek:  
+        str1 += ele
+    return str1
+
+
+def prepisovani(HLjazyk, VEjazyk, soubor):
+    delka = len(soubor)
+    for x in range(0, delka):
+        radek = soubor[x]
+        delka_radku = len(radek)
+        if x == 1:
+            print(type(delka_radku))
+            print(type(radek))
+        if radek.startswith('    <setting id="preferred_language"'):
+            print(HLjazyk)
+            if HLjazyk == "0":
+                radek = zmena(radek , "c", "s")
+                print(0)
+            if HLjazyk == "2":
+                radek = zmena(radek , "s", "k")
+                print(1)
+            if HLjazyk == "3":
+                radek = zmena(radek , "e", "n")
+                print(3)
+        if radek.startswith('    <setting id="fallback_language"'):
+            print(VEjazyk)
+            if VEjazyk == "0":
+                radek = zmena(radek , "c", "s")
+                print(0)
+            if VEjazyk == "2":
+                radek = zmena(radek , "s", "k")
+                print(1)
+            if VEjazyk == "3":
+                radek = zmena(radek , "e", "n")
+        soubor[x] = radek
+    return soubor, delka
+
+def zapis(HLjazyk, VEjazyk, user):
+    filename =("../../../Users/" + user + "/AppData/Roaming/Kodi/userdata/addon_data/skin.estuary.stream-cinema-2.leia/settings.xml")
+    soubor = cteni(filename)
+    soubor, delka = prepisovani(HLjazyk, VEjazyk, soubor)
+    file = open(filename, "w")
+    for x in range(0, delka):
+        file.write(soubor[x])
+        file.write('\n')
+    file.close()
+
 soubor = cteni("../../../Users/" + user + "/AppData/Roaming/Kodi/userdata/addon_data/plugin.video.stream-cinema-2-release/settings.xml")
 HLjazyk, VEjazyk = vycitani(soubor)
-vraceni = "cs"
+zapis(HLjazyk, VEjazyk, user)
 
-if vstup == "preferred_language":
-    vraceni = HLjazyk
-
-if vstup == "fallback_language":
-    vraceni = VEjazyk
-
-file = open("../../../Users/" + user + "/Downloads/vraceni.txt", "w")
-file.write(vstup)
-file.write("\r")
-file.write(vraceni)
-file.close()
-
-
-sys.exit(vraceni)
 
